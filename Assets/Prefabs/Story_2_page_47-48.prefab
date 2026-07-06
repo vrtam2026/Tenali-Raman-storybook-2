@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 862908630267368610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.166, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: 0.018, z: -0.017}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,7 +99,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862908630267368610}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 33c4302e9699b13469b6e681e67a3a8f, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: a84f6959df9ba4d47810f2e0affeaec3, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -207,7 +207,7 @@ MonoBehaviour:
   pageId: TR_S3_P47-48
   mediaManager: {fileID: 0}
   pageType: 0
-  layerRoot2D: {fileID: 0}
+  layerRoot2D: {fileID: 544745558342276123}
   commonBackgroundImage: {fileID: 0}
   persistentLayers2D: []
   storyParts:
@@ -323,7 +323,7 @@ Transform:
   m_GameObject: {fileID: 3120538685534468535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.166, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.034, z: -0.017}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -394,7 +394,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3120538685534468535}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 3b7af5a12ff25e24a8723e1670e32fd6, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 71a840b2b5998654bbb42f2057068529, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -900,9 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}
-  layers:
-  - {fileID: 0}
-  - {fileID: 0}
+  layers: []
   gapAxis: 1
   gap: 0.01
   hardLockGapAxis: 1

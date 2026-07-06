@@ -140,6 +140,13 @@ x86/
 *.nupkg
 **/[Pp]ackages/*
 !**/[Pp]ackages/build/
+# The NuGet rule above accidentally also matches Unity's own Packages folder —
+# these two files are Unity's package configuration and MUST be tracked, or
+# every fresh clone loses all package references (this caused the original
+# 149-error problem on clone).
+!Packages/manifest.json
+!Packages/packages-lock.json
+!Packages/com.ptc.vuforia.engine-11.4.4.tgz
 *.nuget.props
 *.nuget.targets
 
@@ -159,3 +166,6 @@ x86/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# Unity CCD build cache — generated automatically, not source content
+CCDBuildData/

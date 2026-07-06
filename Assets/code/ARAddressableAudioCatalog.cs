@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 /// <summary>
-/// Maps (language + pageId) to an Addressable address string for the audio pack.
-/// Does NOT hold direct AudioClip references — only string addresses.
+/// Maps (language + pageId) to the actual ARPageAudioPack asset — drag the audio
+/// pack file directly into the entry, no address text ever needs to be typed.
 /// Safe to keep local (small size). One entry per language per page.
-/// Example address: "audio/English/S1_P-8-9"
 /// </summary>
 [CreateAssetMenu(menuName = "AR/Addressable Audio Catalog", fileName = "ARAddressableAudioCatalog")]
 public class ARAddressableAudioCatalog : ScriptableObject
@@ -16,15 +16,15 @@ public class ARAddressableAudioCatalog : ScriptableObject
     {
         public string languageName;
         public string pageId;
-        [Tooltip("Addressable address for this audio pack. Example: audio/English/S1_P-8-9")]
-        public string address;
+        [Tooltip("Drag the ARPageAudioPack asset for this page/language here directly.")]
+        public AssetReferenceT<ARPageAudioPack> audioPack;
     }
 
     [SerializeField] private List<Entry> entries = new();
 
-    public bool TryGetAddress(string language, string pageId, out string address)
+    public bool TryGetAudioPack(string language, string pageId, out AssetReferenceT<ARPageAudioPack> audioPack)
     {
-        address = null;
+        audioPack = null;
         if (string.IsNullOrWhiteSpace(language) || string.IsNullOrWhiteSpace(pageId)) return false;
 
         string langKey = Normalize(language);
@@ -35,21 +35,21 @@ public class ARAddressableAudioCatalog : ScriptableObject
             if (entry == null) continue;
             if (Normalize(entry.languageName) == langKey && Normalize(entry.pageId) == pageKey)
             {
-                address = entry.address;
-                return !string.IsNullOrWhiteSpace(address);
+                audioPack = entry.audioPack;
+                return audioPack != null && audioPack.RuntimeKeyIsValid();
             }
         }
         return false;
     }
 
     public bool HasEntry(string language, string pageId) =>
-        TryGetAddress(language, pageId, out _);
+        TryGetAudioPack(language, pageId, out _);
 
     public IReadOnlyList<Entry> GetAllEntries() => entries;
 
-    public void AddEntry(string language, string pageId, string address)
+    public void AddEntry(string language, string pageId, AssetReferenceT<ARPageAudioPack> audioPack)
     {
-        entries.Add(new Entry { languageName = language, pageId = pageId, address = address });
+        entries.Add(new Entry { languageName = language, pageId = pageId, audioPack = audioPack });
     }
 
     private static string Normalize(string s) => (s ?? "").Trim().ToLowerInvariant();

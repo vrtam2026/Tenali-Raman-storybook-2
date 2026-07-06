@@ -6,6 +6,7 @@ using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 /// <summary>
 /// One-click tool to configure all audio packs as Addressable assets.
@@ -141,10 +142,12 @@ public static class AudioAddressableSetupTool
                 string address = $"audio/{language}/{pageId}";
                 RegisterAddressable(settings, group, packPath, address);
 
-                // Update catalog — check existing entries manually
-                if (!catalog.TryGetAddress(language, pageId, out _))
+                // Update catalog — drag-and-drop reference, not a typed address
+                if (!catalog.TryGetAudioPack(language, pageId, out _))
                 {
-                    catalog.AddEntry(language, pageId, address);
+                    string packGuid = AssetDatabase.AssetPathToGUID(packPath);
+                    var audioPackRef = new AssetReferenceT<ARPageAudioPack>(packGuid);
+                    catalog.AddEntry(language, pageId, audioPackRef);
                     catalogDirty = true;
                 }
             }

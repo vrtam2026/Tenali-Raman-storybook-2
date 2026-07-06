@@ -5,6 +5,7 @@ using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.AddressableAssets.Settings.GroupSchemas;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 /// <summary>
 /// One-time migration tool.
@@ -119,9 +120,10 @@ public static class AudioPackMigrationTool
 
                 string engAddress = $"audio/English/{pageId}";
                 RegisterAddressable(settings, engGroup, engPath, engAddress);
-                if (!catalog.TryGetAddress("English", pageId, out _))
+                if (!catalog.TryGetAudioPack("English", pageId, out _))
                 {
-                    catalog.AddEntry("English", pageId, engAddress);
+                    string engGuid = AssetDatabase.AssetPathToGUID(engPath);
+                    catalog.AddEntry("English", pageId, new AssetReferenceT<ARPageAudioPack>(engGuid));
                     catalogDirty = true;
                 }
 
@@ -148,9 +150,10 @@ public static class AudioPackMigrationTool
 
                 string hindiAddress = $"audio/Hindi/{pageId}";
                 RegisterAddressable(settings, hindiGroup, hindiPath, hindiAddress);
-                if (!catalog.TryGetAddress("Hindi", pageId, out _))
+                if (!catalog.TryGetAudioPack("Hindi", pageId, out _))
                 {
-                    catalog.AddEntry("Hindi", pageId, hindiAddress);
+                    string hindiGuid = AssetDatabase.AssetPathToGUID(hindiPath);
+                    catalog.AddEntry("Hindi", pageId, new AssetReferenceT<ARPageAudioPack>(hindiGuid));
                     catalogDirty = true;
                 }
             }

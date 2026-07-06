@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4bbe65a3189fc4fd2ab6216ed72509fb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 163598
+  packageName: Vuforia Engine
+  packageVersion: 11.4.4
+  assetPath: Assets/Editor/Migration/com.ptc.vuforia.engine-11.4.4.tgz
+  uploadId: 787602

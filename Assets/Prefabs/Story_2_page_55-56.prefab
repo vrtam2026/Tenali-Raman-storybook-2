@@ -15476,7 +15476,6 @@ GameObject:
   - component: {fileID: 7838790435510999412}
   - component: {fileID: 4603191833954808773}
   - component: {fileID: 2624457746355525866}
-  - component: {fileID: 7083913126056533539}
   - component: {fileID: 4742523099463274297}
   m_Layer: 0
   m_Name: Story_2_page_55-56
@@ -15498,8 +15497,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2242181621206517437}
   - {fileID: 6527264945888683690}
+  - {fileID: 2242181621206517437}
   - {fileID: 7495911860188910543}
   - {fileID: 3541933417056540343}
   - {fileID: 3185353601272915028}
@@ -15534,6 +15533,52 @@ MonoBehaviour:
   splineMovers:
   - {fileID: 2624457746355525866}
   splinePathMovers: []
+  modelSlots:
+  - model: {fileID: 6527264945888683690}
+    position: {x: -1.968, y: -0.02900004, z: -0.18258864}
+    matchAnimationLength: 1
+    showDuration: 5
+    gapBeforeNext: 0
+    scaleInOut: 0
+    scaleDuration: 0.4
+    originalScale: {x: 1, y: 1, z: 1}
+    lastModel: {fileID: 6527264945888683690}
+  - model: {fileID: 2242181621206517437}
+    position: {x: -1.468, y: -0.029000014, z: -0.225}
+    matchAnimationLength: 1
+    showDuration: 5
+    gapBeforeNext: 0
+    scaleInOut: 0
+    scaleDuration: 0.4
+    originalScale: {x: 1, y: 1, z: 1}
+    lastModel: {fileID: 2242181621206517437}
+  - model: {fileID: 7495911860188910543}
+    position: {x: -0.981, y: -0.029, z: -1.206}
+    matchAnimationLength: 1
+    showDuration: 5
+    gapBeforeNext: 0
+    scaleInOut: 0
+    scaleDuration: 0.4
+    originalScale: {x: 1, y: 1, z: 1}
+    lastModel: {fileID: 7495911860188910543}
+  - model: {fileID: 3541933417056540343}
+    position: {x: -0.520949, y: 0.0010000169, z: -0.24917918}
+    matchAnimationLength: 1
+    showDuration: 5
+    gapBeforeNext: 0
+    scaleInOut: 0
+    scaleDuration: 0.4
+    originalScale: {x: 1, y: 1, z: 1}
+    lastModel: {fileID: 3541933417056540343}
+  - model: {fileID: 8253063957054062481}
+    position: {x: -0.125, y: -0.029000014, z: -0.639}
+    matchAnimationLength: 1
+    showDuration: 5
+    gapBeforeNext: 0
+    scaleInOut: 0
+    scaleDuration: 0.4
+    originalScale: {x: 1, y: 1, z: 1}
+    lastModel: {fileID: 8253063957054062481}
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0
@@ -15571,34 +15616,6 @@ MonoBehaviour:
   animatorToControl: {fileID: 6116648890299475207}
   playAnimatorWhileMoving: 1
   freezeAnimatorOnComplete: 1
---- !u!114 &7083913126056533539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2504434875506341265}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 762825a93cb8609469e9852578098ef6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ContentController
-  activities: []
-  activityTemplateSchemaVersion: 34
-  activityPanel: {fileID: 0}
-  defaultRaycastCamera: {fileID: 0}
-  defaultAudioSource: {fileID: 0}
-  completeImmediatelyWhenNoActivities: 1
-  restartImmediatelyOnReplay: 0
-  onActivitiesStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivitiesCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivitiesReset:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4742523099463274297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33884,7 +33901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3541933417056540343
 Transform:
   m_ObjectHideFlags: 0
@@ -39990,7 +40007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7495911860188910543
 Transform:
   m_ObjectHideFlags: 0
@@ -48731,7 +48748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8253063957054062481
 Transform:
   m_ObjectHideFlags: 0
@@ -49502,7 +49519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2242181621206517437
 Transform:
   m_ObjectHideFlags: 0

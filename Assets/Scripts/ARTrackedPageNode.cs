@@ -289,6 +289,50 @@ public class StoryPart2D
 
 // ───────────────────────────────────────────────────────────────────────────
 
+// One 3D Model Slot — shown on its own, then hidden, before the next slot appears.
+// The model's own Animator (if any) plays its animation automatically once the
+// model is active — this does not trigger or control any animation itself.
+[System.Serializable]
+public class ModelSlot3D
+{
+    [Tooltip("The 3D model to show for this slot.")]
+    public Transform model;
+
+    [Tooltip("Position to place the model at when this slot starts. Adjust here directly instead of in the Hierarchy.")]
+    public Vector3 position;
+
+    [Tooltip("OFF (default) = use Show Duration below.\nON = automatically use this model's own animation length instead — no need to time it by hand.")]
+    public bool matchAnimationLength = false;
+
+    [Tooltip("How many seconds this model stays visible before hiding. Ignored if 'Match Animation Length' is ON.")]
+    [Min(0f)] public float showDuration = 3f;
+
+    [Tooltip("Pause after this model hides, before the next one appears. 0 = instant.")]
+    [Min(0f)] public float gapBeforeNext = 0f;
+
+    [Tooltip("OFF (default) = model switches on/off instantly, exactly as before.\nON = model grows in and shrinks out smoothly instead of an instant switch.")]
+    public bool scaleInOut = false;
+
+    [Tooltip("How long the grow-in / shrink-out takes, in seconds. Only used if 'Scale In/Out' is ON.")]
+    [Min(0.01f)] public float scaleDuration = 0.4f;
+
+    [Tooltip("Optional sound effect that plays the instant this model turns on. Leave empty for no sound.")]
+    public AudioClip sfxClip;
+
+    [Tooltip("Volume for the sound effect above. Only used if a clip is assigned.")]
+    [Range(0f, 1f)] public float sfxVolume = 1f;
+
+    // Internal only — the model's normal size, captured automatically the first
+    // time it's assigned, so Scale In/Out knows what size to grow back to.
+    [HideInInspector] public Vector3 originalScale = Vector3.one;
+
+    // Internal only — used to detect when a new model was just dragged in, so its
+    // current position can be auto-captured. Not shown in the Inspector.
+    [HideInInspector] public Transform lastModel;
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+
 public class ARTrackedPageNode : MonoBehaviour
 {
     [Header("IDs")]
@@ -344,6 +388,9 @@ public class ARTrackedPageNode : MonoBehaviour
 
     [Header("Spline Path Movers (optional)")]
     [SerializeField] private List<SplinePathMover> splinePathMovers = new();
+
+    [Header("Model Slots (optional) — shows one 3D model at a time, in order")]
+    [SerializeField] private List<ModelSlot3D> modelSlots = new();
 
     [Tooltip("How page end is triggered on 3D pages. VoiceEnd (default) matches old behavior exactly.")]
     [SerializeField] private PageEndTrigger3D pageEndTrigger3D = PageEndTrigger3D.VoiceEnd;
@@ -413,6 +460,11 @@ public class ARTrackedPageNode : MonoBehaviour
     private bool _2dPaused;
     private int _currentPartIndex2D = -1;
 
+    // 3D Model Slots runtime
+    private Coroutine _modelSlotsRoutine;
+    private bool _3dSlotsPaused;
+    private int _currentModelSlotIndex = -1;
+
     // Names kept visible after fade (frame stays, black screen removed separately)
     private static readonly string[] _keepVisible = {
         "frame_new_bendender", "frame", "Black Screen", "BlackOverlay", "black page"
@@ -438,6 +490,36 @@ public class ARTrackedPageNode : MonoBehaviour
     public bool IsStoryBlockedByActivity => _storyBlockedByActivity;
 
     private readonly Dictionary<VideoPlayer, VideoFreezeRuntime> _videoRuntime = new();
+
+    // Runs automatically in the Editor whenever a field changes in the Inspector.
+    // Two jobs for Model Slots:
+    //   1. When a NEW model is dragged into a slot, capture its current position
+    //      automatically instead of leaving Position at 0,0,0.
+    //   2. Whenever Position is edited afterward, move the model there immediately
+    //      so you can see exactly where it'll be without pressing Play.
+    private void OnValidate()
+    {
+        if (modelSlots == null) return;
+
+        foreach (var slot in modelSlots)
+        {
+            if (slot == null) continue;
+
+            if (slot.model != slot.lastModel)
+            {
+                slot.lastModel = slot.model;
+                if (slot.model != null)
+                {
+                    slot.position = slot.model.localPosition;
+                    if (slot.model.localScale != Vector3.zero)
+                        slot.originalScale = slot.model.localScale;
+                }
+            }
+
+            if (slot.model != null)
+                slot.model.localPosition = slot.position;
+        }
+    }
 
     private void Awake()
     {
@@ -1132,6 +1214,7 @@ public class ARTrackedPageNode : MonoBehaviour
         ResetAnimatorsToFrameZeroPaused();
         StartAnimatorsAfterIntro();
         StartSplinesAfterIntro();
+        BeginModelSlots3D();
 
         StartWatchingVideo();
 
@@ -1222,6 +1305,127 @@ public class ARTrackedPageNode : MonoBehaviour
         }
     }
 
+    // ── Model Slots (3D) ─────────────────────────────────────────────────────
+    // Optional, additive: shows one 3D model at a time, in order, each with its
+    // own position, show duration, and gap before the next one appears. Each
+    // model's own Animator (whichever clip/state it's already set up with) is
+    // restarted from the beginning the instant its model turns on — not before.
+    // Does nothing if the list is empty, so existing 3D pages that don't use
+    // this are unaffected.
+
+    private void BeginModelSlots3D()
+    {
+        if (modelSlots == null || modelSlots.Count == 0) return;
+
+        if (_modelSlotsRoutine != null) { StopCoroutine(_modelSlotsRoutine); _modelSlotsRoutine = null; }
+        _3dSlotsPaused = false;
+        _currentModelSlotIndex = -1;
+
+        foreach (var slot in modelSlots)
+        {
+            if (slot?.model == null) continue;
+            slot.model.gameObject.SetActive(false);
+            slot.model.localScale = slot.originalScale; // undo any leftover scale from a previous run
+        }
+
+        _modelSlotsRoutine = StartCoroutine(RunModelSlots3D());
+    }
+
+    private IEnumerator RunModelSlots3D()
+    {
+        for (int i = 0; i < modelSlots.Count; i++)
+        {
+            _currentModelSlotIndex = i;
+            ModelSlot3D slot = modelSlots[i];
+            if (slot?.model == null) continue;
+
+            slot.model.localPosition = slot.position;
+            if (slot.scaleInOut) slot.model.localScale = Vector3.zero;
+            slot.model.gameObject.SetActive(true);
+
+            // Model turns on right here — start its own animation fresh from the
+            // beginning at this exact moment, not whatever state it was left in.
+            Animator modelAnimator = slot.model.GetComponentInChildren<Animator>(true);
+            if (modelAnimator != null)
+            {
+                modelAnimator.Rebind();
+                modelAnimator.Update(0f);
+            }
+
+            if (slot.sfxClip != null)
+                AudioSource.PlayClipAtPoint(slot.sfxClip, slot.model.position, slot.sfxVolume);
+
+            if (slot.scaleInOut)
+                yield return ScaleModelRoutine(slot.model, Vector3.zero, slot.originalScale, slot.scaleDuration);
+            else
+                slot.model.localScale = slot.originalScale;
+
+            float duration = slot.matchAnimationLength && modelAnimator != null && modelAnimator.GetCurrentAnimatorStateInfo(0).length > 0f
+                ? modelAnimator.GetCurrentAnimatorStateInfo(0).length
+                : slot.showDuration;
+
+            yield return WaitPausable3D(duration);
+
+            if (slot.scaleInOut)
+                yield return ScaleModelRoutine(slot.model, slot.originalScale, Vector3.zero, slot.scaleDuration);
+
+            slot.model.gameObject.SetActive(false);
+            slot.model.localScale = slot.originalScale; // reset for next time, in case scaling was used
+
+            if (slot.gapBeforeNext > 0f)
+                yield return WaitPausable3D(slot.gapBeforeNext);
+        }
+
+        _modelSlotsRoutine = null;
+        _currentModelSlotIndex = -1;
+    }
+
+    // Universal, safe "reveal" effect: scales the model from one size to another.
+    // Works on any model regardless of shader/material setup (unlike an opacity
+    // fade, which only works if the model's material actually supports
+    // transparency) — this is why it changes size instead of see-through fading.
+    private IEnumerator ScaleModelRoutine(Transform model, Vector3 fromScale, Vector3 toScale, float duration)
+    {
+        float t = 0f;
+        duration = Mathf.Max(0.01f, duration);
+        while (t < duration)
+        {
+            if (!_3dSlotsPaused) t += Time.deltaTime;
+            model.localScale = Vector3.Lerp(fromScale, toScale, t / duration);
+            yield return null;
+        }
+        model.localScale = toScale;
+    }
+
+    private IEnumerator WaitPausable3D(float seconds)
+    {
+        float remaining = seconds;
+        while (remaining > 0f)
+        {
+            if (!_3dSlotsPaused) remaining -= Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    private void PauseModelSlots3D()
+    {
+        _3dSlotsPaused = true;
+    }
+
+    private void ResumeModelSlots3D()
+    {
+        _3dSlotsPaused = false;
+
+        // Re-assert the currently active slot's model is actually showing —
+        // same safety idea as the 2D Video Slots resume fix: if tracking
+        // flickered off at an awkward moment, this guarantees the right
+        // model is visible again rather than leaving it stuck off.
+        if (_currentModelSlotIndex < 0 || modelSlots == null || _currentModelSlotIndex >= modelSlots.Count) return;
+        ModelSlot3D slot = modelSlots[_currentModelSlotIndex];
+        if (slot?.model == null) return;
+        if (!slot.model.gameObject.activeSelf) slot.model.gameObject.SetActive(true);
+    }
+
     public void PauseStoryForActivity()
     {
         _storyBlockedByActivity = true;
@@ -1299,6 +1503,8 @@ public class ARTrackedPageNode : MonoBehaviour
             m.Pause();
         }
 
+        PauseModelSlots3D();
+
         ARVFXPopupController popup = GetComponentInChildren<ARVFXPopupController>(true);
         if (popup != null)
             popup.PauseReveal();
@@ -1339,7 +1545,10 @@ public class ARTrackedPageNode : MonoBehaviour
         {
             _2dPaused = false;
             Resume2DCurrentPartVideos();
+            ReapplyCurrentPart2D();
         }
+
+        ResumeModelSlots3D();
 
         ResumeVideos(mainVideos);
         ResumeVideos(backgroundLoopVideos);
@@ -1381,11 +1590,11 @@ public class ARTrackedPageNode : MonoBehaviour
             MainVideoSettings s =
                 (mainVideoSettings != null && i < mainVideoSettings.Count) ? mainVideoSettings[i] : null;
 
-            var mode = s != null ? s.freezeMode : freezeMode;
+            var mode  = s != null ? s.freezeMode         : freezeMode;
             var first = s != null ? s.freezeFirstSeconds : freezeFirstSeconds;
-            var last = s != null ? s.freezeLastSeconds : freezeLastSeconds;
-            var speed = s != null ? s.playbackSpeed : 1f;
-            var delay = s != null ? s.startDelay : 0f;
+            var last  = s != null ? s.freezeLastSeconds  : freezeLastSeconds;
+            var speed = s != null ? s.playbackSpeed      : 1f;
+            var delay = s != null ? s.startDelay         : 0f;
 
             if (_videoRuntime.TryGetValue(vp, out var rt))
                 rt.RestartWithFreeze(mode, first, last, speed, delay);
@@ -1406,7 +1615,7 @@ public class ARTrackedPageNode : MonoBehaviour
                 (backgroundVideoSettings != null && i < backgroundVideoSettings.Count) ? backgroundVideoSettings[i] : null;
 
             var speed = s != null ? s.playbackSpeed : 1f;
-            var delay = s != null ? s.startDelay : 0f;
+            var delay = s != null ? s.startDelay    : 0f;
 
             if (_videoRuntime.TryGetValue(vp, out var rt))
                 rt.RestartWithFreeze(VuforiaVideoFrameFreezeController.FreezeMode.None, 0f, 0f, speed, delay);
@@ -1515,6 +1724,59 @@ public class ARTrackedPageNode : MonoBehaviour
             if (_active2DVideoRuntime.TryGetValue(vp, out var rt)) rt.Resume();
             else if (!vp.isPlaying) vp.Play();
         }
+    }
+
+    // Re-asserts the CURRENTLY ACTIVE slot's full visual state — background image,
+    // layers, main video, background video — every time tracking is found again.
+    //
+    // Why this exists: if tracking flickers off for a moment while a slot is mid-way
+    // through starting, a step can get silently skipped (e.g. showing the background,
+    // or starting the video) because the page's own GameObject was briefly inactive
+    // at that exact instant. Nothing else would ever notice or correct that on its
+    // own. This function treats "show the current slot correctly" as one single,
+    // repeatable action — safe to run again even if everything is already correct —
+    // so tracking coming back always leaves the slot in the right state, regardless
+    // of what happened during the interruption.
+    //
+    // Only uses direct, synchronous calls (no StartCoroutine) so it can never fail
+    // the same way the interrupted step did.
+    private void ReapplyCurrentPart2D()
+    {
+        if (_currentPartIndex2D < 0 || storyParts == null || _currentPartIndex2D >= storyParts.Count) return;
+
+        StoryPart2D part = storyParts[_currentPartIndex2D];
+        if (part == null) return;
+
+        if (part.backgroundImage != null)
+        {
+            part.backgroundImage.gameObject.SetActive(true);
+            ApplyAlpha2D(part.backgroundImage, 1f);
+        }
+
+        if (part.visualLayers != null)
+            foreach (var vl in part.visualLayers)
+            {
+                if (vl?.layer == null) continue;
+                if (!vl.showAtPartStart) continue;
+                vl.layer.gameObject.SetActive(true);
+                ApplyAlpha2D(vl.layer, 1f);
+            }
+
+        if (part.mainVideos != null)
+            foreach (var entry in part.mainVideos)
+            {
+                if (entry?.video == null) continue;
+                if (!entry.video.gameObject.activeSelf) entry.video.gameObject.SetActive(true);
+                if (entry.video.enabled && !entry.video.isPlaying) entry.video.Play();
+            }
+
+        if (part.backgroundVideos != null)
+            foreach (var entry in part.backgroundVideos)
+            {
+                if (entry?.video == null) continue;
+                if (!entry.video.gameObject.activeSelf) entry.video.gameObject.SetActive(true);
+                if (entry.video.enabled && !entry.video.isPlaying) entry.video.Play();
+            }
     }
 
     // ── Core sequence ───────────────────────────────────────────────────────────
@@ -1794,53 +2056,53 @@ public class ARTrackedPageNode : MonoBehaviour
                 break;
 
             case TimedAction2D.PlayVideo:
+            {
+                VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
+                if (vp != null && vp.gameObject.activeInHierarchy && vp.enabled)
                 {
-                    VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
-                    if (vp != null && vp.gameObject.activeInHierarchy && vp.enabled)
-                    {
-                        TrackActive2DVideo(vp);
-                        vp.time = 0;
-                        vp.Play();
-                    }
-                    break;
+                    TrackActive2DVideo(vp);
+                    vp.time = 0;
+                    vp.Play();
                 }
+                break;
+            }
 
             case TimedAction2D.StopVideo:
+            {
+                VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
+                if (vp != null)
                 {
-                    VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
-                    if (vp != null)
-                    {
-                        vp.Stop();
-                        vp.time = 0;
-                        UntrackActive2DVideo(vp);
-                    }
-                    break;
+                    vp.Stop();
+                    vp.time = 0;
+                    UntrackActive2DVideo(vp);
                 }
+                break;
+            }
 
             case TimedAction2D.PauseVideo:
-                {
-                    VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
-                    if (vp != null && vp.isPlaying) vp.Pause();
-                    break;
-                }
+            {
+                VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
+                if (vp != null && vp.isPlaying) vp.Pause();
+                break;
+            }
 
             case TimedAction2D.ResumeVideo:
+            {
+                VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
+                if (vp != null && vp.gameObject.activeInHierarchy && vp.enabled)
                 {
-                    VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
-                    if (vp != null && vp.gameObject.activeInHierarchy && vp.enabled)
-                    {
-                        TrackActive2DVideo(vp);
-                        if (!vp.isPlaying) vp.Play();
-                    }
-                    break;
+                    TrackActive2DVideo(vp);
+                    if (!vp.isPlaying) vp.Play();
                 }
+                break;
+            }
 
             case TimedAction2D.SetVideoSpeed:
-                {
-                    VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
-                    if (vp != null) vp.playbackSpeed = Mathf.Max(0.1f, tc.videoSpeed);
-                    break;
-                }
+            {
+                VideoPlayer vp = tc.target.GetComponent<VideoPlayer>();
+                if (vp != null) vp.playbackSpeed = Mathf.Max(0.1f, tc.videoSpeed);
+                break;
+            }
         }
     }
 
@@ -1941,14 +2203,16 @@ public class ARTrackedPageNode : MonoBehaviour
 
     // ── Videos ──────────────────────────────────────────────────────────────────
 
-    // Safety net: stops every OTHER slot's main video (and hides its picture) before
-    // the given slot starts, so no leftover/lingering video from another slot can
-    // ever be visibly playing at the same time as the active slot. Works for
-    // any number of slots — not tied to any specific page.
+    // Safety net: force-clears every OTHER slot's main video, background video,
+    // background image, and decorative layers before the given slot starts, so
+    // nothing left over from another slot can ever be visibly showing at the same
+    // time as the active slot. Works for any number of slots — not tied to any
+    // specific page.
     //
-    // Background videos with stopAtPartEnd = false are intentionally allowed to
-    // carry on playing into the next slot — this safety net does not touch those,
-    // so it never breaks that intentional carry-over behavior.
+    // Background videos with stopAtPartEnd = false, and layers with
+    // keepVisibleIntoNextPart = true, are intentionally allowed to carry on into
+    // the next slot — this safety net does not touch those, so it never breaks
+    // that intentional carry-over behavior.
     private void StopAllOtherPartVideos2D(int exceptIndex)
     {
         if (storyParts == null) return;
@@ -1965,6 +2229,21 @@ public class ARTrackedPageNode : MonoBehaviour
                     if (entry?.video == null) continue;
                     if (entry.video.isPlaying) entry.video.Stop();
                     entry.video.gameObject.SetActive(false);
+                }
+
+            if (other.backgroundImage != null)
+            {
+                ApplyAlpha2D(other.backgroundImage, 0f);
+                other.backgroundImage.gameObject.SetActive(false);
+            }
+
+            if (other.visualLayers != null)
+                foreach (var vl in other.visualLayers)
+                {
+                    if (vl?.layer == null) continue;
+                    if (vl.keepVisibleIntoNextPart) continue; // intentional carry-over — leave alone
+                    ApplyAlpha2D(vl.layer, 0f);
+                    vl.layer.gameObject.SetActive(false);
                 }
 
             if (other.backgroundVideos != null)
@@ -2027,9 +2306,13 @@ public class ARTrackedPageNode : MonoBehaviour
         foreach (var entry in part.mainVideos)
         {
             if (entry?.video == null) continue;
-            if (!entry.stopAtPartEnd) continue;
 
             VideoPlayer vp = entry.video;
+
+            // When a slot ends, its main video ALWAYS stops and its picture ALWAYS
+            // disappears — so the next slot starts on a clean screen with no leftover
+            // frame showing underneath it. This does not depend on the stopAtPartEnd
+            // flag, which was hidden from the Inspector and could be left "off".
             if (vp.enabled && vp.gameObject.activeInHierarchy)
             {
                 vp.Stop();
@@ -2038,11 +2321,6 @@ public class ARTrackedPageNode : MonoBehaviour
 
             UntrackActive2DVideo(vp);
 
-            // A finished slot's picture must always disappear before the next slot's
-            // video shows — otherwise the last frame stays on screen underneath the
-            // next slot, making them look like they're overlapping. This always hides
-            // the GameObject now instead of depending on a per-video flag that was
-            // never exposed in the Inspector.
             vp.gameObject.SetActive(false);
         }
     }
