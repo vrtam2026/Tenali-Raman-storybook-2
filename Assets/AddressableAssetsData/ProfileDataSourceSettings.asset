@@ -45,6 +45,42 @@ MonoBehaviour:
       m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/9e12c188-65c2-45b4-9933-6e8db44454f0/release_by_badge/latest/entry_by_path/content/?path=
     - m_Suffix: PromoteOnly
       m_Value: False
+  - m_GroupTypePrefix: CCD.2ea185da-414a-4c00-bfb6-d0dc086d93b3.093dd7e1-8ea4-4afa-ac99-3aba78403e1b.ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5.PROD_1
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/093dd7e1-8ea4-4afa-ac99-3aba78403e1b/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/PROD_1
+    - m_Suffix: CcdBadgeName
+      m_Value: PROD_1
+    - m_Suffix: CcdBucketId
+      m_Value: ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5
+    - m_Suffix: CcdBucketName
+      m_Value: Android
+    - m_Suffix: Environmentid
+      m_Value: 093dd7e1-8ea4-4afa-ac99-3aba78403e1b
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/release_by_badge/PROD_1/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
+  - m_GroupTypePrefix: CCD.2ea185da-414a-4c00-bfb6-d0dc086d93b3.093dd7e1-8ea4-4afa-ac99-3aba78403e1b.ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5.adding_feedbacks
+    m_Variables:
+    - m_Suffix: BuildPath
+      m_Value: CCDBuildData/093dd7e1-8ea4-4afa-ac99-3aba78403e1b/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/adding_feedbacks
+    - m_Suffix: CcdBadgeName
+      m_Value: adding_feedbacks
+    - m_Suffix: CcdBucketId
+      m_Value: ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5
+    - m_Suffix: CcdBucketName
+      m_Value: Android
+    - m_Suffix: Environmentid
+      m_Value: 093dd7e1-8ea4-4afa-ac99-3aba78403e1b
+    - m_Suffix: Environmentname
+      m_Value: production
+    - m_Suffix: LoadPath
+      m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/release_by_badge/adding_feedbacks/entry_by_path/content/?path=
+    - m_Suffix: PromoteOnly
+      m_Value: False
   - m_GroupTypePrefix: CCD.2ea185da-414a-4c00-bfb6-d0dc086d93b3.093dd7e1-8ea4-4afa-ac99-3aba78403e1b.ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5.latest
     m_Variables:
     - m_Suffix: BuildPath

@@ -15,8 +15,13 @@ MonoBehaviour:
   m_GroupName: Tenali-Raman
   m_GUID: 664c109e8ba87834b8611fc0f8766520
   m_SerializeEntries:
-  - m_GUID: ab345c90a49d5df48a1729ebb3f5ba3b
-    m_Address: cube-test
+  - m_GUID: 0d65901fc267a2447a5971d359ada0b3
+    m_Address: Story_2_page_47-48
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e60fc187acbe4f442abcbbcbd9bac731
+    m_Address: Story_2_page_45-46
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
