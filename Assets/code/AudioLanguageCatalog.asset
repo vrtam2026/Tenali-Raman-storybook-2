@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bc82907974ca44d9fb5d57f298fdf3, type: 3}
+  m_Name: AudioLanguageCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::ARAddressableAudioCatalog
+  entries:
+  - languageName: English
+    pageId: TR_S1_P1-2
+    audioPack:
+      m_AssetGUID: d9d1818017143b441b8307d177bd5181
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P1-2
+    audioPack:
+      m_AssetGUID: 5349e09e0d1523640b61039d3e4be859
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P3-4
+    audioPack:
+      m_AssetGUID: 56bb47286fee6544b94aac261294c4f6
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P3-4
+    audioPack:
+      m_AssetGUID: d29397987d6b8564cbeb3861efdf0f6a
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P5-6
+    audioPack:
+      m_AssetGUID: 30673ebd2add0a54aae54a8cd1ff0e74
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P5-6
+    audioPack:
+      m_AssetGUID: 507618afe529ff94dadb5604141ca015
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P7-8
+    audioPack:
+      m_AssetGUID: ff80cfd28c0e47440be582882658ef76
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P7-8
+    audioPack:
+      m_AssetGUID: 7692b40c207cc264fbad8219dab140f2
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P9-10
+    audioPack:
+      m_AssetGUID: 9502a12c51ee2d848aca40c76247ee32
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P9-10
+    audioPack:
+      m_AssetGUID: 0dd3918da40e26c4dac85e40539744c2
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P11-12
+    audioPack:
+      m_AssetGUID: d8d91ca28df993f4ea5c26b5282ba718
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P11-12
+    audioPack:
+      m_AssetGUID: 0f3f3720cb2da3742929bb87f10108fa
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P13-14
+    audioPack:
+      m_AssetGUID: 63402bff8ff675f4dbf163593f124a86
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P13-14
+    audioPack:
+      m_AssetGUID: 5e1ab1e30e6c8cb408e9a15e5b557814
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P15-16
+    audioPack:
+      m_AssetGUID: c0e06a55d40676d43a41376ca9ca7950
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P15-16
+    audioPack:
+      m_AssetGUID: d1b0f110bdbc64d4ab93c9d0d7c40513
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S1_P17-18
+    audioPack:
+      m_AssetGUID: 57d939118321f2c4bad5346e9d8cbf83
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S1_P17-18
+    audioPack:
+      m_AssetGUID: da66448c79e445a4e848ec3d977403a2
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P47-48
+    audioPack:
+      m_AssetGUID: 03aedff60a56ceb448d3779b399c77c8
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P47-48
+    audioPack:
+      m_AssetGUID: e16bedebdd8137b459b81faf3865972b
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P49-50
+    audioPack:
+      m_AssetGUID: 92e13e5906a9e8c4eac0e4349c16bf34
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P49-50
+    audioPack:
+      m_AssetGUID: 6d7891e7747170147a9efa2396e468e6
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P51-52
+    audioPack:
+      m_AssetGUID: aa6aacad77077ec4aad131da83bb5cc1
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P51-52
+    audioPack:
+      m_AssetGUID: a0462e98237344443af3a47f37856148
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P53-54
+    audioPack:
+      m_AssetGUID: a77f66d83c65a8d46a9ae8fea76acc82
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P53-54
+    audioPack:
+      m_AssetGUID: f6dbeee6ae5bc8e48ba01371cb573835
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P55-56
+    audioPack:
+      m_AssetGUID: d5c3d14ced94f214fa1df3f865dfaf33
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P55-56
+    audioPack:
+      m_AssetGUID: 4f2690463931bc6428d40416470676b9
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P57-58
+    audioPack:
+      m_AssetGUID: 0a4f967f6398608489bd9d0e144324fb
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P57-58
+    audioPack:
+      m_AssetGUID: 64620e64772c0494c9d8f365bc32caaa
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P59-60
+    audioPack:
+      m_AssetGUID: 18849a6d6a703fa4eb7a69969cde2b91
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P59-60
+    audioPack:
+      m_AssetGUID: 1ac2e1b7097c91a47a77de1716036b83
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P61-62
+    audioPack:
+      m_AssetGUID: 063c51ba8890b97409e644222c1e938e
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P61-62
+    audioPack:
+      m_AssetGUID: b8fdd81469ff0ce43a3428cc7cd57086
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P63-64
+    audioPack:
+      m_AssetGUID: c9e1a7bfe5b56ce4da8895482d2abbe0
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P63-64
+    audioPack:
+      m_AssetGUID: f0954029901dfce4aa0275ec373753b7
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P65-66
+    audioPack:
+      m_AssetGUID: 2c4ca2f4bc8a5d84bbc3dc5a84025384
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: Hindi
+    pageId: TR_S3_P65-66
+    audioPack:
+      m_AssetGUID: 3141a6204928d134294e28f228749fdb
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5391978497871615502}
   - component: {fileID: 4370050990336851878}
   m_Layer: 0
-  m_Name: 53-54(V)
+  m_Name: 63-64(V1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 1236453031206808888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.095, z: 0.018000001}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,7 +98,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cf71984973732f34f869fae6d08a3230, type: 2}
+  - {fileID: 2100000, guid: 45ff19ccda28a8549b289abc892a5c0f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,11 +130,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236453031206808888}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 126790ccddfd5b949835e80606e90072, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3280eed1f83e5e345ad3bf9702a40ca0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 4d902b25b0a8af648b6282bd37111150, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: ca52e8c84caf85a4abfc9578bbb24f6e, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &47248222858767086
 Transform:
   m_ObjectHideFlags: 0
@@ -207,10 +207,42 @@ MonoBehaviour:
   pageId: TR_S3_P63-64
   mediaManager: {fileID: 0}
   pageType: 0
-  layerRoot2D: {fileID: 0}
+  layerRoot2D: {fileID: 416622058409715341}
   commonBackgroundImage: {fileID: 0}
   persistentLayers2D: []
-  storyParts: []
+  storyParts:
+  - partName: 
+    timing: 0
+    manualDuration: 0
+    backgroundImage: {fileID: 2791805350996295171}
+    restartBackgroundOnSlotStart: 0
+    mainVideos:
+    - video: {fileID: 4370050990336851878}
+      playbackSpeed: 1
+      startDelay: 0
+      freezeMode: 0
+      freezeFirstSeconds: 0
+      freezeLastSeconds: 0
+      delayAfterFinish: 0
+      loop: 0
+      waitForPartEnd: 0
+      stopAtPartEnd: 0
+      hideAtPartEnd: 0
+    visualLayers: []
+    backgroundVideos:
+    - video: {fileID: 0}
+      playbackSpeed: 0
+      startDelay: 0
+      loop: 1
+      freezeFirstSeconds: 0
+      freezeLastSeconds: 0
+      stopAtPartEnd: 1
+      hideAtPartEnd: 0
+      fadeIn: 0
+      fadeInDuration: 0
+      fadeOut: 0
+      fadeOutDuration: 0
+    timedChanges: []
   mainVideos:
   - {fileID: 4370050990336851878}
   backgroundLoopVideos: []
@@ -219,6 +251,7 @@ MonoBehaviour:
   animators: []
   splineMovers: []
   splinePathMovers: []
+  modelSlots: []
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0
@@ -256,7 +289,7 @@ Transform:
   m_GameObject: {fileID: 3239813579630586531}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -0.433, y: 0.098567, z: 0.003}
+  m_LocalPosition: {x: -0.433, y: 0.145567, z: 0.003}
   m_LocalScale: {x: 4.34, y: 4.34, z: 4.34}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -291,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 3660427166613580099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.44, y: 0.101, z: -0.004}
+  m_LocalPosition: {x: -0.44, y: 0.148, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -315,8 +348,8 @@ MonoBehaviour:
   layers:
   - {fileID: 2791805350996295171}
   - {fileID: 1657132313308959254}
-  gapAxis: 1
-  gap: 0.01
+  gapAxis: 0
+  gap: 0.045
   hardLockGapAxis: 1
   applyGapInEditMode: 1
   invertTranslation: 1
@@ -495,7 +528,7 @@ GameObject:
   - component: {fileID: 7407723483890255456}
   - component: {fileID: 1626746295782060756}
   m_Layer: 0
-  m_Name: 54_Room-BG
+  m_Name: 64_Sky-BG01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,7 +543,7 @@ Transform:
   m_GameObject: {fileID: 6466462291784455813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.027}
+  m_LocalPosition: {x: -0.014, y: -0.14, z: -0.027}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -549,7 +582,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5121fcac6767912489f42a8919499b02, type: 2}
+  - {fileID: 2100000, guid: 550a8243d069874488864e724fcd0b82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

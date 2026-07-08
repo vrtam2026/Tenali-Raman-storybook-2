@@ -26,13 +26,13 @@ Transform:
   m_GameObject: {fileID: 2075850348747898481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.44, y: 0.101, z: -0.004}
+  m_LocalPosition: {x: -0.44, y: 0.187433, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1242976103901164709}
-  - {fileID: 2898163883979564504}
   - {fileID: 3055084895476767065}
+  - {fileID: 2898163883979564504}
   - {fileID: 4574757080313103723}
   m_Father: {fileID: 1771720813558580312}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -49,9 +49,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}
-  layers: []
-  gapAxis: 1
-  gap: 0.01
+  layers:
+  - {fileID: 1242976103901164709}
+  - {fileID: 3055084895476767065}
+  - {fileID: 2898163883979564504}
+  - {fileID: 4574757080313103723}
+  gapAxis: 0
+  gap: 0.045
   hardLockGapAxis: 1
   applyGapInEditMode: 1
   invertTranslation: 1
@@ -142,7 +146,7 @@ MonoBehaviour:
   pageId: TR_S3_P51-52
   mediaManager: {fileID: 0}
   pageType: 0
-  layerRoot2D: {fileID: 0}
+  layerRoot2D: {fileID: 7458398284984254465}
   commonBackgroundImage: {fileID: 0}
   persistentLayers2D: []
   storyParts:
@@ -218,6 +222,7 @@ MonoBehaviour:
   animators: []
   splineMovers: []
   splinePathMovers: []
+  modelSlots: []
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0
@@ -528,7 +533,7 @@ Transform:
   m_GameObject: {fileID: 5008445131534717072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.134, z: 0.018000001}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -599,7 +604,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5008445131534717072}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: bc9e7cf265e861d4c8bb84e092ecf57f, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: fd0f2d036ea592348bca020a10d0af48, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -616,7 +621,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 1
+  - 0.684
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 01
@@ -689,7 +694,7 @@ Transform:
   m_GameObject: {fileID: 7313796166379741945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.027}
+  m_LocalPosition: {x: -0.014, y: -0.089, z: 0.048}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -808,7 +813,7 @@ Transform:
   m_GameObject: {fileID: 7466608745360937015}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -0.433, y: 0.098567, z: 0.003}
+  m_LocalPosition: {x: -0.433, y: 0.185, z: 0.003}
   m_LocalScale: {x: 4.34, y: 4.34, z: 4.34}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -934,7 +939,7 @@ Transform:
   m_GameObject: {fileID: 7782118338771351699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.027}
+  m_LocalPosition: {x: -0.014, y: -0.179, z: -0.027}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1025,7 +1030,7 @@ Transform:
   m_GameObject: {fileID: 7789042710303756798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.044, z: 0.108}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1096,7 +1101,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7789042710303756798}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 10d9bdfd8b14c634d82dea17b6793e1d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 0f0ea6c13aac01e4391dc085d1eddfb3, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

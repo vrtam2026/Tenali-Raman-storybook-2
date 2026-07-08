@@ -43,7 +43,7 @@ MonoBehaviour:
   m_BundleRetryCount: 0
   m_BundleRedirectLimit: -1
   m_SharedBundleSettings: 0
-  m_SharedBundleSettingsCustomGroupIndex: 0
+  m_SharedBundleSettingsCustomGroupIndex: 1
   m_ContiguousBundles: 1
   m_StripUnityVersionFromBundleBuild: 0
   m_DisableVisibleSubAssetRepresentations: 0
@@ -65,6 +65,8 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: e6ce0c1db4bd1d34699e8eb850808534, type: 2}
   - {fileID: 11400000, guid: b558b8ef788e22b4bbb9cedeb70a7f52, type: 2}
+  - {fileID: 11400000, guid: 6104f45abc48bf945a256f687cfd0780, type: 2}
+  - {fileID: 11400000, guid: abf176fc5bc902c42aa0ca12345140aa, type: 2}
   - {fileID: 11400000, guid: c7d8a5ff196990145b90309306734614, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
@@ -126,7 +128,7 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
-    - preload
+    - Preload
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: c49b6bba03ca405438e95c9be9a4a2e2, type: 2}

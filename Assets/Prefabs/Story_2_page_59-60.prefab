@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 374050913279379081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: 0.004000008, z: 0.007}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -121,10 +121,10 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &705513395483343430
@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 705513395483343430}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -0.433, y: 0.098567, z: 0.003}
+  m_LocalPosition: {x: -0.433, y: 0.15856701, z: 0.003}
   m_LocalScale: {x: 4.34, y: 4.34, z: 4.34}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -435,7 +435,7 @@ Transform:
   m_GameObject: {fileID: 4756370315830995558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.085999995, z: 0.018000001}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -528,10 +528,10 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &5242814085843605809
@@ -650,13 +650,13 @@ Transform:
   m_GameObject: {fileID: 5536747988809385280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.44, y: 0.101, z: -0.004}
+  m_LocalPosition: {x: -0.44, y: 0.161, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6727565076817824226}
-  - {fileID: 5895206870657173771}
   - {fileID: 51005834018514285}
+  - {fileID: 5895206870657173771}
   - {fileID: 9119103590269644195}
   m_Father: {fileID: 8508332214870486752}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -674,10 +674,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}
   layers:
-  - {fileID: 0}
-  - {fileID: 0}
-  gapAxis: 1
-  gap: 0.01
+  - {fileID: 6727565076817824226}
+  - {fileID: 51005834018514285}
+  - {fileID: 5895206870657173771}
+  - {fileID: 9119103590269644195}
+  gapAxis: 0
+  gap: 0.045
   hardLockGapAxis: 1
   applyGapInEditMode: 1
   invertTranslation: 1
@@ -746,7 +748,7 @@ Transform:
   m_GameObject: {fileID: 6102503353115778722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.027}
+  m_LocalPosition: {x: -0.014, y: -0.131, z: -0.027}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -836,7 +838,7 @@ Transform:
   m_GameObject: {fileID: 6270210629367128142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.003, z: -0.027}
+  m_LocalPosition: {x: -0.014, y: -0.040999994, z: 0.063}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -948,18 +950,50 @@ MonoBehaviour:
   pageId: TR_S3_P59-60
   mediaManager: {fileID: 0}
   pageType: 0
-  layerRoot2D: {fileID: 0}
+  layerRoot2D: {fileID: 4730427774587212226}
   commonBackgroundImage: {fileID: 0}
   persistentLayers2D: []
   storyParts:
   - partName: 
     timing: 0
     manualDuration: 0
-    backgroundImage: {fileID: 0}
+    backgroundImage: {fileID: 6727565076817824226}
     restartBackgroundOnSlotStart: 0
     mainVideos:
+    - video: {fileID: 9099767899237081325}
+      playbackSpeed: 1
+      startDelay: 0
+      freezeMode: 0
+      freezeFirstSeconds: 0
+      freezeLastSeconds: 0
+      delayAfterFinish: 0
+      loop: 0
+      waitForPartEnd: 0
+      stopAtPartEnd: 0
+      hideAtPartEnd: 0
+    visualLayers: []
+    backgroundVideos:
     - video: {fileID: 0}
       playbackSpeed: 0
+      startDelay: 0
+      loop: 1
+      freezeFirstSeconds: 0
+      freezeLastSeconds: 0
+      stopAtPartEnd: 1
+      hideAtPartEnd: 0
+      fadeIn: 0
+      fadeInDuration: 0
+      fadeOut: 0
+      fadeOutDuration: 0
+    timedChanges: []
+  - partName: 
+    timing: 0
+    manualDuration: 0
+    backgroundImage: {fileID: 5895206870657173771}
+    restartBackgroundOnSlotStart: 0
+    mainVideos:
+    - video: {fileID: 2310040601142169124}
+      playbackSpeed: 1
       startDelay: 0
       freezeMode: 0
       freezeFirstSeconds: 0
@@ -992,6 +1026,7 @@ MonoBehaviour:
   animators: []
   splineMovers: []
   splinePathMovers: []
+  modelSlots: []
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0

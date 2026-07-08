@@ -6566,59 +6566,59 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 0.88059926
-        y: 0.029000003
-        z: 0.5943265
+        x: 1.3852501
+        y: 0.028999997
+        z: 0.55925006
       TangentIn:
         x: -0
         y: -0
-        z: -0.05242849
+        z: -0.12723906
       TangentOut:
         x: 0
         y: 0
-        z: 0.05242849
+        z: 0.12723906
       Rotation:
         value:
-          x: 0.0000000023490259
-          y: 0.7502201
-          z: 0.0000000026653328
-          w: -0.66118807
+          x: -5.675454e-10
+          y: 0.7389022
+          z: 5.175506e-10
+          w: -0.6738127
     - Position:
-        x: 0.36047018
-        y: 0.029000007
-        z: 0.5284446
+        x: 0.11825007
+        y: 0.028999997
+        z: 0.44225004
       TangentIn:
         x: -0
         y: -0
-        z: -0.13141549
+        z: -0.17890301
       TangentOut:
         x: 0
         y: 0
-        z: 0.102719136
+        z: 0.08334649
       Rotation:
         value:
-          x: 0.000000009225645
-          y: 0.89969754
-          z: 0.000000014403992
-          w: -0.43651378
+          x: 0.000000014199843
+          y: 0.95024383
+          z: -0.0000000046549653
+          w: -0.3115071
     - Position:
-        x: 0.2470088
-        y: 0.029000023
-        z: 0.22889799
+        x: 0.17625004
+        y: 0.028999997
+        z: 0.17225003
       TangentIn:
         x: -0
         y: -0
-        z: -0.03203149
+        z: -0.027615938
       TangentOut:
         x: 0
         y: 0
-        z: 0.03203149
+        z: 0.027615938
       Rotation:
         value:
-          x: 0.000000004711538
-          y: 0.9836572
-          z: 0.000000025740041
-          w: -0.18005165
+          x: 0.000000035667156
+          y: 0.9944085
+          z: 0.0000000037877115
+          w: 0.105602264
     m_MetaData:
     - Mode: 0
       Tension: 0.5
@@ -15541,6 +15541,8 @@ MonoBehaviour:
     gapBeforeNext: 0
     scaleInOut: 0
     scaleDuration: 0.4
+    sfxClip: {fileID: 0}
+    sfxVolume: 1
     originalScale: {x: 1, y: 1, z: 1}
     lastModel: {fileID: 6527264945888683690}
   - model: {fileID: 2242181621206517437}
@@ -15550,6 +15552,8 @@ MonoBehaviour:
     gapBeforeNext: 0
     scaleInOut: 0
     scaleDuration: 0.4
+    sfxClip: {fileID: 0}
+    sfxVolume: 1
     originalScale: {x: 1, y: 1, z: 1}
     lastModel: {fileID: 2242181621206517437}
   - model: {fileID: 7495911860188910543}
@@ -15559,6 +15563,8 @@ MonoBehaviour:
     gapBeforeNext: 0
     scaleInOut: 0
     scaleDuration: 0.4
+    sfxClip: {fileID: 0}
+    sfxVolume: 1
     originalScale: {x: 1, y: 1, z: 1}
     lastModel: {fileID: 7495911860188910543}
   - model: {fileID: 3541933417056540343}
@@ -15568,6 +15574,8 @@ MonoBehaviour:
     gapBeforeNext: 0
     scaleInOut: 0
     scaleDuration: 0.4
+    sfxClip: {fileID: 0}
+    sfxVolume: 1
     originalScale: {x: 1, y: 1, z: 1}
     lastModel: {fileID: 3541933417056540343}
   - model: {fileID: 8253063957054062481}
@@ -15577,6 +15585,8 @@ MonoBehaviour:
     gapBeforeNext: 0
     scaleInOut: 0
     scaleDuration: 0.4
+    sfxClip: {fileID: 0}
+    sfxVolume: 1
     originalScale: {x: 1, y: 1, z: 1}
     lastModel: {fileID: 8253063957054062481}
   pageEndTrigger3D: 0

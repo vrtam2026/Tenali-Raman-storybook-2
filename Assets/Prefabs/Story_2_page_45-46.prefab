@@ -233,7 +233,7 @@ MonoBehaviour:
   - {fileID: 3574639333969668573}
   - {fileID: 5322597903319285901}
   - {fileID: 9138525764795614123}
-  - {fileID: 0}
+  - {fileID: 5265024169913109481}
   gapAxis: 0
   gap: 0.045
   hardLockGapAxis: 1
@@ -799,6 +799,7 @@ MonoBehaviour:
   animators: []
   splineMovers: []
   splinePathMovers: []
+  modelSlots: []
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0
@@ -959,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5322597903319285901
 Transform:
   m_ObjectHideFlags: 0
@@ -968,13 +969,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8953635047894632440}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.014, y: -0.023000002, z: -0.007000001}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5518958735076340361}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5492315903812714191
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1060,7 +1061,7 @@ Transform:
   m_GameObject: {fileID: 8967996889555367504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.018, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: 0.067, z: -0.017}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 1
   m_Children: []

@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio_English
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Audio_English
+  m_GUID: 78a9e6a3ae67d4044af539faae87e20c
+  m_SerializeEntries:
+  - m_GUID: 03aedff60a56ceb448d3779b399c77c8
+    m_Address: audio/English/TR_S3_P47-48
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 063c51ba8890b97409e644222c1e938e
+    m_Address: audio/English/TR_S3_P61-62
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a4f967f6398608489bd9d0e144324fb
+    m_Address: audio/English/TR_S3_P57-58
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18849a6d6a703fa4eb7a69969cde2b91
+    m_Address: audio/English/TR_S3_P59-60
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c4ca2f4bc8a5d84bbc3dc5a84025384
+    m_Address: audio/English/TR_S3_P65-66
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30673ebd2add0a54aae54a8cd1ff0e74
+    m_Address: audio/English/TR_S1_P5-6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56bb47286fee6544b94aac261294c4f6
+    m_Address: audio/English/TR_S1_P3-4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57d939118321f2c4bad5346e9d8cbf83
+    m_Address: audio/English/TR_S1_P17-18
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63402bff8ff675f4dbf163593f124a86
+    m_Address: audio/English/TR_S1_P13-14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92e13e5906a9e8c4eac0e4349c16bf34
+    m_Address: audio/English/TR_S3_P49-50
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9502a12c51ee2d848aca40c76247ee32
+    m_Address: audio/English/TR_S1_P9-10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a77f66d83c65a8d46a9ae8fea76acc82
+    m_Address: audio/English/TR_S3_P53-54
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa6aacad77077ec4aad131da83bb5cc1
+    m_Address: audio/English/TR_S3_P51-52
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0e06a55d40676d43a41376ca9ca7950
+    m_Address: audio/English/TR_S1_P15-16
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9e1a7bfe5b56ce4da8895482d2abbe0
+    m_Address: audio/English/TR_S3_P63-64
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5c3d14ced94f214fa1df3f865dfaf33
+    m_Address: audio/English/TR_S3_P55-56
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8d91ca28df993f4ea5c26b5282ba718
+    m_Address: audio/English/TR_S1_P11-12
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9d1818017143b441b8307d177bd5181
+    m_Address: audio/English/TR_S1_P1-2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff80cfd28c0e47440be582882658ef76
+    m_Address: audio/English/TR_S1_P7-8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5db129772765e3b4c9de15a59e652195, type: 2}
+    - {fileID: 11400000, guid: 229101e07bfd394468969b2ef95e714f, type: 2}

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 862908630267368610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0.018, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.063999996, z: 0.011}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &710014764806228388
 Transform:
   m_ObjectHideFlags: 0
@@ -283,6 +283,7 @@ MonoBehaviour:
   animators: []
   splineMovers: []
   splinePathMovers: []
+  modelSlots: []
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0
@@ -323,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 3120538685534468535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.034, z: -0.017}
+  m_LocalPosition: {x: -0.014, y: -0.154, z: -0.036}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -537,7 +538,7 @@ Transform:
   m_GameObject: {fileID: 4465214858168868018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -0.433, y: 0.098567, z: 0.003}
+  m_LocalPosition: {x: -0.433, y: 0.193, z: 0.003}
   m_LocalScale: {x: 4.34, y: 4.34, z: 4.34}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -573,7 +574,7 @@ Transform:
   m_GameObject: {fileID: 5828631388782840793}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.107, z: -0.027}
+  m_LocalPosition: {x: -0.018, y: -0.109, z: 0.008}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -877,13 +878,13 @@ Transform:
   m_GameObject: {fileID: 7430401275335652536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.44, y: 0.101, z: -0.004}
+  m_LocalPosition: {x: -0.44, y: 0.19543302, z: -0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 794240202883061454}
-  - {fileID: 5502511367196633809}
   - {fileID: 4975556351780466044}
+  - {fileID: 5502511367196633809}
   - {fileID: 2940174725963778815}
   m_Father: {fileID: 710014764806228388}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -900,9 +901,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}
-  layers: []
-  gapAxis: 1
-  gap: 0.01
+  layers:
+  - {fileID: 794240202883061454}
+  - {fileID: 4975556351780466044}
+  - {fileID: 5502511367196633809}
+  - {fileID: 2940174725963778815}
+  gapAxis: 0
+  gap: 0.045
   hardLockGapAxis: 1
   applyGapInEditMode: 1
   invertTranslation: 1
@@ -1092,7 +1097,7 @@ Transform:
   m_GameObject: {fileID: 8403570421483728386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.1, z: -0.027}
+  m_LocalPosition: {x: -0.014, y: -0.199, z: -0.027}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
