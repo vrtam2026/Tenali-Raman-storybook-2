@@ -620,8 +620,15 @@ public class CustomARHandler : MonoBehaviour
         // Guard: Vuforia may fire after GameObject is destroyed
         if (this == null || !gameObject) return;
 
+        // Only Status.TRACKED means the camera is genuinely seeing the printed image right
+        // now. EXTENDED_TRACKED means Vuforia has stopped seeing the image and is instead
+        // guessing its position from the phone's own motion (device tracking) -- this is
+        // exactly what made content appear to "follow your hand": once the marker is
+        // covered, the content kept moving with the phone/camera instead of pausing.
+        // LIMITED means low-confidence but still real image tracking, so it still counts
+        // as found. Treating EXTENDED_TRACKED as lost sends it through the normal grace
+        // period (pause in place, then release) instead of drifting with device motion.
         if (status.Status == Status.TRACKED ||
-            status.Status == Status.EXTENDED_TRACKED ||
             status.Status == Status.LIMITED)
             OnTrackingFound();
         else

@@ -14,7 +14,7 @@ public class ParallexWithAnimation : MonoBehaviour
     public List<Transform> layers = new List<Transform>();
 
     [Header("Depth spacing")]
-    public GapAxis gapAxis = GapAxis.LocalZ;
+    public GapAxis gapAxis = GapAxis.LocalY;
     public float gap = 0.01f;
     public bool hardLockGapAxis = true;
     public bool applyGapInEditMode = true;

@@ -19,16 +19,17 @@ using UnityEngine.AddressableAssets;
 /// setup tools already use, and assigns it — restoring every entry with zero
 /// manual work and zero risk of mistyping anything.
 ///
-/// Menu: Tools → AR Storybook → Migrate Audio Catalog To Pack References
+/// Menu: Tools → AR Storybook → One-Time Fix: Repair Old Audio Data
 /// Safe to run more than once — entries that already have a pack reference are
-/// left untouched.
+/// left untouched. On a project that never used the old format, it finds nothing
+/// to fix and changes nothing.
 /// </summary>
 public static class AudioCatalogPackReferenceMigrationTool
 {
     private const string CatalogAssetPath = "Assets/code/AudioLanguageCatalog.asset";
     private const string PackOutputFolder = "Assets/code/AudioPacks";
 
-    [MenuItem("Tools/AR Storybook/Migrate Audio Catalog To Pack References")]
+    [MenuItem("Tools/AR Storybook/One-Time Fix: Repair Old Audio Data", false, 50)]
     public static void Run()
     {
         var catalog = AssetDatabase.LoadAssetAtPath<ARAddressableAudioCatalog>(CatalogAssetPath);

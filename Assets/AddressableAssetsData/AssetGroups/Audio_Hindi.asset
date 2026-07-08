@@ -13,25 +13,22 @@ MonoBehaviour:
   m_Name: Audio_Hindi
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Audio_Hindi
-  m_GUID: a8e17a5d5f6dff549b6d737adca40e4d
+  m_GUID: 83972c4fc955a704583077837c2e6db7
   m_SerializeEntries:
-  - m_GUID: 0dd3918da40e26c4dac85e40539744c2
-    m_Address: audio/Hindi/TR_S1_P9-10
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0f3f3720cb2da3742929bb87f10108fa
-    m_Address: audio/Hindi/TR_S1_P11-12
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1ac2e1b7097c91a47a77de1716036b83
     m_Address: audio/Hindi/TR_S3_P59-60
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3141a6204928d134294e28f228749fdb
     m_Address: audio/Hindi/TR_S3_P65-66
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46dbb473796f25d41805356e883b7511
+    m_Address: audio/Hindi/TR_S3_P45-46
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -40,75 +37,47 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 507618afe529ff94dadb5604141ca015
-    m_Address: audio/Hindi/TR_S1_P5-6
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5349e09e0d1523640b61039d3e4be859
-    m_Address: audio/Hindi/TR_S1_P1-2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5e1ab1e30e6c8cb408e9a15e5b557814
-    m_Address: audio/Hindi/TR_S1_P13-14
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 64620e64772c0494c9d8f365bc32caaa
     m_Address: audio/Hindi/TR_S3_P57-58
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6d7891e7747170147a9efa2396e468e6
     m_Address: audio/Hindi/TR_S3_P49-50
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7692b40c207cc264fbad8219dab140f2
-    m_Address: audio/Hindi/TR_S1_P7-8
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a0462e98237344443af3a47f37856148
     m_Address: audio/Hindi/TR_S3_P51-52
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b8fdd81469ff0ce43a3428cc7cd57086
     m_Address: audio/Hindi/TR_S3_P61-62
     m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d1b0f110bdbc64d4ab93c9d0d7c40513
-    m_Address: audio/Hindi/TR_S1_P15-16
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d29397987d6b8564cbeb3861efdf0f6a
-    m_Address: audio/Hindi/TR_S1_P3-4
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: da66448c79e445a4e848ec3d977403a2
-    m_Address: audio/Hindi/TR_S1_P17-18
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e16bedebdd8137b459b81faf3865972b
     m_Address: audio/Hindi/TR_S3_P47-48
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0954029901dfce4aa0275ec373753b7
     m_Address: audio/Hindi/TR_S3_P63-64
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f6dbeee6ae5bc8e48ba01371cb573835
     m_Address: audio/Hindi/TR_S3_P53-54
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}

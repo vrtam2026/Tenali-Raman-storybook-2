@@ -30,8 +30,7 @@ MonoBehaviour:
   - m_GUID: 11cdd77e48a1d214c97ca7bcd36a0b6f
     m_Address: Story_2_page_55-56
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1a95619d8ac92c84b93506853d23d492
     m_Address: Story_2_page_53-54
@@ -78,8 +77,7 @@ MonoBehaviour:
   - m_GUID: e60fc187acbe4f442abcbbcbd9bac731
     m_Address: Story_2_page_45-46
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f2a4f6a32dcd47f4e85cd3830b120b8d
     m_Address: Assets/code/AudioLanguageCatalog.asset

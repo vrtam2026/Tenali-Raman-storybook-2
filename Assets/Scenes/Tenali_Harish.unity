@@ -1841,7 +1841,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ARWindowManager
   windowSize: 1
   releaseContentOutsideWindow: 1
-  pages: []
+  pages:
+  - addressableKey: Story_2_page_45-46
+    pageId: TR_S3_P45-46
+  - addressableKey: Story_2_page_47-48
+    pageId: TR_S3_P47-48
+  - addressableKey: Story_2_page_49-50
+    pageId: TR_S3_P49-50
+  - addressableKey: Story_2_page_51-52
+    pageId: TR_S3_P51-52
+  - addressableKey: Story_2_page_53-54
+    pageId: TR_S3_P53-54
+  - addressableKey: Story_2_page_55-56
+    pageId: TR_S3_P55-56
+  - addressableKey: Story_2_page_57-58
+    pageId: TR_S3_P57-58
+  - addressableKey: Story_2_page_59-60
+    pageId: TR_S3_P59-60
+  - addressableKey: Story_2_page_61-62
+    pageId: TR_S3_P61-62
+  - addressableKey: Story_2_page_63-64
+    pageId: TR_S3_P63-64
+  - addressableKey: Story_2_page_65-66
+    pageId: TR_S3_P65-66
 --- !u!4 &820245036
 Transform:
   m_ObjectHideFlags: 0
