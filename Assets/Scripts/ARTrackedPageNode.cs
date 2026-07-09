@@ -1200,11 +1200,16 @@ public class ARTrackedPageNode : MonoBehaviour
 
         if (Is2DStoryMode())
         {
+            // Start the visuals FIRST, then signal that audio can begin -- previously this
+            // was reversed, so the audio-start callback (which plays the voice/BGM) fired
+            // before Begin2DStoryParts() had even been called, making audio noticeably
+            // precede the visual on real devices (where downloads/rendering take real time,
+            // unlike the Editor where everything is already local and instant).
+            Begin2DStoryParts();
+
             System.Action callback2d = _onStorySystemsStarted;
             _onStorySystemsStarted = null;
             callback2d?.Invoke();
-
-            Begin2DStoryParts();
             return;
         }
 

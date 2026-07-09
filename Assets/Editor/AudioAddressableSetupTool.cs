@@ -103,8 +103,9 @@ public static class AudioAddressableSetupTool
                 if (onlyLanguage != null && !string.Equals(language, onlyLanguage, StringComparison.OrdinalIgnoreCase))
                     continue;
 
-                List<string> audioFiles = Directory.GetFiles(langDir, "*", SearchOption.AllDirectories)
-                    .Where(IsAudioFile).ToList();
+                List<string> allFilesInLangDir = Directory.GetFiles(langDir, "*", SearchOption.AllDirectories).ToList();
+                List<string> audioFiles = allFilesInLangDir.Where(IsAudioFile).ToList();
+                WarnAboutUnrecognizedFiles(allFilesInLangDir, audioFiles, langDir);
 
                 created += MatchAndConnect(audioFiles, allPages, language, settings, catalog, ref catalogDirty);
             }
@@ -175,7 +176,10 @@ public static class AudioAddressableSetupTool
         foreach (string file in audioFiles)
         {
             string name = Path.GetFileNameWithoutExtension(file);
-            Match rangeMatch = Regex.Match(name, @"(\d+)\s*-\s*(\d+)");
+            // Accepts a plain hyphen, spaced hyphen, or an en/em-dash a phone keyboard or
+            // word processor might auto-substitute (e.g. "45–46.mp3"), plus an underscore
+            // as a less common but still reasonable separator (e.g. "45_46.mp3").
+            Match rangeMatch = Regex.Match(name, @"(\d+)\s*[-_–—]\s*(\d+)");
             if (rangeMatch.Success)
             {
                 string range = $"{rangeMatch.Groups[1].Value}-{rangeMatch.Groups[2].Value}";
@@ -188,15 +192,56 @@ public static class AudioAddressableSetupTool
             }
         }
 
-        // Convention 1: the file name contains a page range, e.g. "45-46.mp3".
+        // Convention 1: the file name contains a page range, e.g. "45-46.mp3" -- one
+        // clip, matched as a whole two-number token against a real page. If a range
+        // key does NOT match a real page as a whole, it's held back for Convention 3
+        // below instead of being silently dropped.
+        var unresolvedRangeKeys = new List<string>();
         foreach (var kvp in byRange)
         {
             string pageId = candidatePages.FirstOrDefault(p => PageIdentityUtility.PageIdContainsRange(p.pageId, kvp.Key))?.pageId;
-            if (string.IsNullOrEmpty(pageId)) continue;
+            if (string.IsNullOrEmpty(pageId))
+            {
+                unresolvedRangeKeys.Add(kvp.Key);
+                continue;
+            }
             if (PackExistsForPageId(catalog, language, pageId)) continue;
 
             string bestFile = PickBestVariant(kvp.Value);
-            if (CreatePackFromRawFile(language, pageId, bestFile, settings, catalog, ref catalogDirty))
+            if (CreatePackFromRawFiles(language, pageId, new List<string> { bestFile }, settings, catalog, ref catalogDirty))
+                created++;
+        }
+
+        // Convention 3: "{page}-{segment}", e.g. "57-1.mp3" then "57-2.mp3" -- multiple
+        // voice clips for the SAME page, played one after another in segment order.
+        // Only considered for range-shaped names that did NOT match a real page as a
+        // whole above, so a genuine two-page spread like "45-46.mp3" always wins
+        // Convention 1 first and is never reinterpreted as page 45 segment 46.
+        var segmentGroups = new Dictionary<string, List<(int segment, string file)>>();
+        foreach (string key in unresolvedRangeKeys)
+        {
+            Match segMatch = Regex.Match(key, @"^(\d+)-(\d+)$");
+            if (!segMatch.Success) continue;
+            if (!int.TryParse(segMatch.Groups[2].Value, out int segmentNumber)) continue;
+
+            string pageNumber = segMatch.Groups[1].Value;
+            if (!segmentGroups.TryGetValue(pageNumber, out var list))
+                segmentGroups[pageNumber] = list = new List<(int, string)>();
+
+            // A single segment slot can itself have a retake ("57-1.mp3" + "57-1 2nd.mp3") --
+            // pick the best one for that slot the same way Convention 1 does.
+            string bestForSegment = PickBestVariant(byRange[key]);
+            list.Add((segmentNumber, bestForSegment));
+        }
+
+        foreach (var kvp in segmentGroups)
+        {
+            string pageId = candidatePages.FirstOrDefault(p => PageIdentityUtility.PageIdContainsRange(p.pageId, kvp.Key))?.pageId;
+            if (string.IsNullOrEmpty(pageId)) continue; // page number alone matches no real page either -- nothing to connect
+            if (PackExistsForPageId(catalog, language, pageId)) continue;
+
+            List<string> orderedFiles = kvp.Value.OrderBy(x => x.segment).Select(x => x.file).ToList();
+            if (CreatePackFromRawFiles(language, pageId, orderedFiles, settings, catalog, ref catalogDirty))
                 created++;
         }
 
@@ -210,8 +255,21 @@ public static class AudioAddressableSetupTool
             .OrderBy(x => x.num)
             .ToList();
 
+        // Positional matching is inherently fragile -- it trusts that file #3 really is
+        // the 3rd page. If a file is missing or misnumbered, everything after the gap
+        // silently shifts onto the WRONG page. Warn loudly instead of guessing quietly.
+        int expectedNext = 1;
         foreach (var entry in positionalSorted)
         {
+            if (entry.num != expectedNext)
+            {
+                Debug.LogWarning($"[Audio Setup] Positional audio files for {language} skip from expected " +
+                                  $"page #{expectedNext} to #{entry.num} (found '{Path.GetFileName(entry.file)}'). " +
+                                  "Every file after a gap like this can end up on the WRONG page. Rename these " +
+                                  "with an explicit page range instead (e.g. \"45-46.mp3\") to avoid relying on order.");
+            }
+            expectedNext = entry.num + 1;
+
             int index = entry.num - 1;
             if (index < 0 || index >= sortedCandidates.Count) continue;
 
@@ -219,7 +277,7 @@ public static class AudioAddressableSetupTool
             if (string.IsNullOrEmpty(pageId)) continue;
             if (PackExistsForPageId(catalog, language, pageId)) continue;
 
-            if (CreatePackFromRawFile(language, pageId, entry.file, settings, catalog, ref catalogDirty))
+            if (CreatePackFromRawFiles(language, pageId, new List<string> { entry.file }, settings, catalog, ref catalogDirty))
                 created++;
         }
 
@@ -270,8 +328,9 @@ public static class AudioAddressableSetupTool
                 continue;
             }
 
-            List<string> audioFiles = Directory.GetFiles(audioDir, "*", SearchOption.TopDirectoryOnly)
-                .Where(IsAudioFile).ToList();
+            List<string> allFilesInDir = Directory.GetFiles(audioDir, "*", SearchOption.TopDirectoryOnly).ToList();
+            List<string> audioFiles = allFilesInDir.Where(IsAudioFile).ToList();
+            WarnAboutUnrecognizedFiles(allFilesInDir, audioFiles, audioDir);
 
             created += MatchAndConnect(audioFiles, storyPages, language, settings, catalog, ref catalogDirty);
         }
@@ -351,8 +410,20 @@ public static class AudioAddressableSetupTool
     private static int ExtractPositionalNumber(string filePath)
     {
         string name = Path.GetFileNameWithoutExtension(filePath);
-        Match m = Regex.Match(name, @"(\d+)");
-        return m.Success && int.TryParse(m.Value, out int n) ? n : -1;
+
+        // Prefer a number that directly follows "page"/"pg" (e.g. "Story2_page3.mp3" -> 3,
+        // not the "2" from "Story2") since that's almost always the intended index.
+        Match afterPage = Regex.Match(name, @"(?:page|pg)\s*[-_]?\s*(\d+)", RegexOptions.IgnoreCase);
+        if (afterPage.Success && int.TryParse(afterPage.Groups[1].Value, out int fromPage))
+            return fromPage;
+
+        // Otherwise take the LAST number in the name, not the first -- a leading number
+        // is more often a story/version prefix than the intended page index.
+        MatchCollection all = Regex.Matches(name, @"\d+");
+        if (all.Count > 0 && int.TryParse(all[all.Count - 1].Value, out int fromLast))
+            return fromLast;
+
+        return -1;
     }
 
     // When more than one file exists for the same page range (e.g. a re-recorded
@@ -393,24 +464,36 @@ public static class AudioAddressableSetupTool
         return hasVoice || hasBgm;
     }
 
-    internal static bool CreatePackFromRawFile(string language, string pageId, string filePath,
+    // Builds (or updates) a page's pack from one or more clips, IN ORDER -- one file
+    // means a single voice clip as before; several files (e.g. "57-1.mp3", "57-2.mp3")
+    // become sequential voiceClips that play one after another on that page.
+    internal static bool CreatePackFromRawFiles(string language, string pageId, List<string> orderedFilePaths,
         AddressableAssetSettings settings, ARAddressableAudioCatalog catalog, ref bool catalogDirty)
     {
-        string assetPath = filePath.Replace('\\', '/');
-        int assetsIdx = assetPath.IndexOf("Assets/");
-        if (assetsIdx < 0) return false;
-        assetPath = assetPath.Substring(assetsIdx);
-
-        AudioClip clip = AssetDatabase.LoadAssetAtPath<AudioClip>(assetPath);
-        if (clip == null)
+        var clips = new List<AudioClip>();
+        foreach (string filePath in orderedFilePaths)
         {
-            Debug.LogWarning($"[Audio Setup] Could not load '{assetPath}' as an AudioClip -- skipping.");
-            return false;
+            string assetPath = filePath.Replace('\\', '/');
+            int assetsIdx = assetPath.IndexOf("Assets/");
+            if (assetsIdx < 0) continue;
+            assetPath = assetPath.Substring(assetsIdx);
+
+            AudioClip clip = AssetDatabase.LoadAssetAtPath<AudioClip>(assetPath);
+            if (clip == null)
+            {
+                Debug.LogWarning($"[Audio Setup] Could not load '{assetPath}' as an AudioClip -- skipping.");
+                continue;
+            }
+            clips.Add(clip);
         }
+        if (clips.Count == 0) return false;
 
         string packFolder = $"{PackOutputFolder}/{language}";
         EnsureFolder(packFolder);
-        string packPath = $"{packFolder}/Page_{pageId}_{language}.asset";
+        // pageId comes from a free-text field on the page prefab -- sanitize it before
+        // using it in a file name so a stray "/", ":" etc. can't silently fail to create
+        // the asset or land it somewhere unexpected.
+        string packPath = $"{packFolder}/Page_{SanitizeForFileName(pageId)}_{language}.asset";
 
         ARPageAudioPack pack = AssetDatabase.LoadAssetAtPath<ARPageAudioPack>(packPath);
         if (pack == null)
@@ -418,15 +501,13 @@ public static class AudioAddressableSetupTool
             pack = ScriptableObject.CreateInstance<ARPageAudioPack>();
             pack.languageName = language;
             pack.pageId       = pageId;
-            pack.voiceClips   = new List<ARPageAudioPack.AudioSegment>();
             pack.bgmClips     = new List<ARPageAudioPack.AudioSegment>();
             AssetDatabase.CreateAsset(pack, packPath);
         }
 
-        pack.voiceClips = new List<ARPageAudioPack.AudioSegment>
-        {
-            new ARPageAudioPack.AudioSegment { clip = clip, volume = 1f }
-        };
+        pack.voiceClips = clips
+            .Select(c => new ARPageAudioPack.AudioSegment { clip = c, volume = 1f })
+            .ToList();
         EditorUtility.SetDirty(pack);
 
         AddressableAssetGroup group = GetOrCreateGroup(settings, $"Audio_{language}");
@@ -441,7 +522,8 @@ public static class AudioAddressableSetupTool
             catalogDirty = true;
         }
 
-        Debug.Log($"[Audio Setup] Connected '{Path.GetFileName(filePath)}' -> page '{pageId}' ({language}).");
+        string names = string.Join(", ", orderedFilePaths.Select(Path.GetFileName));
+        Debug.Log($"[Audio Setup] Connected [{names}] -> page '{pageId}' ({language}), {clips.Count} clip(s) in sequence.");
         return true;
     }
 
@@ -485,9 +567,44 @@ public static class AudioAddressableSetupTool
         AssetDatabase.ImportAsset(path);
     }
 
+    // pageId is free text read off a page prefab -- strip anything illegal in a Windows/
+    // Unity asset file name so building a pack path from it can never silently fail.
+    internal static string SanitizeForFileName(string pageId)
+    {
+        if (string.IsNullOrEmpty(pageId)) return pageId;
+        foreach (char c in Path.GetInvalidFileNameChars())
+            pageId = pageId.Replace(c, '_');
+        return pageId;
+    }
+
+    // Includes .m4a/.aac (the default format for iPhone/Android voice memos and WhatsApp
+    // voice notes -- very likely to be what a non-technical user actually hands over) and
+    // .flac/.wma so more real-world recordings are picked up instead of silently skipped.
     private static bool IsAudioFile(string path)
     {
         string ext = Path.GetExtension(path).ToLower();
-        return ext == ".mp3" || ext == ".wav" || ext == ".ogg" || ext == ".aif" || ext == ".aiff";
+        return ext == ".mp3" || ext == ".wav" || ext == ".ogg" || ext == ".aif" || ext == ".aiff" ||
+               ext == ".m4a" || ext == ".aac" || ext == ".flac" || ext == ".wma";
+    }
+
+    // Files that are clearly never audio and should never be reported as "skipped" --
+    // Unity metadata, OS junk files, and common non-audio project files.
+    private static readonly string[] IgnoredExtensions = { ".meta", ".ds_store", ".db", ".ini", ".txt", ".md" };
+
+    // Points out any file sitting in an audio folder that ISN'T being picked up, instead
+    // of silently ignoring it -- e.g. a recording handed over in a format not in the list
+    // above, so the user finds out immediately instead of wondering why a page stayed silent.
+    private static void WarnAboutUnrecognizedFiles(List<string> allFiles, List<string> recognizedAudioFiles, string dir)
+    {
+        var unrecognized = allFiles
+            .Except(recognizedAudioFiles)
+            .Where(f => !IgnoredExtensions.Contains(Path.GetExtension(f).ToLower()))
+            .ToList();
+
+        if (unrecognized.Count == 0) return;
+
+        string names = string.Join(", ", unrecognized.Select(Path.GetFileName));
+        Debug.LogWarning($"[Audio Setup] '{dir}' has {unrecognized.Count} file(s) that were NOT recognized as " +
+                          $"audio and were skipped: {names}. Supported formats: .mp3 .wav .ogg .m4a .aac .flac .wma .aif .aiff.");
     }
 }

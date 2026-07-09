@@ -343,14 +343,26 @@ public class CustomARHandler : MonoBehaviour
         return keepReplayButtonAlwaysVisible && instantiatedObject != null;
     }
 
+    // Runs every frame from Update(), so only actually touch SetActive/CanvasGroup when
+    // the visible/not-visible state genuinely changes -- these calls dirty the object
+    // and Canvas even when the values written are identical to what's already there.
+    private bool _replayVisibilityApplied = false;
+
     private void RefreshReplayButtonVisibility()
     {
-        if (!ShouldKeepReplayVisible() || replayButton == null || _replayCG == null) return;
+        if (!ShouldKeepReplayVisible() || replayButton == null || _replayCG == null)
+        {
+            _replayVisibilityApplied = false;
+            return;
+        }
+
+        if (_replayVisibilityApplied) return;
 
         replayButton.SetActive(true);
         _replayCG.alpha = 1f;
         _replayCG.interactable = true;
         _replayCG.blocksRaycasts = true;
+        _replayVisibilityApplied = true;
     }
 
     // ----------------------------------------------------------------------
@@ -818,7 +830,7 @@ public class CustomARHandler : MonoBehaviour
 
             if (_releaseCoroutine != null) { StopCoroutine(_releaseCoroutine); _releaseCoroutine = null; }
 
-            float grace = _arMediaManager != null ? _arMediaManager.ResumeGraceSeconds : 4f;
+            float grace = _arMediaManager != null ? _arMediaManager.ResumeGraceSeconds : 1f;
             _releaseCoroutine = StartCoroutine(ReleaseAfterGrace(grace));
         }
     }

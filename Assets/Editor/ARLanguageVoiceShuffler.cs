@@ -17,12 +17,27 @@ using UnityEngine;
 /// </summary>
 public static class ARLanguageVoiceShuffler
 {
-    public static void Run(string targetLanguage, string sourceLanguage = "English")
+    public static void Run(string targetLanguage, string sourceLanguage = null)
     {
         if (string.IsNullOrWhiteSpace(targetLanguage))
         {
             EditorUtility.DisplayDialog("Error", "No target language given.", "OK");
             return;
+        }
+
+        // Default to English if it has packs; otherwise fall back to whatever OTHER
+        // language already has the most recordings, so this still works on a project
+        // that was set up entirely without an English folder.
+        if (string.IsNullOrWhiteSpace(sourceLanguage))
+        {
+            sourceLanguage = PickDefaultSourceLanguage(targetLanguage);
+            if (sourceLanguage == null)
+            {
+                EditorUtility.DisplayDialog("Error",
+                    "No language has any recorded ARPageAudioPack assets yet to shuffle from. " +
+                    "Record real audio for at least one language first.", "OK");
+                return;
+            }
         }
 
         string sourceDir = $"Assets/code/AudioPacks/{sourceLanguage}";
@@ -142,6 +157,35 @@ public static class ARLanguageVoiceShuffler
     }
 
     // ── Helpers ────────────────────────────────────────────────────────────────
+
+    // English if it has any packs; otherwise the language (other than the target) with
+    // the most ARPageAudioPack assets on disk -- works for a project set up without an
+    // English folder at all instead of always assuming one exists.
+    static string PickDefaultSourceLanguage(string targetLanguage)
+    {
+        if (AssetDatabase.FindAssets("t:ARPageAudioPack", new[] { "Assets/code/AudioPacks/English" }).Length > 0)
+            return "English";
+
+        string[] langDirs = System.IO.Directory.Exists("Assets/code/AudioPacks")
+            ? System.IO.Directory.GetDirectories("Assets/code/AudioPacks")
+            : new string[0];
+
+        string best = null;
+        int bestCount = 0;
+        foreach (string dir in langDirs)
+        {
+            string lang = System.IO.Path.GetFileName(dir);
+            if (string.Equals(lang, targetLanguage, System.StringComparison.OrdinalIgnoreCase)) continue;
+
+            int count = AssetDatabase.FindAssets("t:ARPageAudioPack", new[] { dir }).Length;
+            if (count > bestCount)
+            {
+                bestCount = count;
+                best = lang;
+            }
+        }
+        return best;
+    }
 
     static bool HasRealAudio(ARPageAudioPack pack)
     {
