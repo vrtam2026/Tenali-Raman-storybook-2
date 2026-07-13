@@ -231,6 +231,34 @@ public class ARAddressableAudioService : MonoBehaviour
     }
 
     /// <summary>
+    /// Every distinct language name currently present in the catalog. Always up to
+    /// date -- add a language's audio via the Editor tool (which adds catalog
+    /// entries) and it shows up here automatically on the next run, no code change.
+    /// </summary>
+    public List<string> GetAllLanguages()
+    {
+        var languages = new List<string>();
+        if (catalog == null) return languages;
+
+        foreach (var entry in catalog.GetAllEntries())
+        {
+            if (entry == null || string.IsNullOrWhiteSpace(entry.languageName)) continue;
+
+            bool alreadyListed = false;
+            foreach (var l in languages)
+            {
+                if (string.Equals(l, entry.languageName, StringComparison.OrdinalIgnoreCase))
+                {
+                    alreadyListed = true;
+                    break;
+                }
+            }
+            if (!alreadyListed) languages.Add(entry.languageName);
+        }
+        return languages;
+    }
+
+    /// <summary>
     /// Returns the full status of every entry in the catalog — Cached, Downloading, NotLoaded, or Failed.
     /// Used by the diagnostic overlay to show the complete picture.
     /// </summary>

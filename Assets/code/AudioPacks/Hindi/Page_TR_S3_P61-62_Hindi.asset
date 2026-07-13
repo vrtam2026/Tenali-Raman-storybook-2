@@ -15,7 +15,7 @@ MonoBehaviour:
   languageName: Hindi
   pageId: TR_S3_P61-62
   voiceClips:
-  - clip: {fileID: 8300000, guid: 1a282f4b26c9f294b9d0d433701b3831, type: 3}
+  - clip: {fileID: 8300000, guid: 10c72557c8475624fadd6e739dd66a87, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1

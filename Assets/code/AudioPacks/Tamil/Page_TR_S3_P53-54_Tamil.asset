@@ -15,7 +15,7 @@ MonoBehaviour:
   languageName: Tamil
   pageId: TR_S3_P53-54
   voiceClips:
-  - clip: {fileID: 8300000, guid: 1a282f4b26c9f294b9d0d433701b3831, type: 3}
+  - clip: {fileID: 8300000, guid: c17f3e4c20bff5a42a47560d649e9ed8, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1
