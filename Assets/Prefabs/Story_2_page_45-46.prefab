@@ -690,7 +690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4572386611780284439
 Transform:
   m_ObjectHideFlags: 0
@@ -744,6 +744,7 @@ MonoBehaviour:
       waitForPartEnd: 0
       stopAtPartEnd: 0
       hideAtPartEnd: 0
+    mainPlayOrder: 0
     visualLayers: []
     backgroundVideos:
     - video: {fileID: 0}
@@ -776,6 +777,7 @@ MonoBehaviour:
       waitForPartEnd: 0
       stopAtPartEnd: 0
       hideAtPartEnd: 0
+    mainPlayOrder: 0
     visualLayers: []
     backgroundVideos:
     - video: {fileID: 0}

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio_English_Audio
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Audio_English_Audio
+  m_GUID: 22dbacfe67349444795ecac36a2834c1
+  m_SerializeEntries:
+  - m_GUID: 1810d1cc671bc444fb0c33d85881ca9b
+    m_Address: audio/English_Audio/TR_S1_P5-6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3694479d0617e704990eb2ebf6741a8b
+    m_Address: audio/English_Audio/TR_S1_P1-2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 583210cbd9ab05045a16a7eb9118a86f
+    m_Address: audio/English_Audio/TR_S1_P15-16
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7802a1683716cc44abbaaa3b548c36c4
+    m_Address: audio/English_Audio/TR_S1_P13-14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d1c73875cbc4d94888571a18cfafe3a
+    m_Address: audio/English_Audio/TR_S1_P3-4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 928eb77e6791ad2408fbd327870f256e
+    m_Address: audio/English_Audio/TR_S1_P17-18
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9da4070318789ba40bb0ca3b9b7b0cdc
+    m_Address: audio/English_Audio/TR_S1_P11-12
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9faac92b7e32ef04e85ddb02e12d96d2
+    m_Address: audio/English_Audio/TR_S1_P7-8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9fdd943f28196740a5b7039eb369af2
+    m_Address: audio/English_Audio/TR_S1_P9-10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 05a4e9a5fafbff84ba3744ce4dd25f21, type: 2}
+    - {fileID: 11400000, guid: ad5946c917cd0f34e94cc9c7c37d0f1b, type: 2}

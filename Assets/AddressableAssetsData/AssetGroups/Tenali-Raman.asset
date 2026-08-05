@@ -15,64 +15,62 @@ MonoBehaviour:
   m_GroupName: Tenali-Raman
   m_GUID: 664c109e8ba87834b8611fc0f8766520
   m_SerializeEntries:
-  - m_GUID: 03424cdb3f7f3b44f94ac2a013c7dbee
-    m_Address: Story_2_page_65-66
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0d65901fc267a2447a5971d359ada0b3
-    m_Address: Story_2_page_47-48
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 11cdd77e48a1d214c97ca7bcd36a0b6f
-    m_Address: Story_2_page_55-56
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1a95619d8ac92c84b93506853d23d492
-    m_Address: Story_2_page_53-54
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 465993585565eb94e964566bcdd1413f
-    m_Address: Story_2_page_51-52
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 85cac5f2673c74248ac200ec769faaac
-    m_Address: Story_2_page_49-50
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c8fd09e4cbca8074b9c48e320f90e159
-    m_Address: Story_2_page_57-58
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cf7109ba61fca7449b3fb9b85a3a1c84
-    m_Address: Story_2_page_63-64
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d100eab940a6ae04f8256a8b55561cd1
-    m_Address: Story_2_page_61-62
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e33676f22c3c7a147b4573c0df500859
-    m_Address: Story_2_page_59-60
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e60fc187acbe4f442abcbbcbd9bac731
-    m_Address: Story_2_page_45-46
+  - m_GUID: 38cf4bc2c4f2f36468209f52c1f0b3b3
+    m_Address: Story_2_page_1-2
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f2a4f6a32dcd47f4e85cd3830b120b8d
-    m_Address: Assets/code/AudioLanguageCatalog.asset
+  - m_GUID: 4224a4463728c9647855ffea62f724e4
+    m_Address: Story_2_page_15-16
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61387ab52b3e3a646921ba0f98900061
+    m_Address: Story_2_page_17-18
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c9ce0c814d2b7c4b8d29413783f3088
+    m_Address: Story_2_page_3-4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87c458abeb07edc428ca58a6440cf801
+    m_Address: Story_2_page_13-14
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b106650a1307c714d8b70b7a05c31049
+    m_Address: Story_2_page_intro
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce99e18e26eae644888f66176b3d6f7a
+    m_Address: Story_2_page_9-10
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc538721b3d08734db3ba8fb758d3178
+    m_Address: Story_2_page_7-8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e64a5934e2942d8428ec241f732db04a
+    m_Address: Story_2_page_5-6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6b1b949dfd850d45b1c9482aef7ff08
+    m_Address: Story_2_page_11-12
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
