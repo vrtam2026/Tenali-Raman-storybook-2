@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio_hindi
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Audio_hindi
+  m_GUID: f8536a4ba03472741bf2d73c5c75c3fb
+  m_SerializeEntries:
+  - m_GUID: 14e4487034538de46ace4294d63d7169
+    m_Address: audio/hindi/TR_S1_P3-4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3be96612bfb7a9e4094e2c1ffd563b51
+    m_Address: audio/hindi/TR_S1_P15-16
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4137f82005e356744aa8fb5282e0004d
+    m_Address: audio/hindi/TR_S1_P7-8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 454e55f7a86c76b4394c72fb948b1a19
+    m_Address: audio/hindi/TR_S1_P5-6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 645583d7b9a50cd419b8d66757199abf
+    m_Address: audio/hindi/TR_S1_P17-18
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6daad9faf867f9c409a28c2440ebd0cb
+    m_Address: audio/hindi/TR_S1_Intro
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 775f6ed2bffd968409ed7df229d8767d
+    m_Address: audio/hindi/TR_S1_P9-10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99b4cfb515811a948b5e4390638e7bdf
+    m_Address: audio/hindi/TR_S1_P1-2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a14c7b74659f8ad408ea25d0a1264baa
+    m_Address: audio/hindi/TR_S1_P11-12
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4ba8a2de1c76da4c91f66a154ce2cfc
+    m_Address: audio/hindi/TR_S1_P13-14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2d94c404429492f4ab552fe033e3c3e0, type: 2}
+    - {fileID: 11400000, guid: 7adf0e6b88ef338428f92ecd70abcf96, type: 2}

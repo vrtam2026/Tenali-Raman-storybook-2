@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio_French
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Audio_French
+  m_GUID: 20779b482fa0c574fa4cfa15b7eef5ad
+  m_SerializeEntries:
+  - m_GUID: 1127a948317ca9345a16cc9c13e00a29
+    m_Address: audio/French/TR_S1_P13-14
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d41acdb69ba72449a0535a73202c6d8
+    m_Address: audio/French/TR_S1_P17-18
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4096b9b8dbbd85f46b76f26c5d3fc425
+    m_Address: audio/French/TR_S1_Intro
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43854ed78f3bfe84083f93738634de93
+    m_Address: audio/French/TR_S1_P1-2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43e8d29f19fb16849862c8ca21f00235
+    m_Address: audio/French/TR_S1_P11-12
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 647455f7a9f1d554a91ddf9a1e4d8f3a
+    m_Address: audio/French/TR_S1_P9-10
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65a6c5fd082732049a9c9ada65d9c301
+    m_Address: audio/French/TR_S1_P15-16
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b1569f11e4eb264a9a02315018841e5
+    m_Address: audio/French/TR_S1_P5-6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4609dfe71b67a545967aba179c2bab8
+    m_Address: audio/French/TR_S1_P3-4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4620ecec14f29f4aa3cd2a191a63632
+    m_Address: audio/French/TR_S1_P7-8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 19642a081d7d4604f829b74d8dfc42db, type: 2}
+    - {fileID: 11400000, guid: 75e2e559a09f31141ac2d7923d26238f, type: 2}

@@ -178,6 +178,34 @@ public class ARAddressableAudioService : MonoBehaviour
         };
     }
 
+    /// <summary>
+    /// Every distinct language name currently present in the catalog. Always up to
+    /// date -- add a language's audio via the Editor tool (which adds catalog
+    /// entries) and it shows up here automatically on the next run, no code change.
+    /// </summary>
+    public List<string> GetAllLanguages()
+    {
+        var languages = new List<string>();
+        if (catalog == null) return languages;
+
+        foreach (var entry in catalog.GetAllEntries())
+        {
+            if (entry == null || string.IsNullOrWhiteSpace(entry.languageName)) continue;
+
+            bool alreadyListed = false;
+            foreach (var l in languages)
+            {
+                if (string.Equals(l, entry.languageName, StringComparison.OrdinalIgnoreCase))
+                {
+                    alreadyListed = true;
+                    break;
+                }
+            }
+            if (!alreadyListed) languages.Add(entry.languageName);
+        }
+        return languages;
+    }
+
     public bool HasCachedPack(string language, string pageId)
     {
         string cacheKey = MakeKey(language, pageId);
@@ -196,8 +224,26 @@ public class ARAddressableAudioService : MonoBehaviour
         string key = MakeKey(language, pageId);
         if (_cache.TryGetValue(key, out var handle))
         {
-            if (handle.IsValid())
+            // Release through the catalog's own AssetReference rather than the generic
+            // Addressables.Release(handle). An AssetReference keeps its OWN internal
+            // "already loaded" flag, and only its ReleaseAsset() clears that flag.
+            // Releasing just the handle frees the asset but leaves the reference still
+            // believing it is loaded, so the next LoadAssetAsync() on that same
+            // reference throws "Attempting to load AssetReference that has already been
+            // loaded" -- and that page stays silent when it is scanned again.
+            if (handle.IsValid() &&
+                catalog != null &&
+                catalog.TryGetAudioPack(language, pageId, out var audioPackRef))
+            {
+                audioPackRef.ReleaseAsset();
+            }
+            else if (handle.IsValid())
+            {
+                // No catalog entry to release through (entry removed since load) --
+                // fall back so the asset is still freed rather than leaked.
                 Addressables.Release(handle);
+            }
+
             _cache.Remove(key);
             Debug.Log($"[AR-AUDIO] Released from cache: {key}");
         }
@@ -228,34 +274,6 @@ public class ARAddressableAudioService : MonoBehaviour
         public string    Address;
         public PackState State;
         public float     Progress; // only meaningful when Downloading
-    }
-
-    /// <summary>
-    /// Every distinct language name currently present in the catalog. Always up to
-    /// date -- add a language's audio via the Editor tool (which adds catalog
-    /// entries) and it shows up here automatically on the next run, no code change.
-    /// </summary>
-    public List<string> GetAllLanguages()
-    {
-        var languages = new List<string>();
-        if (catalog == null) return languages;
-
-        foreach (var entry in catalog.GetAllEntries())
-        {
-            if (entry == null || string.IsNullOrWhiteSpace(entry.languageName)) continue;
-
-            bool alreadyListed = false;
-            foreach (var l in languages)
-            {
-                if (string.Equals(l, entry.languageName, StringComparison.OrdinalIgnoreCase))
-                {
-                    alreadyListed = true;
-                    break;
-                }
-            }
-            if (!alreadyListed) languages.Add(entry.languageName);
-        }
-        return languages;
     }
 
     /// <summary>

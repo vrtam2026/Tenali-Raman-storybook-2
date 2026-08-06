@@ -2250,7 +2250,15 @@ public class ARTrackedPageNode : MonoBehaviour
                 foreach (var entry in other.mainVideos)
                 {
                     if (entry?.video == null) continue;
+
+                    // UntrackActive2DVideo also disposes this video's freeze/start-delay
+                    // runtime. Without it, a timer left counting down from another slot
+                    // would still fire later and call Play() on a slot that has already
+                    // ended -- a video quietly running again in the background.
+                    UntrackActive2DVideo(entry.video);
+
                     if (entry.video.isPlaying) entry.video.Stop();
+                    entry.video.time = 0;
                     entry.video.gameObject.SetActive(false);
                 }
 
@@ -2274,7 +2282,16 @@ public class ARTrackedPageNode : MonoBehaviour
                 {
                     if (entry?.video == null) continue;
                     if (!entry.stopAtPartEnd) continue; // intentional carry-over — leave alone
+
+                    // Same as above: kill the timers, then switch the object off. Stopping
+                    // alone used to leave the GameObject active with its last decoded frame
+                    // still sitting in its render texture, so an ended slot's background
+                    // stayed on screen underneath the slot that replaced it.
+                    UntrackActive2DVideo(entry.video);
+
                     if (entry.video.isPlaying) entry.video.Stop();
+                    entry.video.time = 0;
+                    entry.video.gameObject.SetActive(false);
                 }
         }
     }
@@ -2473,8 +2490,11 @@ public class ARTrackedPageNode : MonoBehaviour
 
         UntrackActive2DVideo(vp);
 
-        if (entry.hideAtPartEnd)
-            vp.gameObject.SetActive(false);
+        // Always switch the object off once its slot is over -- not only when
+        // hideAtPartEnd is ticked. That flag defaults to OFF, so background videos
+        // were being stopped but left active, still showing their last decoded frame
+        // behind whichever slot came next. A finished slot must leave nothing behind.
+        vp.gameObject.SetActive(false);
     }
 
     private void TrackActive2DVideo(VideoPlayer vp)
