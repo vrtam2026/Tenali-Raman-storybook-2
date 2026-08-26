@@ -15,8 +15,23 @@ MonoBehaviour:
   m_GroupName: Audio_hindi
   m_GUID: f8536a4ba03472741bf2d73c5c75c3fb
   m_SerializeEntries:
+  - m_GUID: 0355661dc746d524a98ffb587a33a432
+    m_Address: audio/hindi/TR_S3_P59-60
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1209fec54ed4a8b4cac99ff0b37bb0c0
+    m_Address: audio/hindi/TR_S3_P65-66
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14e4487034538de46ace4294d63d7169
     m_Address: audio/hindi/TR_S1_P3-4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38ba4ddfc2bf36141aaeb4efbf8d581c
+    m_Address: audio/hindi/TR_S3_P51-52
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -35,6 +50,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50368cf43db6ac949a74a5aedc0cadb6
+    m_Address: audio/hindi/TR_S3_P53-54
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a7fb412e607164439fb24da5df9dae2
+    m_Address: audio/hindi/TR_S3_P47-48
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6324d8db75db76a40bd846ea3313c386
+    m_Address: audio/hindi/TR_S3_P63-64
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 645583d7b9a50cd419b8d66757199abf
     m_Address: audio/hindi/TR_S1_P17-18
     m_ReadOnly: 0
@@ -50,6 +80,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 779dcbeb74f9e8a41bbcb9ae2e2ee52b
+    m_Address: audio/hindi/TR_S3_P61-62
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 99b4cfb515811a948b5e4390638e7bdf
     m_Address: audio/hindi/TR_S1_P1-2
     m_ReadOnly: 0
@@ -60,8 +95,28 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4370bec6e97c9e459b1e62c5014ce21
+    m_Address: audio/hindi/TR_S3_P57-58
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b32489c7c0a8685458f5ac730f8b66ef
+    m_Address: audio/hindi/TR_S3_P49-50
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b4ba8a2de1c76da4c91f66a154ce2cfc
     m_Address: audio/hindi/TR_S1_P13-14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1902da6d312d174ea394d7044e72b88
+    m_Address: audio/hindi/TR_S3_P55-56
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5beb379159121b48b9d0a06eb4efa25
+    m_Address: audio/hindi/TR_S3_P45-46
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
