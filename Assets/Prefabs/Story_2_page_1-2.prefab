@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 403281704261861606}
   - component: {fileID: 888484779649464956}
   m_Layer: 0
-  m_Name: Intro_page_(V1)
+  m_Name: 1-2(V1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S1_Intro
+  pageId: TR_S1_P1-2
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 1659153775070510083}
@@ -828,7 +828,7 @@ GameObject:
   - component: {fileID: 1871093558156010734}
   - component: {fileID: 6462711590000952827}
   m_Layer: 0
-  m_Name: Intro_page_(BG01)
+  m_Name: 1-2 (BG01)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,7 +882,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0fc78e864622a3e4390f2f26b9ec7a73, type: 2}
+  - {fileID: 2100000, guid: 5d903512267643b4ba786bc8f95f08a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 441502159519589461}
   - component: {fileID: 2934459625778316374}
   m_Layer: 0
-  m_Name: 7-8 (I3) Ground
+  m_Name: 9-10 (I3) Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 8118181015061658013}
   - component: {fileID: 7672315363017990504}
   m_Layer: 0
-  m_Name: '7-8 (V4) Clouds '
+  m_Name: '9-10 (V4) Clouds '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 2230422265591433023}
   - component: {fileID: 8704526725421086067}
   m_Layer: 0
-  m_Name: 7-8 (V1) Main
+  m_Name: 9-10 (V1) Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S1_P7-8
+  pageId: TR_S1_P9-10
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 135590911179188734}
@@ -987,7 +987,7 @@ GameObject:
   - component: {fileID: 3736776313875899322}
   - component: {fileID: 4201510590527576628}
   m_Layer: 0
-  m_Name: 7-8 (V2) People
+  m_Name: 9-10 (V2) People
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

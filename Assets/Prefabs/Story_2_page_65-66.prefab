@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7049863150737732419}
   - component: {fileID: 2310040601142169124}
   m_Layer: 0
-  m_Name: 59-60(V2)
+  m_Name: 65-66(V2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 5436254031804530227}
   - component: {fileID: 9099767899237081325}
   m_Layer: 0
-  m_Name: 59-60(V1)
+  m_Name: 65-66(V1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 6410911171759200653}
   - component: {fileID: 3658249921455078024}
   m_Layer: 0
-  m_Name: 60_Sky-BG01
+  m_Name: 66_Sky-BG01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 6889682308711597603}
   - component: {fileID: 3222019472715318255}
   m_Layer: 0
-  m_Name: 60_Temp-BG02
+  m_Name: 66_Temp-BG02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S3_P59-60
+  pageId: TR_S3_P65-66
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 4730427774587212226}

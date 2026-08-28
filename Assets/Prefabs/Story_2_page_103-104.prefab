@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883437210461206824}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.62146, y: 0, z: -13.55004}
   m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S1_P31-32
+  pageId: TR_S5_P103-104
   mediaManager: {fileID: 0}
   pageType: 1
   layerRoot2D: {fileID: 0}

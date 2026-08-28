@@ -12682,7 +12682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S1_P17-18
+  pageId: TR_S1_P19-20
   mediaManager: {fileID: 0}
   pageType: 1
   layerRoot2D: {fileID: 0}
@@ -14051,7 +14051,7 @@ GameObject:
   - component: {fileID: 1803902742209755187}
   - component: {fileID: 6868876578712215361}
   m_Layer: 0
-  m_Name: Spline 17-18(T)
+  m_Name: Spline 19-20(T)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

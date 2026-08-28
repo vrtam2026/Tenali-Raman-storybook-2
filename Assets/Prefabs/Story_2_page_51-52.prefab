@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 1865908922301572884}
   - component: {fileID: 950056486691094382}
   m_Layer: 0
-  m_Name: 46_Room-BG01
+  m_Name: 52_Room-BG01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 4943066677795534679}
   - component: {fileID: 2395904175014753078}
   m_Layer: 0
-  m_Name: 45-46(V1)
+  m_Name: 51-52(V1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S3_P45-46
+  pageId: TR_S3_P51-52
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 5518958735076340361}
@@ -1019,7 +1019,7 @@ GameObject:
   - component: {fileID: 5492315903812714191}
   - component: {fileID: 3193514296832399610}
   m_Layer: 0
-  m_Name: 46_Room-BG02
+  m_Name: 52_Room-BG02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 5919072940825511892}
   - component: {fileID: 705022441599965986}
   m_Layer: 0
-  m_Name: 45-46(V2)
+  m_Name: 51-52(V2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

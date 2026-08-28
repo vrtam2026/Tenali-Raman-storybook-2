@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 5391978497871615502}
   - component: {fileID: 4370050990336851878}
   m_Layer: 0
-  m_Name: 63-64(V1)
+  m_Name: 69-70(V1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S3_P63-64
+  pageId: TR_S3_P69-70
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 416622058409715341}
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 7407723483890255456}
   - component: {fileID: 1626746295782060756}
   m_Layer: 0
-  m_Name: 64_Sky-BG01
+  m_Name: 70_Sky-BG01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

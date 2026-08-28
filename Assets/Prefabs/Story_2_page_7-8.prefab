@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 8652565835575680742}
   - component: {fileID: 3035273962356995520}
   m_Layer: 0
-  m_Name: 5-6 (V1)02 Main
+  m_Name: 7-8 (V1)02 Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 5936264035711681668}
   - component: {fileID: 3109802142880480118}
   m_Layer: 0
-  m_Name: 5-6 (V1)01 City
+  m_Name: 7-8 (V1)01 City
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S1_P5-6
+  pageId: TR_S1_P7-8
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 3961844881522631388}
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 3678857645152127204}
   - component: {fileID: 5349399212447691420}
   m_Layer: 0
-  m_Name: 5-6 (I2)02 Farm
+  m_Name: 7-8 (I2)02 Farm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 8860107795352803362}
   - component: {fileID: 6929967524546782999}
   m_Layer: 0
-  m_Name: 5-6 (V2)01 Sky
+  m_Name: 7-8 (V2)01 Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 2943817030082522081}
   - component: {fileID: 197214935921765647}
   m_Layer: 0
-  m_Name: 5-6 (V3)02 Sky
+  m_Name: 7-8 (V3)02 Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

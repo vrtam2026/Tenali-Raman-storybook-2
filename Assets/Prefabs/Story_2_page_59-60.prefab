@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S3_P53-54
+  pageId: TR_S3_P59-60
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 0}
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 6740328681217723593}
   - component: {fileID: 4433925331791135266}
   m_Layer: 0
-  m_Name: 53-54(V)
+  m_Name: 59-60(V)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 2410456386450627702}
   - component: {fileID: 1792012075534722897}
   m_Layer: 0
-  m_Name: 54_Room-BG
+  m_Name: 60_Room-BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
