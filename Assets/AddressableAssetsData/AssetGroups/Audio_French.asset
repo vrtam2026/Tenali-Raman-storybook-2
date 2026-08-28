@@ -18,62 +18,52 @@ MonoBehaviour:
   - m_GUID: 1127a948317ca9345a16cc9c13e00a29
     m_Address: audio/French/TR_S1_P13-14
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3d41acdb69ba72449a0535a73202c6d8
     m_Address: audio/French/TR_S1_P17-18
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4096b9b8dbbd85f46b76f26c5d3fc425
     m_Address: audio/French/TR_S1_Intro
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43854ed78f3bfe84083f93738634de93
     m_Address: audio/French/TR_S1_P1-2
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43e8d29f19fb16849862c8ca21f00235
     m_Address: audio/French/TR_S1_P11-12
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 647455f7a9f1d554a91ddf9a1e4d8f3a
     m_Address: audio/French/TR_S1_P9-10
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 65a6c5fd082732049a9c9ada65d9c301
     m_Address: audio/French/TR_S1_P15-16
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8b1569f11e4eb264a9a02315018841e5
     m_Address: audio/French/TR_S1_P5-6
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c4609dfe71b67a545967aba179c2bab8
     m_Address: audio/French/TR_S1_P3-4
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d4620ecec14f29f4aa3cd2a191a63632
     m_Address: audio/French/TR_S1_P7-8
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}

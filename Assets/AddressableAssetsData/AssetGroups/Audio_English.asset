@@ -18,56 +18,47 @@ MonoBehaviour:
   - m_GUID: 02958e68f33eef246bf700eaac32930d
     m_Address: audio/English/TR_S1_P1-2
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0b6cb987116fea045ac42bef2b18276f
     m_Address: audio/English/TR_S1_P3-4
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2c20b2b38c38fa544a59f9d59132599a
     m_Address: audio/English/TR_S1_P11-12
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5eaa6da5991665846808597df8b171b7
     m_Address: audio/English/TR_S1_P15-16
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5f5509f7cddcba8478213476a2f0e6fd
     m_Address: audio/English/TR_S1_P7-8
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7335a8319b3ef1e418f16a56f0ca1ae1
     m_Address: audio/English/TR_S1_P13-14
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7ae0bc379a2349f479087912b0255861
     m_Address: audio/English/TR_S1_P5-6
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b649858d9bb17ee4daf653c310963029
     m_Address: audio/English/TR_S1_P17-18
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f78c342a33e5ced4f9ceb64c0fcfa80d
     m_Address: audio/English/TR_S1_P9-10
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
