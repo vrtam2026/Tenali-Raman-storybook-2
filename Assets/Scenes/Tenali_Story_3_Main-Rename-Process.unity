@@ -1417,7 +1417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &108662452
 Transform:
   m_ObjectHideFlags: 0
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 32
+  mTrackableName: 36
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 108662455}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 32
+  mTargetName: 36
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 108662455}
   mMeshFilter: {fileID: 0}
@@ -6230,7 +6230,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2133717012586100438, guid: 5c9353a5429ec93439fec8fd0a67fa1d, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 72183350761744193, guid: 5c9353a5429ec93439fec8fd0a67fa1d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1505146314}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c9353a5429ec93439fec8fd0a67fa1d, type: 3}
 --- !u!4 &455129000 stripped
@@ -8083,6 +8087,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1809800458}
     m_Modifications:
+    - target: {fileID: 772113984765225252, guid: 82f3b2a6746f6444686ec277dbcbdfc2,
+        type: 3}
+      propertyPath: mediaManager
+      value: 
+      objectReference: {fileID: 1065018288}
     - target: {fileID: 4412885064894042535, guid: 82f3b2a6746f6444686ec277dbcbdfc2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8139,8 +8148,7 @@ PrefabInstance:
       value: Story_2_page_27-28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6913121454291463918, guid: 82f3b2a6746f6444686ec277dbcbdfc2, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f3b2a6746f6444686ec277dbcbdfc2, type: 3}
@@ -9019,7 +9027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &634354219
 Transform:
   m_ObjectHideFlags: 0
@@ -10411,6 +10419,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Story_2_page_35-36
       objectReference: {fileID: 0}
+    - target: {fileID: 733915793494339568, guid: c65c919d4a0812545b6dc88eab985e55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6460531435193179591, guid: c65c919d4a0812545b6dc88eab985e55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10462,8 +10475,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 47926008355373303, guid: c65c919d4a0812545b6dc88eab985e55, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c65c919d4a0812545b6dc88eab985e55, type: 3}
@@ -16798,7 +16810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1314588107
 Transform:
   m_ObjectHideFlags: 0
@@ -18175,6 +18187,100 @@ Transform:
   - {fileID: 1936542093}
   m_Father: {fileID: 1507676647}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1505146313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 455129000}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.738
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.35689244
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9341455
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 221.819
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4740fcf56d8fd4246aa90d24409d81da,
+        type: 3}
+      propertyPath: m_Name
+      value: tenali_first_act
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4740fcf56d8fd4246aa90d24409d81da, type: 3}
+--- !u!4 &1505146314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4740fcf56d8fd4246aa90d24409d81da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1505146313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1507676646
 GameObject:
   m_ObjectHideFlags: 0
@@ -18190,7 +18296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1507676647
 Transform:
   m_ObjectHideFlags: 0
@@ -19646,7 +19752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1641189052
 Transform:
   m_ObjectHideFlags: 0
@@ -20251,7 +20357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1711441085
 Transform:
   m_ObjectHideFlags: 0
@@ -20961,7 +21067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1809800458
 Transform:
   m_ObjectHideFlags: 0
@@ -20993,7 +21099,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 24
+  mTrackableName: 28
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
@@ -21088,7 +21194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1809800461}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 24
+  mTargetName: 28
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1809800461}
   mMeshFilter: {fileID: 0}
@@ -21678,7 +21784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1935049372
 Transform:
   m_ObjectHideFlags: 0
@@ -21716,7 +21822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1936542093
 Transform:
   m_ObjectHideFlags: 0
@@ -21726,7 +21832,7 @@ Transform:
   m_GameObject: {fileID: 1936542092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.502, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21748,7 +21854,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 35
+  mTrackableName: 39
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
@@ -21843,7 +21949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1936542096}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 35
+  mTargetName: 39
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1936542096}
   mMeshFilter: {fileID: 0}
