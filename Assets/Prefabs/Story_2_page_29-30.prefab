@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 2308826161606611760}
   - component: {fileID: 3755855160691785173}
   m_Layer: 0
-  m_Name: 25-26(V2)
+  m_Name: 29-30(V2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6555447440179248662
 Transform:
   m_ObjectHideFlags: 0
@@ -66,7 +66,8 @@ MeshRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 2100000, guid: 9cf7bec4b3b5b2048ad83976cb2020e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,11 +99,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728696805797972185}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: adf7551b876b3f2459dbc07256a067c1, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: c00c978a9f13e2348b5cd28a6549b48f, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -341,6 +342,17 @@ MonoBehaviour:
     - video: {fileID: 1854451730465228974}
       playbackSpeed: 1
       startDelay: 0
+      freezeMode: 0
+      freezeFirstSeconds: 0
+      freezeLastSeconds: 0
+      delayAfterFinish: 0
+      loop: 0
+      waitForPartEnd: 0
+      stopAtPartEnd: 0
+      hideAtPartEnd: 0
+    - video: {fileID: 3755855160691785173}
+      playbackSpeed: 1
+      startDelay: 10
       freezeMode: 0
       freezeFirstSeconds: 0
       freezeLastSeconds: 0
@@ -610,7 +622,7 @@ GameObject:
   - component: {fileID: 975036945866172792}
   - component: {fileID: 1854451730465228974}
   m_Layer: 0
-  m_Name: 25-26(V1)
+  m_Name: 29-30(V1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +746,7 @@ GameObject:
   - component: {fileID: 4250802735219045121}
   - component: {fileID: 8791895519381746903}
   m_Layer: 0
-  m_Name: 25-26(I3)
+  m_Name: 29-30(I3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
