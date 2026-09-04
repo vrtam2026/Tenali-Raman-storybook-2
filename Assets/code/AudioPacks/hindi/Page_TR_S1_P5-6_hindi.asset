@@ -9,15 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6052e5f5c4bb9c46811e86c88dffa27, type: 3}
-  m_Name: Page_TR_S1_P5-6_hindi
+  m_Script: {fileID: 11500000, guid: 2c8316f37bb6635429cc90f09ac2c4c1, type: 3}
+  m_Name: Page_TR_S1_P5-6_Hindi
   m_EditorClassIdentifier: Assembly-CSharp::ARPageAudioPack
-  languageName: hindi
+  languageName: Hindi
   pageId: TR_S1_P5-6
   voiceClips:
-  - clip: {fileID: 8300000, guid: 55452bccbb1fdcb49809e32ccc12a2de, type: 3}
+  - clip: {fileID: 8300000, guid: c6ee8b6dab16ee145971504b0b6de475, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1
     loop: 0
-  bgmClips: []
+  bgmClips:
+  - clip: {fileID: 8300000, guid: f447ea6975f0c61448004a2f678c7943, type: 3}
+    delayBefore: 0
+    delayAfter: 0
+    volume: 1
+    loop: 1

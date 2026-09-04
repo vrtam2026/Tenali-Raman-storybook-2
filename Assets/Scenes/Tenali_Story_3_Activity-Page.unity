@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 241947930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_3-4
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 241947930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 241947930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 241947930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -4547,6 +4547,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &508683630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508683631}
+  - component: {fileID: 508683633}
+  - component: {fileID: 508683632}
+  m_Layer: 0
+  m_Name: LoadingScreenCharacterImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &508683631
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508683630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1541757208}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &508683632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508683630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &508683633
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508683630}
+  m_CullTransparentMesh: 1
 --- !u!114 &510957595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4797,6 +4872,161 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &548245588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548245594}
+  - component: {fileID: 548245593}
+  - component: {fileID: 548245592}
+  - component: {fileID: 548245591}
+  - component: {fileID: 548245590}
+  - component: {fileID: 548245589}
+  m_Layer: 5
+  m_Name: QuizLoadingScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &548245589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548245588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa05c90ec21992c43919bf8502851dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuizLoadingScreen
+  characterGroups:
+  - frames:
+    - {fileID: 21300000, guid: 54a7c1b6b55145342a8ba82ef67484e6, type: 3}
+    - {fileID: 21300000, guid: ce493c3db179c344799e792da5994ad4, type: 3}
+  loopAnimation: 1
+  frameSpeed: 1.5
+  fadeInDuration: 0.3
+  fadeOutDuration: 0.3
+  minimumShowSeconds: 2
+  characterImage: {fileID: 791640414}
+  loadingText: {fileID: 0}
+  appearSfx: {fileID: 0}
+  quizLoadingStartSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+  whileQuizLoadingSound:
+    useSound: 1
+    audioClip: {fileID: 8300000, guid: dfa385e43cba2ef499d3c7f51d72b239, type: 3}
+    volume: 1.784
+    loop: 1
+  quizLoadingCompleteSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+--- !u!225 &548245590
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548245588}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &548245591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548245588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &548245592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548245588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &548245593
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548245588}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
+--- !u!224 &548245594
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548245588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 791640416}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!222 &550455977
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5298,7 +5528,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 578480931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -5312,7 +5542,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 578480931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -5332,7 +5562,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 578480931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -5345,7 +5575,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 578480931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_77-78
@@ -5887,7 +6117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 609611923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -5901,7 +6131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 609611923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -5921,7 +6151,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 609611923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -5940,7 +6170,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 12
+  mTrackableName: 55
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -5961,7 +6191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 609611923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_55-56
@@ -5988,7 +6218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 609611930}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 12
+  mTargetName: 55
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 609611930}
   mMeshFilter: {fileID: 0}
@@ -7419,6 +7649,81 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &791640413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791640416}
+  - component: {fileID: 791640415}
+  - component: {fileID: 791640414}
+  m_Layer: 5
+  m_Name: QuizLoadingScreenCharacterImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &791640414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791640413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &791640415
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791640413}
+  m_CullTransparentMesh: 1
+--- !u!224 &791640416
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791640413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 548245594}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &797808098
 GameObject:
   m_ObjectHideFlags: 0
@@ -7617,7 +7922,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 820245034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93b86fe1d63715c419a0bd57d4c2bed5, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b2e94146f12cb14188b094d66544b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARWindowManager
   windowSize: 1
@@ -8153,7 +8458,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 854032080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_3-4
@@ -8175,7 +8480,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 854032080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -8189,7 +8494,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 854032080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -8209,7 +8514,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 854032080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -8228,7 +8533,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: --- EMPTY ---
+  mTrackableName: 3
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/--- EMPTY ---.xml
   mAspectRatio: 1
@@ -8254,7 +8559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 854032087}
   mHiddenRoot: {fileID: 0}
-  mTargetName: --- EMPTY ---
+  mTargetName: 3
   mDatasetName: Vuforia/--- EMPTY ---.xml
   mCastedBehaviour: {fileID: 854032087}
   mMeshFilter: {fileID: 0}
@@ -8501,7 +8806,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 891931102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e08041b761a0d4c9fb1ef539b955b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7afb0a4a8e9c4854583aefcb2bcbc049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OverlayManager
   overlayPanel: {fileID: 101928614}
@@ -9246,7 +9551,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1270007002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82b85594be7e804ba3ae50dcf3d75c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cf2d473f926d384693cf215e77598f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARInteractionUI
   instructionPanel: {fileID: 182083594}
@@ -9521,7 +9826,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065018287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0a4ff9315287c4fb1c299b8f112ed6, type: 3}
+  m_Script: {fileID: 11500000, guid: b13d84427ffd7a049973e3428fbb4127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARMediaManager
   replayButton: {fileID: 479568792}
@@ -9555,7 +9860,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065018287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc1f288f1eeee148b520fa337c3d7bb, type: 3}
+  m_Script: {fileID: 11500000, guid: b2b29af3c3eb41942a3590081e78b02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARAddressableAudioService
   catalog: {fileID: 11400000, guid: f2a4f6a32dcd47f4e85cd3830b120b8d, type: 2}
@@ -9585,7 +9890,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110882286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 441df16af41930140832fbee83d904d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b38d32d82cf2e7469c6231db643cd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARPreloader
   labelToPreload: Preload
@@ -9651,7 +9956,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130629463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_17-18
@@ -9673,7 +9978,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130629463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -9687,7 +9992,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130629463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -9707,7 +10012,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1130629463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -10266,7 +10571,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210400557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -10280,7 +10585,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210400557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -10300,7 +10605,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210400557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -10313,7 +10618,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210400557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_73-74
@@ -10534,7 +10839,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1270007002}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201aaced76390d74598779385b044536, type: 3}
+  m_Script: {fileID: 11500000, guid: 867040d6e7bcef24183b2668101913aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoHideUI
   hideDelay: 3
@@ -11316,6 +11621,147 @@ Transform:
   - {fileID: 1429486260}
   m_Father: {fileID: 2084407632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1541757203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1541757208}
+  - component: {fileID: 1541757207}
+  - component: {fileID: 1541757206}
+  - component: {fileID: 1541757205}
+  - component: {fileID: 1541757204}
+  m_Layer: 0
+  m_Name: LoadingScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1541757204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541757203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b70a0a32641c0c4696c583aaba79ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadingScreen
+  characterGroups:
+  - frames:
+    - {fileID: 21300000, guid: 6b38a13741fae654da4589e6d78b142d, type: 3}
+    - {fileID: 21300000, guid: ce493c3db179c344799e792da5994ad4, type: 3}
+  loopAnimation: 1
+  randomFrame: 0
+  frameSpeed: 1.5
+  fadeInDuration: 0.4
+  fadeOutDuration: 0.4
+  showThresholdSeconds: 0.1
+  appearSfx: {fileID: 0}
+  loadingStartSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+  whileLoadingSound:
+    useSound: 1
+    audioClip: {fileID: 8300000, guid: dfa385e43cba2ef499d3c7f51d72b239, type: 3}
+    volume: 1.837
+    loop: 1
+  loadingCompleteSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+--- !u!114 &1541757205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541757203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1541757206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541757203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1541757207
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541757203}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
+--- !u!224 &1541757208
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541757203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 508683631}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1556448903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11472,7 +11918,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584010700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -11486,7 +11932,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584010700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -11506,7 +11952,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584010700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -11525,7 +11971,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 18
+  mTrackableName: 62
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -11546,7 +11992,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584010700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_61-62
@@ -11573,7 +12019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1584010707}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 18
+  mTargetName: 62
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -11701,7 +12147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597447369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_103-104
@@ -11723,7 +12169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597447369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -11737,7 +12183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597447369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -11757,7 +12203,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597447369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -11776,7 +12222,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 4
+  mTrackableName: 08
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -11802,7 +12248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1597447376}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 4
+  mTargetName: 08
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 1597447376}
   mMeshFilter: {fileID: 0}
@@ -12484,7 +12930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1911629249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -12498,7 +12944,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1911629249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -12518,7 +12964,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1911629249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -12531,7 +12977,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1911629249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_49-50
@@ -12610,7 +13056,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949726856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -12624,7 +13070,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949726856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -12644,7 +13090,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949726856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -12657,7 +13103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949726856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_87-88
@@ -12685,7 +13131,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 4
+  mTrackableName: 09
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -12711,7 +13157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1949726863}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 4
+  mTargetName: 09
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 1949726863}
   mMeshFilter: {fileID: 0}
@@ -12835,7 +13281,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025707870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
@@ -12849,7 +13295,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025707870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea6f12da1854ac4d9d24d36be0a3a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 77e9462e382d0a247b5227b9ad0c9205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModelInteraction
   pageType: 1
@@ -12869,7 +13315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025707870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d3bf4c36849e94692ab4f7719f06ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e7654ddf213804399466ae76b20d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 0
@@ -12882,7 +13328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2025707870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d887ea33f4e4a340ab73d1463fab5df, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
   addressableKey: Story_2_page_31-32
@@ -12910,7 +13356,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 4
+  mTrackableName: 32
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -12936,7 +13382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 2025707877}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 4
+  mTargetName: 32
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 2025707877}
   mMeshFilter: {fileID: 0}
@@ -13186,3 +13632,5 @@ SceneRoots:
   - {fileID: 891931104}
   - {fileID: 1173614583}
   - {fileID: 578455245}
+  - {fileID: 1541757208}
+  - {fileID: 548245594}

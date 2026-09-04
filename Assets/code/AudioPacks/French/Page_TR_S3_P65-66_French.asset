@@ -9,15 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6052e5f5c4bb9c46811e86c88dffa27, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c8316f37bb6635429cc90f09ac2c4c1, type: 3}
   m_Name: Page_TR_S3_P65-66_French
   m_EditorClassIdentifier: Assembly-CSharp::ARPageAudioPack
   languageName: French
   pageId: TR_S3_P65-66
   voiceClips:
-  - clip: {fileID: 8300000, guid: a65aad4e16ace3d4b9de40c3fe317dba, type: 3}
+  - clip: {fileID: 8300000, guid: d2ad3989e625f0d4481fa315150d6929, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1
     loop: 0
-  bgmClips: []
+  bgmClips:
+  - clip: {fileID: 8300000, guid: a45747bcb3356f8448d9df8d105ca688, type: 3}
+    delayBefore: 0
+    delayAfter: 0
+    volume: 1
+    loop: 1

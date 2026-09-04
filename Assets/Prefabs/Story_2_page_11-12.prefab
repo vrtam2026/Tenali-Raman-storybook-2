@@ -105,8 +105,8 @@ VideoPlayer:
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 8400000, guid: 3ea886921042e5c45bc8bd3d3022a17e, type: 2}
   m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
+  m_TargetMaterialRenderer: {fileID: 8708475333484222873}
+  m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
@@ -119,7 +119,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 2643747589469838251}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0.003}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4664168013671039085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8b61716507d304caa14b216edfa80c, type: 3}
+  m_Script: {fileID: 11500000, guid: 74e22316492b61f43b189da19954093c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}
@@ -873,8 +873,8 @@ VideoPlayer:
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
+  m_TargetMaterialRenderer: {fileID: 9148324158486220298}
+  m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
@@ -887,7 +887,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -1032,8 +1032,8 @@ VideoPlayer:
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 8400000, guid: 6588c7c243f41024ba7a8803c27c5042, type: 2}
   m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
+  m_TargetMaterialRenderer: {fileID: 5355602805396590694}
+  m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
@@ -1046,7 +1046,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6740461057567448037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e007fa2c4b4d948ac0bd92f2e640c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
   pageId: TR_S1_P11-12

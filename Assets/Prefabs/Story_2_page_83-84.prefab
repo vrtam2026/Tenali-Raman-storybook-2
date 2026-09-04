@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4817222534976190816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e007fa2c4b4d948ac0bd92f2e640c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
   pageId: TR_S4_P83-84
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4817222534976190816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d5331cabdc2c641a4ef73d12f59eab, type: 3}
+  m_Script: {fileID: 11500000, guid: ec9309fdda34dff4eb973d7bc3f99ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackableSplineMover
   splineContainer: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4817222534976190816}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 762825a93cb8609469e9852578098ef6, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f88054253ad3c4facfa36ca1ca3dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContentController
   activities: []
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4817222534976190816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ebca3ae261dc4941b6b838b653f9c93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e01f0816f56cb443acb261c2f21d518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1

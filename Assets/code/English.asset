@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e22a02dda3a8240b47759538ecadd1, type: 3}
+  m_Script: {fileID: 11500000, guid: b3d331fdc502fed4a817be397b8a68ac, type: 3}
   m_Name: English
   m_EditorClassIdentifier: Assembly-CSharp::ARStorybookLanguage

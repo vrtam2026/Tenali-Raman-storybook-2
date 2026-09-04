@@ -9,19 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6052e5f5c4bb9c46811e86c88dffa27, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c8316f37bb6635429cc90f09ac2c4c1, type: 3}
   m_Name: Page_TR_S1_P7-8_English
   m_EditorClassIdentifier: Assembly-CSharp::ARPageAudioPack
   languageName: English
   pageId: TR_S1_P7-8
   voiceClips:
-  - clip: {fileID: 8300000, guid: 641f50b1fde9790408c3dba5fc813c3b, type: 3}
+  - clip: {fileID: 8300000, guid: c498686469465a04aaf8b302f9036c0d, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1
     loop: 0
   bgmClips:
-  - clip: {fileID: 8300000, guid: cf496cc29a0b6f34b955c775d2e3e0ad, type: 3}
+  - clip: {fileID: 8300000, guid: 9af77244dda1a6d4eb5263c8e167674f, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1

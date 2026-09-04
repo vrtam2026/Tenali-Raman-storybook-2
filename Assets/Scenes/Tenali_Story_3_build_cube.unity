@@ -328,7 +328,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 21
+  mTrackableName: 66
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 60658042}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 21
+  mTargetName: 66
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 60658042}
   mMeshFilter: {fileID: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 14
+  mTrackableName: 58
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 123479349}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 14
+  mTargetName: 58
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 123479349}
   mMeshFilter: {fileID: 0}
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 2
+  mTrackableName: 71
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory4.xml
   mAspectRatio: 1
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 150684906}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 2
+  mTargetName: 71
   mDatasetName: Vuforia/TenaliStory4.xml
   mCastedBehaviour: {fileID: 150684906}
   mMeshFilter: {fileID: 0}
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 8
+  mTrackableName: 52
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 214211279}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 8
+  mTargetName: 52
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 214211279}
   mMeshFilter: {fileID: 0}
@@ -3874,7 +3874,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 10
+  mTrackableName: 54
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -3944,7 +3944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 359064353}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 10
+  mTargetName: 54
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 359064353}
   mMeshFilter: {fileID: 0}
@@ -4130,6 +4130,161 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &392342275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392342281}
+  - component: {fileID: 392342280}
+  - component: {fileID: 392342279}
+  - component: {fileID: 392342278}
+  - component: {fileID: 392342277}
+  - component: {fileID: 392342276}
+  m_Layer: 5
+  m_Name: QuizLoadingScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &392342276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392342275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa05c90ec21992c43919bf8502851dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuizLoadingScreen
+  characterGroups:
+  - frames:
+    - {fileID: 21300000, guid: 54a7c1b6b55145342a8ba82ef67484e6, type: 3}
+    - {fileID: 21300000, guid: ce493c3db179c344799e792da5994ad4, type: 3}
+  loopAnimation: 1
+  frameSpeed: 1.5
+  fadeInDuration: 0.3
+  fadeOutDuration: 0.3
+  minimumShowSeconds: 2
+  characterImage: {fileID: 813377624}
+  loadingText: {fileID: 0}
+  appearSfx: {fileID: 0}
+  quizLoadingStartSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+  whileQuizLoadingSound:
+    useSound: 1
+    audioClip: {fileID: 8300000, guid: dfa385e43cba2ef499d3c7f51d72b239, type: 3}
+    volume: 1.784
+    loop: 1
+  quizLoadingCompleteSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+--- !u!225 &392342277
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392342275}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &392342278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392342275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &392342279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392342275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &392342280
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392342275}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 20
+  m_TargetDisplay: 0
+--- !u!224 &392342281
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392342275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 813377626}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &392828360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4841,7 +4996,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 16
+  mTrackableName: 15
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -4911,7 +5066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 446616207}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 16
+  mTargetName: 15
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 446616207}
   mMeshFilter: {fileID: 0}
@@ -5361,7 +5516,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 09
+  mTrackableName: 2
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory4.xml
   mAspectRatio: 1
@@ -5431,7 +5586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 470815210}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 09
+  mTargetName: 2
   mDatasetName: Vuforia/TenaliStory4.xml
   mCastedBehaviour: {fileID: 470815210}
   mMeshFilter: {fileID: 0}
@@ -7246,7 +7401,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 12
+  mTrackableName: 55
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -7316,7 +7471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 609611930}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 12
+  mTargetName: 55
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 609611930}
   mMeshFilter: {fileID: 0}
@@ -8486,7 +8641,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 16
+  mTrackableName: 38
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -8556,7 +8711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 729741084}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 16
+  mTargetName: 38
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 729741084}
   mMeshFilter: {fileID: 0}
@@ -8875,7 +9030,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 5
+  mTrackableName: 6
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -8945,7 +9100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 756152356}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 5
+  mTargetName: 6
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 756152356}
   mMeshFilter: {fileID: 0}
@@ -9216,7 +9371,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 13
+  mTrackableName: 36
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -9286,7 +9441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 778199616}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 13
+  mTargetName: 36
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 778199616}
   mMeshFilter: {fileID: 0}
@@ -9489,6 +9644,81 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &813377623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813377626}
+  - component: {fileID: 813377625}
+  - component: {fileID: 813377624}
+  m_Layer: 5
+  m_Name: QuizLoadingScreenCharacterImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &813377624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813377623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &813377625
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813377623}
+  m_CullTransparentMesh: 1
+--- !u!224 &813377626
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813377623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 392342281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &814553721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9651,7 +9881,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 820245034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93b86fe1d63715c419a0bd57d4c2bed5, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b2e94146f12cb14188b094d66544b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARWindowManager
   windowSize: 1
@@ -10115,7 +10345,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 4
+  mTrackableName: 3
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -10185,7 +10415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 854032087}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 4
+  mTargetName: 3
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 854032087}
   mMeshFilter: {fileID: 0}
@@ -10688,7 +10918,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 20
+  mTrackableName: 64
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -10773,7 +11003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 891835087}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 20
+  mTargetName: 64
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 891835087}
   mMeshFilter: {fileID: 0}
@@ -10804,7 +11034,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 891931102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e08041b761a0d4c9fb1ef539b955b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7afb0a4a8e9c4854583aefcb2bcbc049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OverlayManager
   overlayPanel: {fileID: 101928614}
@@ -11244,7 +11474,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 04
+  mTrackableName: 012
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory5.xml
   mAspectRatio: 1
@@ -11314,7 +11544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 950004454}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 04
+  mTargetName: 012
   mDatasetName: Vuforia/TenaliStory5.xml
   mCastedBehaviour: {fileID: 950004454}
   mMeshFilter: {fileID: 0}
@@ -11674,7 +11904,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1270007002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82b85594be7e804ba3ae50dcf3d75c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cf2d473f926d384693cf215e77598f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARInteractionUI
   instructionPanel: {fileID: 182083594}
@@ -11763,7 +11993,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 015
+  mTrackableName: 04
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -11833,7 +12063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1022284011}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 015
+  mTargetName: 04
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1022284011}
   mMeshFilter: {fileID: 0}
@@ -12105,7 +12335,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065018287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0a4ff9315287c4fb1c299b8f112ed6, type: 3}
+  m_Script: {fileID: 11500000, guid: b13d84427ffd7a049973e3428fbb4127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARMediaManager
   replayButton: {fileID: 479568792}
@@ -12139,7 +12369,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065018287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc1f288f1eeee148b520fa337c3d7bb, type: 3}
+  m_Script: {fileID: 11500000, guid: b2b29af3c3eb41942a3590081e78b02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARAddressableAudioService
   catalog: {fileID: 11400000, guid: f2a4f6a32dcd47f4e85cd3830b120b8d, type: 2}
@@ -12316,7 +12546,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 8
+  mTrackableName: 7
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -12386,7 +12616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1106733120}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 8
+  mTargetName: 7
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 1106733120}
   mMeshFilter: {fileID: 0}
@@ -12417,7 +12647,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110882286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 441df16af41930140832fbee83d904d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b38d32d82cf2e7469c6231db643cd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARPreloader
   labelToPreload: Preload
@@ -12436,6 +12666,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1124722718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124722719}
+  - component: {fileID: 1124722721}
+  - component: {fileID: 1124722720}
+  m_Layer: 0
+  m_Name: LoadingScreenCharacterImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1124722719
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124722718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1320140753}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1124722720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124722718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1124722721
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124722718}
+  m_CullTransparentMesh: 1
 --- !u!1 &1130629463
 GameObject:
   m_ObjectHideFlags: 0
@@ -13084,7 +13389,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 04
+  mTrackableName: 09
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -13154,7 +13459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1215451577}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 04
+  mTargetName: 09
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1215451577}
   mMeshFilter: {fileID: 0}
@@ -13339,7 +13644,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1270007002}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201aaced76390d74598779385b044536, type: 3}
+  m_Script: {fileID: 11500000, guid: 867040d6e7bcef24183b2668101913aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoHideUI
   hideDelay: 3
@@ -13708,7 +14013,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 020
+  mTrackableName: 08
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -13778,7 +14083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1306916477}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 020
+  mTargetName: 08
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1306916477}
   mMeshFilter: {fileID: 0}
@@ -13907,6 +14212,147 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1306934986}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!1 &1320140748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320140753}
+  - component: {fileID: 1320140752}
+  - component: {fileID: 1320140751}
+  - component: {fileID: 1320140750}
+  - component: {fileID: 1320140749}
+  m_Layer: 0
+  m_Name: LoadingScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1320140749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320140748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b70a0a32641c0c4696c583aaba79ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadingScreen
+  characterGroups:
+  - frames:
+    - {fileID: 21300000, guid: 6b38a13741fae654da4589e6d78b142d, type: 3}
+    - {fileID: 21300000, guid: ce493c3db179c344799e792da5994ad4, type: 3}
+  loopAnimation: 1
+  randomFrame: 0
+  frameSpeed: 1.5
+  fadeInDuration: 0.4
+  fadeOutDuration: 0.4
+  showThresholdSeconds: 0.1
+  appearSfx: {fileID: 0}
+  loadingStartSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+  whileLoadingSound:
+    useSound: 1
+    audioClip: {fileID: 8300000, guid: dfa385e43cba2ef499d3c7f51d72b239, type: 3}
+    volume: 1.837
+    loop: 1
+  loadingCompleteSound:
+    useSound: 0
+    audioClip: {fileID: 0}
+    volume: 1
+    loop: 0
+--- !u!114 &1320140750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320140748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1320140751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320140748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1320140752
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320140748}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
+--- !u!224 &1320140753
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320140748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1124722719}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1323733985
 GameObject:
   m_ObjectHideFlags: 0
@@ -13956,7 +14402,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 022
+  mTrackableName: 010
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -14026,7 +14472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1323733992}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 022
+  mTargetName: 010
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1323733992}
   mMeshFilter: {fileID: 0}
@@ -14251,7 +14697,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 011
+  mTrackableName: 02
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory5.xml
   mAspectRatio: 1
@@ -14321,7 +14767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1426863998}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 011
+  mTargetName: 02
   mDatasetName: Vuforia/TenaliStory5.xml
   mCastedBehaviour: {fileID: 1426863998}
   mMeshFilter: {fileID: 0}
@@ -14660,7 +15106,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 014
+  mTrackableName: 1
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -14730,7 +15176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1496097615}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 014
+  mTargetName: 1
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1496097615}
   mMeshFilter: {fileID: 0}
@@ -14784,7 +15230,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 06
+  mTrackableName: 011
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -14854,7 +15300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1526307401}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 06
+  mTargetName: 011
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1526307401}
   mMeshFilter: {fileID: 0}
@@ -14908,7 +15354,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 018
+  mTrackableName: 06
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -14978,7 +15424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1540902409}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 018
+  mTargetName: 06
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1540902409}
   mMeshFilter: {fileID: 0}
@@ -15107,7 +15553,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 18
+  mTrackableName: 62
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -15177,7 +15623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1584010707}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 18
+  mTargetName: 62
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -15306,7 +15752,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 1
+  mTrackableName: 08
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory6.xml
   mAspectRatio: 1
@@ -15376,7 +15822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1597447376}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 1
+  mTargetName: 08
   mDatasetName: Vuforia/TenaliStory6.xml
   mCastedBehaviour: {fileID: 1597447376}
   mMeshFilter: {fileID: 0}
@@ -15430,7 +15876,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 8
+  mTrackableName: 29
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -15500,7 +15946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1625794114}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 8
+  mTargetName: 29
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 1625794114}
   mMeshFilter: {fileID: 0}
@@ -15964,7 +16410,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 13
+  mTrackableName: 14
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory1.xml
   mAspectRatio: 1
@@ -16034,7 +16480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1691306094}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 13
+  mTargetName: 14
   mDatasetName: Vuforia/TenaliStory1.xml
   mCastedBehaviour: {fileID: 1691306094}
   mMeshFilter: {fileID: 0}
@@ -16088,7 +16534,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 012
+  mTrackableName: 04
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory4.xml
   mAspectRatio: 1
@@ -16158,7 +16604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1702116423}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 012
+  mTargetName: 04
   mDatasetName: Vuforia/TenaliStory4.xml
   mCastedBehaviour: {fileID: 1702116423}
   mMeshFilter: {fileID: 0}
@@ -16658,7 +17104,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 20
+  mTrackableName: 42
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -16728,7 +17174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1837919672}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 20
+  mTargetName: 42
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 1837919672}
   mMeshFilter: {fileID: 0}
@@ -16782,7 +17228,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 12
+  mTrackableName: 34
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -16852,7 +17298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1854455749}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 12
+  mTargetName: 34
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 1854455749}
   mMeshFilter: {fileID: 0}
@@ -16891,7 +17337,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 16
+  mTrackableName: 60
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory3.xml
   mAspectRatio: 1
@@ -16976,7 +17422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1896811448}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 16
+  mTargetName: 60
   mDatasetName: Vuforia/TenaliStory3.xml
   mCastedBehaviour: {fileID: 1896811448}
   mMeshFilter: {fileID: 0}
@@ -17154,7 +17600,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 6
+  mTrackableName: 28
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -17224,7 +17670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1928045261}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 6
+  mTargetName: 28
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 1928045261}
   mMeshFilter: {fileID: 0}
@@ -17278,7 +17724,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 02
+  mTrackableName: 09
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory5.xml
   mAspectRatio: 1
@@ -17348,7 +17794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1949726863}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 02
+  mTargetName: 09
   mDatasetName: Vuforia/TenaliStory5.xml
   mCastedBehaviour: {fileID: 1949726863}
   mMeshFilter: {fileID: 0}
@@ -17526,7 +17972,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 10
+  mTrackableName: 32
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -17596,7 +18042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 2025707877}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 10
+  mTargetName: 32
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 2025707877}
   mMeshFilter: {fileID: 0}
@@ -17686,7 +18132,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 17
+  mTrackableName: 39
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/TenaliStory2.xml
   mAspectRatio: 1
@@ -17756,7 +18202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 2079141502}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 17
+  mTargetName: 39
   mDatasetName: Vuforia/TenaliStory2.xml
   mCastedBehaviour: {fileID: 2079141502}
   mMeshFilter: {fileID: 0}
@@ -18027,3 +18473,5 @@ SceneRoots:
   - {fileID: 891931104}
   - {fileID: 1173614583}
   - {fileID: 578455245}
+  - {fileID: 1320140753}
+  - {fileID: 392342281}

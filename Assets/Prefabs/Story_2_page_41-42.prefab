@@ -132,13 +132,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 964618902697340387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8b61716507d304caa14b216edfa80c, type: 3}
+  m_Script: {fileID: 11500000, guid: 74e22316492b61f43b189da19954093c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}
   layers:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8140785470270385350}
+  - {fileID: 4766603781056689134}
+  - {fileID: 4304164144694742838}
   gapAxis: 0
   gap: 0.045
   hardLockGapAxis: 1
@@ -299,7 +300,7 @@ Transform:
   m_GameObject: {fileID: 2112948519232694212}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014000028, y: -0.068, z: -0.027000016}
+  m_LocalPosition: {x: -0.014000028, y: -0.023000002, z: -0.027000016}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,10 +406,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2401292446821248396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e007fa2c4b4d948ac0bd92f2e640c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
-  pageId: TR_S2_41-42
+  pageId: TR_S2_P41-42
   mediaManager: {fileID: 0}
   pageType: 0
   layerRoot2D: {fileID: 5219994027957640407}
@@ -672,7 +673,7 @@ Transform:
   m_GameObject: {fileID: 5235453657973811489}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.014000028, y: -0.023000002, z: -0.017000025}
+  m_LocalPosition: {x: -0.014000028, y: 0.022, z: -0.017000025}
   m_LocalScale: {x: 0.20561595, y: 0.10280798, z: 0.10280798}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -749,8 +750,8 @@ VideoPlayer:
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 8400000, guid: 64a4ad9f208045643ae4ca58eb591691, type: 2}
   m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
+  m_TargetMaterialRenderer: {fileID: 4171780334857860457}
+  m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0

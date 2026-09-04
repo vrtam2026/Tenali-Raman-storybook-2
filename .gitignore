@@ -169,3 +169,11 @@ x86/
 
 # Unity CCD build cache — generated automatically, not source content
 CCDBuildData/
+
+# Local-only Unity CLI tools (per-machine, not shared)
+# (must come after the "!/[Aa]ssets/**/*.meta" un-ignore above to actually exclude the .meta)
+/Assets/Editor/LocalOnly/
+/Assets/Editor/LocalOnly.meta
+
+# Claude Code's own project settings (per-machine, personal — never shared)
+.claude/settings.local.json

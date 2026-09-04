@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 473414586966327429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78259f5dc7d4bab43818dafd8a98b483, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e007fa2c4b4d948ac0bd92f2e640c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
   pageId: TR_S3_P71-72
@@ -212,8 +212,8 @@ VideoPlayer:
   m_TargetCamera: {fileID: 0}
   m_TargetTexture: {fileID: 8400000, guid: 01df95325e53d9e4fb85afefa736105c, type: 2}
   m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
+  m_TargetMaterialRenderer: {fileID: 3515762769655272004}
+  m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8410074163235443707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8b61716507d304caa14b216edfa80c, type: 3}
+  m_Script: {fileID: 11500000, guid: 74e22316492b61f43b189da19954093c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallexWithAnimation
   cameraTransform: {fileID: 0}

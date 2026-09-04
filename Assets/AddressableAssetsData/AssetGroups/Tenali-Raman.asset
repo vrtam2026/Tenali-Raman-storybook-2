@@ -14,7 +14,272 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Tenali-Raman
   m_GUID: 664c109e8ba87834b8611fc0f8766520
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 03424cdb3f7f3b44f94ac2a013c7dbee
+    m_Address: Story_2_page_65-66
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0788ccdce41a2e54c9e6eda634714814
+    m_Address: Story_2_page_41-42
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d29712acc8abf648833b5fb995b7b5c
+    m_Address: Story_2_page_101-102
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d9541f7b58a7d746b9588d2d22269b3
+    m_Address: Story_2_page_31-32
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0db6407b84290c14bb2395d4f69018b3
+    m_Address: Story_2_page_29-30
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11cdd77e48a1d214c97ca7bcd36a0b6f
+    m_Address: Story_2_page_55-56
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18a17afcdcd34814ea7bd283020f9103
+    m_Address: Story_2_page_87-88
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 190cec340ce29894d906fc3f07eecea7
+    m_Address: Story_2_page_127-128
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a90e6c90b1277e40a4903d6d8076f36
+    m_Address: Story_2_page_99-100
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37b6ca8780fee304e88ffe3efd97ff54
+    m_Address: Story_2_page_115-116
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38b02698094b72144bc3980b887a5170
+    m_Address: Story_2_page_119-120
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38cf4bc2c4f2f36468209f52c1f0b3b3
+    m_Address: Story_2_page_1-2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4224a4463728c9647855ffea62f724e4
+    m_Address: Story_2_page_15-16
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 465993585565eb94e964566bcdd1413f
+    m_Address: Story_2_page_51-52
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46e3f52d3122a0c459b1026ee34cba11
+    m_Address: Story_2_page_43-44
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bb1e480d089f3d419b7d3166377818a
+    m_Address: Story_2_page_135-136
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a42004e7e0ed3146a0a9407959076f5
+    m_Address: Story_2_page_105-106
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5aab6cccf22f6b344989b064a97ed1cf
+    m_Address: Story_2_page_79-80
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5c9353a5429ec93439fec8fd0a67fa1d
+    m_Address: Story_2_page_39-40
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61387ab52b3e3a646921ba0f98900061
+    m_Address: Story_2_page_17-18
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67239dc3420dc504a9d353bcdd982883
+    m_Address: Story_2_page_69-70
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b8c7e65e43dda84cbcf22c207d189bc
+    m_Address: Story_2_page_121-122
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 73205fae971e0c841bdae71c06a36786
+    m_Address: Story_2_page_85-86
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7792a64808832d64c9bd658a2e708a72
+    m_Address: Story_2_page_97-98
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c9ce0c814d2b7c4b8d29413783f3088
+    m_Address: Story_2_page_3-4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7daf99750e2dcce40a8162a13a7e598b
+    m_Address: Story_2_page_123-124
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8207855a20246244db68e0db170364c7
+    m_Address: Story_2_page_33-34
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82f3b2a6746f6444686ec277dbcbdfc2
+    m_Address: Story_2_page_27-28
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87c458abeb07edc428ca58a6440cf801
+    m_Address: Story_2_page_13-14
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d7afe9f494fd0c4d84f49fb803125f0
+    m_Address: Story_2_page_81-82
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f8d43337b4e49340af62be7241d6c6d
+    m_Address: Story_2_page_71-72
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a19903c15df9be045881e2bef0c0b3dc
+    m_Address: Story_2_page_19-20
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa3814264f997a54d99b47505eced758
+    m_Address: Story_2_page_83-84
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd0d5acebfff7c64586884926c570d21
+    m_Address: Story_2_page_107-108
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c65c919d4a0812545b6dc88eab985e55
+    m_Address: Story_2_page_35-36
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8d307a736f89c942895e257efcc8de7
+    m_Address: Story_2_page_89-90
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8fd09e4cbca8074b9c48e320f90e159
+    m_Address: Story_2_page_57-58
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca9e267fa8c74654a831eb8cb031c785
+    m_Address: Story_2_page_103-104
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce99e18e26eae644888f66176b3d6f7a
+    m_Address: Story_2_page_9-10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf7109ba61fca7449b3fb9b85a3a1c84
+    m_Address: Story_2_page_63-64
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d100eab940a6ae04f8256a8b55561cd1
+    m_Address: Story_2_page_61-62
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5065974dd6dfd843b012f1c8c1c898e
+    m_Address: Story_2_page_67-68
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da30741bd4854504397cb30bf6f9abf6
+    m_Address: Story_2_page_125-126
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc538721b3d08734db3ba8fb758d3178
+    m_Address: Story_2_page_7-8
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de470d1059af93441af2cc61ed9cb77a
+    m_Address: Story_2_page_37-38
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e33676f22c3c7a147b4573c0df500859
+    m_Address: Story_2_page_59-60
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e64a5934e2942d8428ec241f732db04a
+    m_Address: Story_2_page_5-6
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6b1b949dfd850d45b1c9482aef7ff08
+    m_Address: Story_2_page_11-12
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0c38b305d780424093d7aa392998f27
+    m_Address: Story_2_page_129-130
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f162753cd08cdb042a6c96e7456a92d7
+    m_Address: Story_2_page_117-118
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5245d29caf9fa645b9401a95c9c409e
+    m_Address: Story_2_page_133-134
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f77b55c4568656449bfd6b668513c734
+    m_Address: Story_2_page_131-132
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc490726bf873e8448ef7c8d09ac568e
+    m_Address: Story_2_page_53-54
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
   m_SchemaSet:
