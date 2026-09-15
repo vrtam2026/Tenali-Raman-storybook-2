@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f3d3c9b603d8ff4384bd13d8349bf94
+guid: 97c5c3a6b0bfd694b9842019878b9d2a
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: guard_walk
+      name: guard walk
       takeName: Take 001
       internalID: 1827226128182048838
-      firstFrame: 1
-      lastFrame: 25
+      firstFrame: 0
+      lastFrame: 192
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -58,7 +58,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []

@@ -15,14 +15,9 @@ MonoBehaviour:
   languageName: French
   pageId: TR_S1_P5-6
   voiceClips:
-  - clip: {fileID: 8300000, guid: c6ee8b6dab16ee145971504b0b6de475, type: 3}
+  - clip: {fileID: 8300000, guid: d99176a457e887e468785cd30b8cb226, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1
     loop: 0
-  bgmClips:
-  - clip: {fileID: 8300000, guid: f447ea6975f0c61448004a2f678c7943, type: 3}
-    delayBefore: 0
-    delayAfter: 0
-    volume: 1
-    loop: 1
+  bgmClips: []

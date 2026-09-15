@@ -20,9 +20,4 @@ MonoBehaviour:
     delayAfter: 0
     volume: 1
     loop: 0
-  bgmClips:
-  - clip: {fileID: 8300000, guid: 9af77244dda1a6d4eb5263c8e167674f, type: 3}
-    delayBefore: 0
-    delayAfter: 0
-    volume: 1
-    loop: 1
+  bgmClips: []

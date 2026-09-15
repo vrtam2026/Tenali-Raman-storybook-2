@@ -33,7 +33,7 @@ Transform:
   m_LocalScale: {x: 0.27, y: 0.27, z: 0.27}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2446390976643527869}
+  - {fileID: 3714776618900605923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &772113984765225252
@@ -60,11 +60,11 @@ MonoBehaviour:
   mainVideoSettings: []
   backgroundVideoSettings: []
   animators:
-  - {fileID: 2439237847710610317}
+  - {fileID: 8689830669185365798}
   splineMovers: []
   splinePathMovers: []
   modelSlots:
-  - model: {fileID: 2446390976643527869}
+  - model: {fileID: 0}
     position: {x: 0.15, y: 0, z: -0.738}
     matchAnimationLength: 0
     showDuration: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     sfxClip: {fileID: 0}
     sfxVolume: 0
     originalScale: {x: 2.5, y: 2.5, z: 2.5}
-    lastModel: {fileID: 2446390976643527869}
+    lastModel: {fileID: 0}
   pageEndTrigger3D: 0
   freezeMode: 0
   freezeFirstSeconds: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VuforiaTrackHook
   keepContentVisibleOnShortTrackingLoss: 1
   lostTrackingGraceSeconds: 0.6
---- !u!1001 &2772505279562224470
+--- !u!1001 &3749018928941247496
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -176,7 +176,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 0.5690233
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
@@ -186,12 +186,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.738
+      value: -1.1553383
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.35689244
+      value: 0.3331698
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
@@ -201,7 +201,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9341455
+      value: -0.94286686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
@@ -216,7 +216,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 221.819
+      value: -141.077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
@@ -240,28 +240,28 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83d1c806af71ef944a9322e56e82f237,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2439237847710610317}
+      addedObject: {fileID: 8689830669185365798}
   m_SourcePrefab: {fileID: 100100000, guid: 83d1c806af71ef944a9322e56e82f237, type: 3}
---- !u!4 &2446390976643527869 stripped
+--- !u!4 &3714776618900605923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 83d1c806af71ef944a9322e56e82f237,
     type: 3}
-  m_PrefabInstance: {fileID: 2772505279562224470}
+  m_PrefabInstance: {fileID: 3749018928941247496}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3078354437740080647 stripped
+--- !u!1 &4091055218241769817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 83d1c806af71ef944a9322e56e82f237,
     type: 3}
-  m_PrefabInstance: {fileID: 2772505279562224470}
+  m_PrefabInstance: {fileID: 3749018928941247496}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2439237847710610317
+--- !u!95 &8689830669185365798
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3078354437740080647}
+  m_GameObject: {fileID: 4091055218241769817}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6df12242328f8cb4781e4ed5cfabfae5, type: 2}

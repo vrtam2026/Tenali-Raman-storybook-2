@@ -25,4 +25,4 @@ MonoBehaviour:
     delayBefore: 0
     delayAfter: 0
     volume: 1
-    loop: 1
+    loop: 0

@@ -10,19 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c8316f37bb6635429cc90f09ac2c4c1, type: 3}
-  m_Name: Page_TR_S3_P57-58_Hindi
+  m_Name: Page_TR_S3_P57-58_hindi
   m_EditorClassIdentifier: Assembly-CSharp::ARPageAudioPack
-  languageName: Hindi
+  languageName: hindi
   pageId: TR_S3_P57-58
   voiceClips:
-  - clip: {fileID: 8300000, guid: 445a461e95787db4293cf0e55a89380b, type: 3}
+  - clip: {fileID: 8300000, guid: 10c804fccaee6c44b8e8a8ed95949028, type: 3}
     delayBefore: 0
     delayAfter: 0
     volume: 1
     loop: 0
-  bgmClips:
-  - clip: {fileID: 8300000, guid: b22d92258e151cb4f988b1894fa5ad28, type: 3}
-    delayBefore: 0
-    delayAfter: 0
-    volume: 1
-    loop: 1
+  bgmClips: []

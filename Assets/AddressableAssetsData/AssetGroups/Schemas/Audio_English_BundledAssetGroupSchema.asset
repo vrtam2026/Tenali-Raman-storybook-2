@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d17a21594effb4e9591490b009e7aa, type: 3}
   m_Name: Audio_English_BundledAssetGroupSchema
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema
-  m_Group: {fileID: 11400000, guid: 0a760c93a3bb8e147b23d02581aaa192, type: 2}
+  m_Group: {fileID: 11400000, guid: 8cc85f4c04b71734da5e0e587dd3f787, type: 2}
   m_InternalBundleIdMode: 1
   m_Compression: 1
   m_IncludeAddressInCatalog: 1
@@ -38,11 +38,11 @@ MonoBehaviour:
     m_Id: 5fcea0cf287bd1041a72235b275153d1
   m_LoadPath:
     m_Id: e33ba43f76ae2854b801995f43cea246
-  m_BundleMode: 1
+  m_BundleMode: 0
   m_AssetBundleProviderType:
     m_AssemblyName: Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     m_ClassName: UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider
   m_UseDefaultSchemaSettings: 0
-  m_SelectedPathPairIndex: 0
+  m_SelectedPathPairIndex: 1
   m_BundleNaming: 0
   m_AssetLoadMode: 0

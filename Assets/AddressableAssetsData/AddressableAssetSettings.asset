@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 664c109e8ba87834b8611fc0f8766520
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: a15f00eeec80142f4d35c6ff679ea4f1
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
@@ -63,12 +63,12 @@ MonoBehaviour:
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
-  - {fileID: 11400000, guid: 980612400fa1dc545a63fe991857db56, type: 2}
   - {fileID: 11400000, guid: dd71b1bf5c344a31a14d0fafa07992a7, type: 2}
+  - {fileID: 11400000, guid: 980612400fa1dc545a63fe991857db56, type: 2}
   - {fileID: 11400000, guid: b558b8ef788e22b4bbb9cedeb70a7f52, type: 2}
-  - {fileID: 11400000, guid: 0a760c93a3bb8e147b23d02581aaa192, type: 2}
-  - {fileID: 11400000, guid: c7d8a5ff196990145b90309306734614, type: 2}
   - {fileID: 11400000, guid: 13bdc0825b20e8d45a35daff983599a2, type: 2}
+  - {fileID: 11400000, guid: c7d8a5ff196990145b90309306734614, type: 2}
+  - {fileID: 11400000, guid: 8cc85f4c04b71734da5e0e587dd3f787, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
@@ -95,17 +95,17 @@ MonoBehaviour:
       m_ProfileName: Tenali-Raman
       m_Values:
       - m_Id: 04506ea34a506744095f130fbe366c5b
-        m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/9e12c188-65c2-45b4-9933-6e8db44454f0/release_by_badge/latest/entry_by_path/content/?path=
+        m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/release_by_badge/latest/entry_by_path/content/?path=
       - m_Id: 5fcea0cf287bd1041a72235b275153d1
-        m_Value: CCDBuildData/093dd7e1-8ea4-4afa-ac99-3aba78403e1b/9e12c188-65c2-45b4-9933-6e8db44454f0/latest
+        m_Value: CCDBuildData/093dd7e1-8ea4-4afa-ac99-3aba78403e1b/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/latest
       - m_Id: 5ff6e7c4282dbda46bdb7d05d3eda3c4
         m_Value: production
       - m_Id: 8af4f54ba8c9e0a47b25317c841f2b2a
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: b7c7bc7bd8e535d458377bc7d6a156be
-        m_Value: CCDBuildData/093dd7e1-8ea4-4afa-ac99-3aba78403e1b/9e12c188-65c2-45b4-9933-6e8db44454f0/latest
+        m_Value: CCDBuildData/093dd7e1-8ea4-4afa-ac99-3aba78403e1b/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/latest
       - m_Id: e33ba43f76ae2854b801995f43cea246
-        m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/9e12c188-65c2-45b4-9933-6e8db44454f0/release_by_badge/latest/entry_by_path/content/?path=
+        m_Value: https://2ea185da-414a-4c00-bfb6-d0dc086d93b3.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/ad1ad9fd-6238-4b17-a7b3-eed0e1a895f5/release_by_badge/latest/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: 04506ea34a506744095f130fbe366c5b
       m_Name: Local.LoadPath
