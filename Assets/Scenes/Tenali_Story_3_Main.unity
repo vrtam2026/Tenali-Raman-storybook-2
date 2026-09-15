@@ -8688,7 +8688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &634354219
 Transform:
   m_ObjectHideFlags: 0
@@ -22505,6 +22505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Story_2_page_61-62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504434875506341265, guid: d100eab940a6ae04f8256a8b55561cd1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7838790435510999412, guid: d100eab940a6ae04f8256a8b55561cd1,
         type: 3}
