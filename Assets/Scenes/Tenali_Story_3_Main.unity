@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 3454409}
   - component: {fileID: 3454408}
   - component: {fileID: 3454407}
+  - component: {fileID: 3454412}
   m_Layer: 0
   m_Name: Story_2_page_87-88
   m_TagString: Untagged
@@ -150,10 +151,11 @@ Transform:
   m_GameObject: {fileID: 3454403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1687713353}
   m_Father: {fileID: 96670921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3454406
@@ -171,9 +173,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 09
+  mTrackableName: 87
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -182,7 +184,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
+  mPreview: {fileID: 3454412}
 --- !u!114 &3454407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,9 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
+  mObserverBehaviour: {fileID: 3454406}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 61
+  mTargetName: 87
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -271,6 +273,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 40
+--- !u!114 &3454412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3454403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 3454406}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 87
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 3454406}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &29376262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -433,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54970048}
   - component: {fileID: 54970050}
-  - component: {fileID: 54970049}
+  - component: {fileID: 54970051}
   m_Layer: 0
   m_Name: Story_2_page_109-Moral
   m_TagString: Untagged
@@ -456,25 +477,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &54970049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54970047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 54970050}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 013
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 54970050}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &54970050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,9 +492,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 013
+  mTrackableName: 109-moral
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -501,7 +503,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 54970049}
+  mPreview: {fileID: 54970051}
+--- !u!114 &54970051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54970047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 54970050}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 109-moral
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 54970050}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &60658035
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +691,7 @@ GameObject:
   - component: {fileID: 81644143}
   - component: {fileID: 81644142}
   - component: {fileID: 81644141}
+  - component: {fileID: 81644146}
   m_Layer: 0
   m_Name: Story_2_page_83-84
   m_TagString: Untagged
@@ -686,10 +708,11 @@ Transform:
   m_GameObject: {fileID: 81644137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.502, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 371082504}
   m_Father: {fileID: 96670921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &81644140
@@ -707,9 +730,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 06
+  mTrackableName: 83
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -718,7 +741,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
+  mPreview: {fileID: 81644146}
 --- !u!114 &81644141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,9 +754,9 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
+  mObserverBehaviour: {fileID: 81644140}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 61
+  mTargetName: 83
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -807,6 +830,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 38
+--- !u!114 &81644146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81644137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 81644140}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 83
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 81644140}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &95283689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -933,8 +975,7 @@ GameObject:
   - component: {fileID: 97232165}
   - component: {fileID: 97232164}
   - component: {fileID: 97232163}
-  - component: {fileID: 97232160}
-  - component: {fileID: 97232162}
+  - component: {fileID: 97232167}
   m_Layer: 0
   m_Name: Story_2_page_135-136
   m_TagString: Untagged
@@ -954,28 +995,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 195910736}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &97232160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97232158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 97232161}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 022
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 97232161}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &97232161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,9 +1014,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 022
+  mTrackableName: 136
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -1002,26 +1025,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 97232160}
---- !u!114 &97232162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97232158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 97232167}
 --- !u!114 &97232163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,6 +1095,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 58
+--- !u!114 &97232167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97232158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 97232161}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 136
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 97232161}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &101928612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,8 +1236,7 @@ GameObject:
   - component: {fileID: 104401561}
   - component: {fileID: 104401560}
   - component: {fileID: 104401559}
-  - component: {fileID: 104401556}
-  - component: {fileID: 104401558}
+  - component: {fileID: 104401563}
   m_Layer: 0
   m_Name: Story_2_page_103-104
   m_TagString: Untagged
@@ -1234,28 +1256,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2103544414}
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &104401556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104401554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 104401557}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 08
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 104401557}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &104401557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,9 +1275,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 08
+  mTrackableName: 104
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -1282,26 +1286,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 104401556}
---- !u!114 &104401558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104401554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 104401563}
 --- !u!114 &104401559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,6 +1356,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 45
+--- !u!114 &104401563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104401554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 104401557}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 104
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 104401557}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &106977991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,6 +2498,86 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AlphaFadeSpeed: 0.15
+--- !u!1001 &195910735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 97232159}
+    m_Modifications:
+    - target: {fileID: 1883437210461206824, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_135-136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883437210461206824, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8371260378440688100, guid: 4bb1e480d089f3d419b7d3166377818a, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bb1e480d089f3d419b7d3166377818a, type: 3}
+--- !u!4 &195910736 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3551392877699100639, guid: 4bb1e480d089f3d419b7d3166377818a,
+    type: 3}
+  m_PrefabInstance: {fileID: 195910735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &199585092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,7 +3259,7 @@ Transform:
   m_GameObject: {fileID: 231357488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3195,8 +3279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 231357491}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 015
-  mDatasetName: Vuforia/TenaliStory4.xml
+  mTargetName: 93-quiz
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 231357491}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -3215,9 +3299,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 015
+  mTrackableName: 93-quiz
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -4559,6 +4643,86 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &339366931
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2140070378}
+    m_Modifications:
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861758006982079373, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_101-102
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861758006982079373, guid: 0d29712acc8abf648833b5fb995b7b5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 3786634742373173067, guid: 0d29712acc8abf648833b5fb995b7b5c, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d29712acc8abf648833b5fb995b7b5c, type: 3}
+--- !u!4 &339366932 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6641788786314151628, guid: 0d29712acc8abf648833b5fb995b7b5c,
+    type: 3}
+  m_PrefabInstance: {fileID: 339366931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &339670711
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,6 +5114,86 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1001 &363995859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 456127297}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_127-128
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: 190cec340ce29894d906fc3f07eecea7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: 190cec340ce29894d906fc3f07eecea7, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 190cec340ce29894d906fc3f07eecea7, type: 3}
+--- !u!4 &363995860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: 190cec340ce29894d906fc3f07eecea7,
+    type: 3}
+  m_PrefabInstance: {fileID: 363995859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &364848362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5010,6 +5254,175 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &369064263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1613108299}
+    m_Modifications:
+    - target: {fileID: 4990553901702117906, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_81-82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990553901702117906, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289413709115626218, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: layerRoot2D
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289413709115626218, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: 'mainVideos.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d7afe9f494fd0c4d84f49fb803125f0, type: 3}
+--- !u!4 &369064264 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7457397103596285149, guid: 8d7afe9f494fd0c4d84f49fb803125f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 369064263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &371082503
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 81644138}
+    m_Modifications:
+    - target: {fileID: 4817222534976190816, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_83-84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817222534976190816, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 2037717969700527870, guid: aa3814264f997a54d99b47505eced758, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3814264f997a54d99b47505eced758, type: 3}
+--- !u!4 &371082504 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6258032644600006035, guid: aa3814264f997a54d99b47505eced758,
+    type: 3}
+  m_PrefabInstance: {fileID: 371082503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &371109912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5048,6 +5461,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969207041}
   m_CullTransparentMesh: 1
+--- !u!1001 &384468662
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 950931165}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_133-134
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f5245d29caf9fa645b9401a95c9c409e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: f5245d29caf9fa645b9401a95c9c409e, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5245d29caf9fa645b9401a95c9c409e, type: 3}
+--- !u!4 &384468663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: f5245d29caf9fa645b9401a95c9c409e,
+    type: 3}
+  m_PrefabInstance: {fileID: 384468662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &387716853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5328,6 +5821,86 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &398333811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 453460224}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_117-118
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f162753cd08cdb042a6c96e7456a92d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: f162753cd08cdb042a6c96e7456a92d7, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f162753cd08cdb042a6c96e7456a92d7, type: 3}
+--- !u!4 &398333812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: f162753cd08cdb042a6c96e7456a92d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 398333811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &398362082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5659,6 +6232,91 @@ RectTransform:
   m_AnchoredPosition: {x: 323, y: 3}
   m_SizeDelta: {x: 400, y: 94.7626}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &410760078
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 837970485}
+    m_Modifications:
+    - target: {fileID: 1565501480030695275, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: pageType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883437210461206824, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_107-108
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883437210461206824, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8371260378440688100, guid: bd0d5acebfff7c64586884926c570d21, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd0d5acebfff7c64586884926c570d21, type: 3}
+--- !u!4 &410760079 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3551392877699100639, guid: bd0d5acebfff7c64586884926c570d21,
+    type: 3}
+  m_PrefabInstance: {fileID: 410760078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &418506973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5895,6 +6553,85 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &444793841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1403816451}
+    m_Modifications:
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683139622221138398, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_105-106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683139622221138398, guid: 5a42004e7e0ed3146a0a9407959076f5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a42004e7e0ed3146a0a9407959076f5, type: 3}
+--- !u!4 &444793842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 706420161248679229, guid: 5a42004e7e0ed3146a0a9407959076f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 444793841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &446383106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6092,8 +6829,7 @@ GameObject:
   - component: {fileID: 453460230}
   - component: {fileID: 453460229}
   - component: {fileID: 453460228}
-  - component: {fileID: 453460225}
-  - component: {fileID: 453460227}
+  - component: {fileID: 453460232}
   m_Layer: 0
   m_Name: Story_2_page_117-118
   m_TagString: Untagged
@@ -6113,28 +6849,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 398333812}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &453460225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453460223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 453460226}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 04
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 453460226}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &453460226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6150,9 +6868,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 04
+  mTrackableName: 118
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -6161,26 +6879,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 453460225}
---- !u!114 &453460227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453460223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 453460232}
 --- !u!114 &453460228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6250,6 +6949,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 49
+--- !u!114 &453460232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453460223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 453460226}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 118
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 453460226}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &456127296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,8 +6982,7 @@ GameObject:
   - component: {fileID: 456127303}
   - component: {fileID: 456127302}
   - component: {fileID: 456127301}
-  - component: {fileID: 456127298}
-  - component: {fileID: 456127300}
+  - component: {fileID: 456127305}
   m_Layer: 0
   m_Name: Story_2_page_127-128
   m_TagString: Untagged
@@ -6285,28 +7002,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 363995860}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &456127298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456127296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 456127299}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 014
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 456127299}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &456127299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6322,9 +7021,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 014
+  mTrackableName: 128
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -6333,26 +7032,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 456127298}
---- !u!114 &456127300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456127296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 456127305}
 --- !u!114 &456127301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6422,6 +7102,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 54
+--- !u!114 &456127305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456127296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 456127299}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 128
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 456127299}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!224 &461024382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7100,6 +7799,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &510589841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1739428428}
+    m_Modifications:
+    - target: {fileID: 1883437210461206824, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_115-116
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883437210461206824, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37b6ca8780fee304e88ffe3efd97ff54, type: 3}
+--- !u!4 &510589842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3551392877699100639, guid: 37b6ca8780fee304e88ffe3efd97ff54,
+    type: 3}
+  m_PrefabInstance: {fileID: 510589841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &510957595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7866,6 +8644,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
+--- !u!1001 &583283919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1707820568}
+    m_Modifications:
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731196162824317429, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_89-90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8731196162824317429, guid: c8d307a736f89c942895e257efcc8de7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8d307a736f89c942895e257efcc8de7, type: 3}
+--- !u!4 &583283920 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2695611937275614850, guid: c8d307a736f89c942895e257efcc8de7,
+    type: 3}
+  m_PrefabInstance: {fileID: 583283919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &591208493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8170,7 +9027,7 @@ Transform:
   m_GameObject: {fileID: 608494504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8190,8 +9047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 608494507}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 013
-  mDatasetName: Vuforia/TenaliStory4.xml
+  mTargetName: 91-moral
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 608494507}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -8210,9 +9067,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 013
+  mTrackableName: 91-moral
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -9439,6 +10296,86 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &744794018
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 938062981}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_123-124
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: 7daf99750e2dcce40a8162a13a7e598b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: 7daf99750e2dcce40a8162a13a7e598b, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7daf99750e2dcce40a8162a13a7e598b, type: 3}
+--- !u!4 &744794019 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: 7daf99750e2dcce40a8162a13a7e598b,
+    type: 3}
+  m_PrefabInstance: {fileID: 744794018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &745667222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10596,8 +11533,7 @@ GameObject:
   - component: {fileID: 837970491}
   - component: {fileID: 837970490}
   - component: {fileID: 837970489}
-  - component: {fileID: 837970486}
-  - component: {fileID: 837970488}
+  - component: {fileID: 837970493}
   m_Layer: 0
   m_Name: Story_2_page_107-108
   m_TagString: Untagged
@@ -10614,31 +11550,13 @@ Transform:
   m_GameObject: {fileID: 837970484}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 410760079}
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &837970486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837970484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 837970487}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 011
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 837970487}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &837970487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10654,9 +11572,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 011
+  mTrackableName: 107
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -10665,26 +11583,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 837970486}
---- !u!114 &837970488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837970484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 837970493}
 --- !u!114 &837970489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10754,6 +11653,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 47
+--- !u!114 &837970493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837970484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 837970487}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 107
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 837970487}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!114 &839325257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10964,6 +11882,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117119463}
   m_CullTransparentMesh: 1
+--- !u!1001 &846358406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1418271485}
+    m_Modifications:
+    - target: {fileID: 1283196199323130900, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_79-80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283196199323130900, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4142742470642545476, guid: 5aab6cccf22f6b344989b064a97ed1cf, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5aab6cccf22f6b344989b064a97ed1cf, type: 3}
+--- !u!4 &846358407 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7771521267995922031, guid: 5aab6cccf22f6b344989b064a97ed1cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 846358406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &849621470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12201,8 +13199,7 @@ GameObject:
   - component: {fileID: 938062987}
   - component: {fileID: 938062986}
   - component: {fileID: 938062985}
-  - component: {fileID: 938062982}
-  - component: {fileID: 938062984}
+  - component: {fileID: 938062989}
   m_Layer: 0
   m_Name: Story_2_page_123-124
   m_TagString: Untagged
@@ -12222,28 +13219,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 744794019}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &938062982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938062980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 938062983}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 010
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 938062983}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &938062983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12259,9 +13238,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 010
+  mTrackableName: 124
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -12270,26 +13249,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 938062982}
---- !u!114 &938062984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938062980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 938062989}
 --- !u!114 &938062985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12359,6 +13319,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 52
+--- !u!114 &938062989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938062980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 938062983}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 124
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 938062983}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!4 &941077244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4636900281554769884, guid: a19903c15df9be045881e2bef0c0b3dc,
@@ -12490,8 +13469,7 @@ GameObject:
   - component: {fileID: 950931171}
   - component: {fileID: 950931170}
   - component: {fileID: 950931169}
-  - component: {fileID: 950931166}
-  - component: {fileID: 950931168}
+  - component: {fileID: 950931173}
   m_Layer: 0
   m_Name: Story_2_page_133-134
   m_TagString: Untagged
@@ -12511,28 +13489,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 384468663}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &950931166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950931164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 950931167}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 020
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 950931167}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &950931167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12548,9 +13508,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 020
+  mTrackableName: 134
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -12559,26 +13519,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 950931166}
---- !u!114 &950931168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950931164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 950931173}
 --- !u!114 &950931169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12648,6 +13589,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 57
+--- !u!114 &950931173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950931164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 950931167}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 134
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 950931167}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!114 &951750323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12822,7 +13782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 969820713}
   - component: {fileID: 969820715}
-  - component: {fileID: 969820714}
+  - component: {fileID: 969820716}
   m_Layer: 0
   m_Name: Story_2_page_111-Quiz
   m_TagString: Untagged
@@ -12839,31 +13799,12 @@ Transform:
   m_GameObject: {fileID: 969820712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &969820714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969820712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 969820715}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 015
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 969820715}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &969820715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12879,9 +13820,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 015
+  mTrackableName: 111-quiz
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -12890,7 +13831,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 969820714}
+  mPreview: {fileID: 969820716}
+--- !u!114 &969820716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969820712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 969820715}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 111-quiz
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 969820715}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &971367893
 GameObject:
   m_ObjectHideFlags: 0
@@ -13034,6 +13994,86 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1001 &987207834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2144737719}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_121-122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: 6b8c7e65e43dda84cbcf22c207d189bc, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b8c7e65e43dda84cbcf22c207d189bc, type: 3}
+--- !u!4 &987207835 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: 6b8c7e65e43dda84cbcf22c207d189bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 987207834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &987904334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13285,7 +14325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040210138}
   - component: {fileID: 1040210140}
-  - component: {fileID: 1040210139}
+  - component: {fileID: 1040210141}
   m_Layer: 0
   m_Name: Story_2_page_137-Moral
   m_TagString: Untagged
@@ -13302,31 +14342,12 @@ Transform:
   m_GameObject: {fileID: 1040210137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1040210139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040210137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1040210140}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 023
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 1040210140}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1040210140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13342,9 +14363,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 023
+  mTrackableName: 137-moral
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -13353,7 +14374,105 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1040210139}
+  mPreview: {fileID: 1040210141}
+--- !u!114 &1040210141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040210137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1040210140}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 137-moral
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1040210140}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!1001 &1056412073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1540874105}
+    m_Modifications:
+    - target: {fileID: 1883437210461206824, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_119-120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883437210461206824, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38b02698094b72144bc3980b887a5170, type: 3}
+--- !u!4 &1056412074 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3551392877699100639, guid: 38b02698094b72144bc3980b887a5170,
+    type: 3}
+  m_PrefabInstance: {fileID: 1056412073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1061200938
 GameObject:
   m_ObjectHideFlags: 0
@@ -14869,8 +15988,7 @@ GameObject:
   - component: {fileID: 1244032288}
   - component: {fileID: 1244032287}
   - component: {fileID: 1244032286}
-  - component: {fileID: 1244032283}
-  - component: {fileID: 1244032285}
+  - component: {fileID: 1244032290}
   m_Layer: 0
   m_Name: Story_2_page_97-98
   m_TagString: Untagged
@@ -14890,28 +16008,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1392930705}
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1244032283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244032281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1244032284}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 02
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 1244032284}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1244032284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14927,9 +16027,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 02
+  mTrackableName: 98
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -14938,26 +16038,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1244032283}
---- !u!114 &1244032285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244032281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1244032290}
 --- !u!114 &1244032286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15027,6 +16108,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 42
+--- !u!114 &1244032290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244032281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1244032284}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 98
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1244032284}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!4 &1249168787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3447352242805381048, guid: a4c36045bfa98d943b2c677791864e6d,
@@ -16287,6 +17387,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349069709}
   m_CullTransparentMesh: 1
+--- !u!1001 &1368945369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1768005247}
+    m_Modifications:
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811192558619886048, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_99-100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811192558619886048, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8401594472295248287, guid: 2a90e6c90b1277e40a4903d6d8076f36, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a90e6c90b1277e40a4903d6d8076f36, type: 3}
+--- !u!4 &1368945370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 459186617164817384, guid: 2a90e6c90b1277e40a4903d6d8076f36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1368945369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1377153380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16360,6 +17540,85 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465993585565eb94e964566bcdd1413f, type: 3}
+--- !u!1001 &1392930704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1244032282}
+    m_Modifications:
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599096915452543613, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_97-98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599096915452543613, guid: 7792a64808832d64c9bd658a2e708a72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7792a64808832d64c9bd658a2e708a72, type: 3}
+--- !u!4 &1392930705 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3932838648618916199, guid: 7792a64808832d64c9bd658a2e708a72,
+    type: 3}
+  m_PrefabInstance: {fileID: 1392930704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403816450
 GameObject:
   m_ObjectHideFlags: 0
@@ -16374,8 +17633,7 @@ GameObject:
   - component: {fileID: 1403816457}
   - component: {fileID: 1403816456}
   - component: {fileID: 1403816455}
-  - component: {fileID: 1403816452}
-  - component: {fileID: 1403816454}
+  - component: {fileID: 1403816459}
   m_Layer: 0
   m_Name: Story_2_page_105-106
   m_TagString: Untagged
@@ -16392,31 +17650,13 @@ Transform:
   m_GameObject: {fileID: 1403816450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 444793842}
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1403816452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403816450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1403816453}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 09
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 1403816453}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1403816453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16432,9 +17672,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 09
+  mTrackableName: 105
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -16443,26 +17683,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1403816452}
---- !u!114 &1403816454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403816450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1403816459}
 --- !u!114 &1403816455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16532,6 +17753,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 46
+--- !u!114 &1403816459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403816450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1403816453}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 105
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1403816453}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1405077015
 GameObject:
   m_ObjectHideFlags: 0
@@ -16546,8 +17786,7 @@ GameObject:
   - component: {fileID: 1405077022}
   - component: {fileID: 1405077021}
   - component: {fileID: 1405077020}
-  - component: {fileID: 1405077017}
-  - component: {fileID: 1405077019}
+  - component: {fileID: 1405077024}
   m_Layer: 0
   m_Name: Story_2_page_125-126
   m_TagString: Untagged
@@ -16567,28 +17806,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1462749670}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1405077017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405077015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1405077018}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 012
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 1405077018}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1405077018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16604,9 +17825,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 012
+  mTrackableName: 126
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -16615,26 +17836,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1405077017}
---- !u!114 &1405077019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405077015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1405077024}
 --- !u!114 &1405077020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16704,6 +17906,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 53
+--- !u!114 &1405077024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405077015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1405077018}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 126
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1405077018}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1418271484
 GameObject:
   m_ObjectHideFlags: 0
@@ -16719,6 +17940,7 @@ GameObject:
   - component: {fileID: 1418271490}
   - component: {fileID: 1418271489}
   - component: {fileID: 1418271488}
+  - component: {fileID: 1418271493}
   m_Layer: 0
   m_Name: Story_2_page_79-80
   m_TagString: Untagged
@@ -16738,7 +17960,8 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 846358407}
   m_Father: {fileID: 96670921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1418271487
@@ -16756,9 +17979,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 2
+  mTrackableName: 80
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -16767,7 +17990,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
+  mPreview: {fileID: 1418271493}
 --- !u!114 &1418271488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16780,9 +18003,9 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
+  mObserverBehaviour: {fileID: 1418271487}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 61
+  mTargetName: 80
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -16856,6 +18079,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 36
+--- !u!114 &1418271493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418271484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1418271487}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 80
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1418271487}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!4 &1426053720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 821396947862373966, guid: 38cf4bc2c4f2f36468209f52c1f0b3b3,
@@ -17003,8 +18245,7 @@ GameObject:
   - component: {fileID: 1456719002}
   - component: {fileID: 1456719001}
   - component: {fileID: 1456719000}
-  - component: {fileID: 1456718997}
-  - component: {fileID: 1456718999}
+  - component: {fileID: 1456719004}
   m_Layer: 0
   m_Name: Story_2_page_129-130
   m_TagString: Untagged
@@ -17021,31 +18262,13 @@ Transform:
   m_GameObject: {fileID: 1456718995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1948014396}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1456718997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456718995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1456718998}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 015
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 1456718998}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1456718998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17061,9 +18284,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 015
+  mTrackableName: 129
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -17072,26 +18295,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1456718997}
---- !u!114 &1456718999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456718995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1456719004}
 --- !u!114 &1456719000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17161,6 +18365,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 55
+--- !u!114 &1456719004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456718995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1456718998}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 129
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1456718998}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!1001 &1462749669
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1405077016}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_125-126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: da30741bd4854504397cb30bf6f9abf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: da30741bd4854504397cb30bf6f9abf6, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da30741bd4854504397cb30bf6f9abf6, type: 3}
+--- !u!4 &1462749670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: da30741bd4854504397cb30bf6f9abf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462749669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1469657019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3707584825046110683, guid: e6b1b949dfd850d45b1c9482aef7ff08,
@@ -17302,8 +18605,7 @@ GameObject:
   - component: {fileID: 1540874111}
   - component: {fileID: 1540874110}
   - component: {fileID: 1540874109}
-  - component: {fileID: 1540874106}
-  - component: {fileID: 1540874108}
+  - component: {fileID: 1540874113}
   m_Layer: 0
   m_Name: Story_2_page_119-120
   m_TagString: Untagged
@@ -17323,28 +18625,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1056412074}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1540874106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540874104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1540874107}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 06
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 1540874107}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1540874107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17360,9 +18644,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 06
+  mTrackableName: 120
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -17371,26 +18655,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1540874106}
---- !u!114 &1540874108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540874104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1540874113}
 --- !u!114 &1540874109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17460,6 +18725,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 50
+--- !u!114 &1540874113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540874104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1540874107}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 120
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1540874107}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1556448903
 GameObject:
   m_ObjectHideFlags: 0
@@ -17622,8 +18906,7 @@ GameObject:
   - component: {fileID: 1575434933}
   - component: {fileID: 1575434932}
   - component: {fileID: 1575434931}
-  - component: {fileID: 1575434928}
-  - component: {fileID: 1575434930}
+  - component: {fileID: 1575434935}
   m_Layer: 0
   m_Name: Story_2_page_131-132
   m_TagString: Untagged
@@ -17643,28 +18926,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1620272247}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1575434928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575434926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1575434929}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 018
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 1575434929}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1575434929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17680,9 +18945,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 018
+  mTrackableName: 132
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -17691,26 +18956,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1575434928}
---- !u!114 &1575434930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1575434926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1575434935}
 --- !u!114 &1575434931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17780,6 +19026,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 56
+--- !u!114 &1575434935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575434926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1575434929}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 132
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1575434929}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1584010700
 GameObject:
   m_ObjectHideFlags: 0
@@ -18176,6 +19441,7 @@ GameObject:
   - component: {fileID: 1613108304}
   - component: {fileID: 1613108303}
   - component: {fileID: 1613108302}
+  - component: {fileID: 1613108307}
   m_Layer: 0
   m_Name: Story_2_page_81-82
   m_TagString: Untagged
@@ -18195,7 +19461,8 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 369064264}
   m_Father: {fileID: 96670921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1613108301
@@ -18213,9 +19480,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 04
+  mTrackableName: 82
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -18224,7 +19491,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 0}
+  mPreview: {fileID: 1613108307}
 --- !u!114 &1613108302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18237,9 +19504,9 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
+  mObserverBehaviour: {fileID: 1613108301}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 61
+  mTargetName: 82
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -18313,6 +19580,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 37
+--- !u!114 &1613108307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613108298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1613108301}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 82
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1613108301}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!1001 &1620272246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1575434927}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_131-132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f77b55c4568656449bfd6b668513c734,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: f77b55c4568656449bfd6b668513c734, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f77b55c4568656449bfd6b668513c734, type: 3}
+--- !u!4 &1620272247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: f77b55c4568656449bfd6b668513c734,
+    type: 3}
+  m_PrefabInstance: {fileID: 1620272246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1631160851
 GameObject:
   m_ObjectHideFlags: 0
@@ -18619,10 +19985,11 @@ Transform:
   m_GameObject: {fileID: 1669132846}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1980026553}
   m_Father: {fileID: 96670921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1669132848
@@ -18639,8 +20006,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1669132849}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 07
-  mDatasetName: Vuforia/TenaliStory4.xml
+  mTargetName: 85
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1669132849}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -18659,9 +20026,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 07
+  mTrackableName: 85
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -18683,9 +20050,9 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
+  mObserverBehaviour: {fileID: 1669132849}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 61
+  mTargetName: 85
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -18759,6 +20126,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 39
+--- !u!1001 &1687713352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3454404}
+    m_Modifications:
+    - target: {fileID: 4990553901702117906, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_87-88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990553901702117906, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8589833018363000436, guid: 18a17afcdcd34814ea7bd283020f9103, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18a17afcdcd34814ea7bd283020f9103, type: 3}
+--- !u!4 &1687713353 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7457397103596285149, guid: 18a17afcdcd34814ea7bd283020f9103,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687713352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1691306087
 GameObject:
   m_ObjectHideFlags: 0
@@ -18947,7 +20394,8 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 583283920}
   m_Father: {fileID: 96670921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1707820569
@@ -18964,8 +20412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1707820570}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 012
-  mDatasetName: Vuforia/TenaliStory4.xml
+  mTargetName: 90
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1707820570}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -18984,9 +20432,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 012
+  mTrackableName: 90
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory4.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -19008,9 +20456,9 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
+  mObserverBehaviour: {fileID: 1707820570}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 61
+  mTargetName: 90
   mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
   mCastedBehaviour: {fileID: 1584010707}
   mMeshFilter: {fileID: 0}
@@ -19379,8 +20827,7 @@ GameObject:
   - component: {fileID: 1739428434}
   - component: {fileID: 1739428433}
   - component: {fileID: 1739428432}
-  - component: {fileID: 1739428429}
-  - component: {fileID: 1739428431}
+  - component: {fileID: 1739428436}
   m_Layer: 0
   m_Name: Story_2_page_115-116
   m_TagString: Untagged
@@ -19397,31 +20844,13 @@ Transform:
   m_GameObject: {fileID: 1739428427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 510589842}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1739428429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739428427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1739428430}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 1
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 1739428430}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1739428430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19437,9 +20866,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 1
+  mTrackableName: 115
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -19448,26 +20877,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1739428429}
---- !u!114 &1739428431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739428427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1739428436}
 --- !u!114 &1739428432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19537,6 +20947,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 48
+--- !u!114 &1739428436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739428427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1739428430}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 115
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1739428430}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1743366693
 GameObject:
   m_ObjectHideFlags: 0
@@ -19552,7 +20981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1743366694
 Transform:
   m_ObjectHideFlags: 0
@@ -19595,8 +21024,7 @@ GameObject:
   - component: {fileID: 1768005253}
   - component: {fileID: 1768005252}
   - component: {fileID: 1768005251}
-  - component: {fileID: 1768005248}
-  - component: {fileID: 1768005250}
+  - component: {fileID: 1768005255}
   m_Layer: 0
   m_Name: Story_2_page_99-100
   m_TagString: Untagged
@@ -19616,28 +21044,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1368945370}
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1768005248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768005246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1768005249}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 04
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 1768005249}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1768005249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19653,9 +21063,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 04
+  mTrackableName: 100
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -19664,26 +21074,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1768005248}
---- !u!114 &1768005250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768005246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 1768005255}
 --- !u!114 &1768005251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19753,6 +21144,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 43
+--- !u!114 &1768005255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768005246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 1768005249}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 100
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 1768005249}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1809800457
 GameObject:
   m_ObjectHideFlags: 0
@@ -20622,11 +22032,175 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 29376262}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1948014395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1456718996}
+    m_Modifications:
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_129-130
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734220704565855700, guid: f0c38b305d780424093d7aa392998f27,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6337308020529488416, guid: f0c38b305d780424093d7aa392998f27, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0c38b305d780424093d7aa392998f27, type: 3}
+--- !u!4 &1948014396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1724328000741339352, guid: f0c38b305d780424093d7aa392998f27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1948014395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1956323767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3938330024577760573, guid: dc538721b3d08734db3ba8fb758d3178,
     type: 3}
   m_PrefabInstance: {fileID: 328780665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1980026552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1669132847}
+    m_Modifications:
+    - target: {fileID: 1283196199323130900, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_85-86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283196199323130900, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296287076324188312, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73205fae971e0c841bdae71c06a36786, type: 3}
+--- !u!4 &1980026553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7771521267995922031, guid: 73205fae971e0c841bdae71c06a36786,
+    type: 3}
+  m_PrefabInstance: {fileID: 1980026552}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2031130387
 PrefabInstance:
@@ -20900,7 +22474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073909945}
   - component: {fileID: 2073909947}
-  - component: {fileID: 2073909946}
+  - component: {fileID: 2073909948}
   m_Layer: 0
   m_Name: Story_2_page_139-Quiz
   m_TagString: Untagged
@@ -20917,31 +22491,12 @@ Transform:
   m_GameObject: {fileID: 2073909944}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2073909946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073909944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 2073909947}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 025
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 2073909947}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &2073909947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20957,9 +22512,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 025
+  mTrackableName: 139-quiz
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -20968,7 +22523,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2073909946}
+  mPreview: {fileID: 2073909948}
+--- !u!114 &2073909948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073909944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 2073909947}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 139-quiz
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 2073909947}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &2075122407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21204,6 +22778,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096736585}
   m_CullTransparentMesh: 1
+--- !u!1001 &2103544413
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 104401555}
+    m_Modifications:
+    - target: {fileID: 1883437210461206824, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_Name
+      value: Story_2_page_103-104
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883437210461206824, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 8371260378440688100, guid: ca9e267fa8c74654a831eb8cb031c785, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca9e267fa8c74654a831eb8cb031c785, type: 3}
+--- !u!4 &2103544414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3551392877699100639, guid: ca9e267fa8c74654a831eb8cb031c785,
+    type: 3}
+  m_PrefabInstance: {fileID: 2103544413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2110971406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4688852591047698843, guid: ca23badd855b5d243be1d88ecae92d64,
@@ -21377,8 +23031,7 @@ GameObject:
   - component: {fileID: 2140070384}
   - component: {fileID: 2140070383}
   - component: {fileID: 2140070382}
-  - component: {fileID: 2140070379}
-  - component: {fileID: 2140070381}
+  - component: {fileID: 2140070386}
   m_Layer: 0
   m_Name: Story_2_page_101-102
   m_TagString: Untagged
@@ -21395,31 +23048,13 @@ Transform:
   m_GameObject: {fileID: 2140070377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 339366932}
   m_Father: {fileID: 1276280099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2140070379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140070377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 2140070380}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 05
-  mDatasetName: Vuforia/TenaliStory5.xml
-  mCastedBehaviour: {fileID: 2140070380}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &2140070380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21435,9 +23070,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 05
+  mTrackableName: 101
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory5.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -21446,26 +23081,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2140070379}
---- !u!114 &2140070381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140070377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 2140070386}
 --- !u!114 &2140070382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21535,6 +23151,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 44
+--- !u!114 &2140070386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140070377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 2140070380}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 101
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 2140070380}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &2144737718
 GameObject:
   m_ObjectHideFlags: 0
@@ -21549,8 +23184,7 @@ GameObject:
   - component: {fileID: 2144737725}
   - component: {fileID: 2144737724}
   - component: {fileID: 2144737723}
-  - component: {fileID: 2144737720}
-  - component: {fileID: 2144737722}
+  - component: {fileID: 2144737727}
   m_Layer: 0
   m_Name: Story_2_page_121-122
   m_TagString: Untagged
@@ -21570,28 +23204,10 @@ Transform:
   m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 987207835}
   m_Father: {fileID: 1743366694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2144737720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144737718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 2144737721}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 08
-  mDatasetName: Vuforia/TenaliStory6.xml
-  mCastedBehaviour: {fileID: 2144737721}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &2144737721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21607,9 +23223,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 08
+  mTrackableName: 122
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/TenaliStory6.xml
+  mDataSetPath: Vuforia/NEW_TENALI_STORYPAGES.xml
   mAspectRatio: 1
   mImageTargetType: 0
   mWidth: 1
@@ -21618,26 +23234,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2144737720}
---- !u!114 &2144737722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144737718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1584010707}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: 61
-  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
-  mCastedBehaviour: {fileID: 1584010707}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+  mPreview: {fileID: 2144737727}
 --- !u!114 &2144737723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21707,6 +23304,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PageTarget
   pageIndex: 51
+--- !u!114 &2144737727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144737718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
+  mObserverBehaviour: {fileID: 2144737721}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: 122
+  mDatasetName: Vuforia/NEW_TENALI_STORYPAGES.xml
+  mCastedBehaviour: {fileID: 2144737721}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &94231180653095969
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="VuforiaScripts.csproj" />
+  <Project Path="VuforiaPackageTests.csproj" />
+  <Project Path="VuforiaEditorScripts.csproj" />
+</Solution>
