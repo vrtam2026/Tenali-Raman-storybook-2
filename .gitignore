@@ -47,8 +47,6 @@
 
 # NuGet Packages
 *.nupkg
-**/[Pp]ackages/*
-!**/[Pp]ackages/build/
 
 # .NET build artifacts
 artifacts/
@@ -85,6 +83,10 @@ playground.xcworkspace
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Mm]emory[Cc]aptures/
+
+# Package payloads are too large for git; manifest.json and packages-lock.json must stay tracked
+/[Pp]ackages/*.tgz
+/[Pp]ackages/com.unity.inputsystem/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -138,8 +140,6 @@ x86/
 
 # NuGet
 *.nupkg
-**/[Pp]ackages/*
-!**/[Pp]ackages/build/
 *.nuget.props
 *.nuget.targets
 
