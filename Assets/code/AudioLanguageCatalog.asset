@@ -102,14 +102,6 @@ MonoBehaviour:
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
   - languageName: English
-    pageId: TR_S2_P29-30
-    audioPack:
-      m_AssetGUID: f14e0f7d72cf0f845af0a0ef584c3be3
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
-  - languageName: English
     pageId: TR_S2_P31-32
     audioPack:
       m_AssetGUID: 0b95f6862499d3345830e546931bf1f9
@@ -134,14 +126,6 @@ MonoBehaviour:
       m_SubObjectGUID: 
       m_EditorAssetChanged: 0
   - languageName: English
-    pageId: TR_S2_P37-38
-    audioPack:
-      m_AssetGUID: 313d401ebb3f20c4280310b18a5bd60c
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
-  - languageName: English
     pageId: TR_S2_P39-40
     audioPack:
       m_AssetGUID: aaec3cd864a97cd4fa2dab12ccfc0d66
@@ -161,22 +145,6 @@ MonoBehaviour:
     pageId: TR_S2_P43-44
     audioPack:
       m_AssetGUID: 7e17a475b12d4074890db448f06c5812
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
-  - languageName: English
-    pageId: TR_S3_P51-52
-    audioPack:
-      m_AssetGUID: 03c583861853288409064960d50c7ca8
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_SubObjectGUID: 
-      m_EditorAssetChanged: 0
-  - languageName: English
-    pageId: TR_S3_P53-54
-    audioPack:
-      m_AssetGUID: d85aae11d238d5e489517758fa206a0a
       m_SubObjectName: 
       m_SubObjectType: 
       m_SubObjectGUID: 
@@ -729,6 +697,38 @@ MonoBehaviour:
     pageId: TR_S3_P71-72
     audioPack:
       m_AssetGUID: 1e525134419c6c94d95d116bdadf8276
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S2_P29-30
+    audioPack:
+      m_AssetGUID: 20c48bfd7d5d2bd48b01fd42ddca7f4d
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S2_P37-38
+    audioPack:
+      m_AssetGUID: 96b9b650e8f8b8c4d80eb64f0c205f79
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P51-52
+    audioPack:
+      m_AssetGUID: 5ff6a63fe45bfeb4c99cad0c5978f605
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - languageName: English
+    pageId: TR_S3_P53-54
+    audioPack:
+      m_AssetGUID: 4606b23cbb31b4f41b5c3b3df9787206
       m_SubObjectName: 
       m_SubObjectType: 
       m_SubObjectGUID: 

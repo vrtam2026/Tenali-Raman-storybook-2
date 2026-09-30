@@ -303,17 +303,55 @@ public class StoryPart2D
 
 // ───────────────────────────────────────────────────────────────────────────
 
-// One 3D Model Slot — shown on its own, then hidden, before the next slot appears.
+// When a 3D Model Slot appears.
+public enum ModelStart3D
+{
+    AfterPrevious,      // default — starts once the slot above has finished its own time
+    TogetherWithSlot    // starts at the same moment another (earlier) slot starts
+}
+
+// When a 3D Model Slot disappears.
+public enum ModelHide3D
+{
+    AfterOwnTime,   // default — hides when its own Show Duration ends
+    WhenSlotHides,  // stays on until another slot hides
+    StayOn          // never hides on its own — stays until the page resets
+}
+
+// One 3D Model Slot. By default it is shown on its own, then hidden, before the
+// next slot appears. The "appear / disappear" options let a model start together
+// with another one, or stay on longer.
 // The model's own Animator (if any) plays its animation automatically once the
 // model is active — this does not trigger or control any animation itself.
 [System.Serializable]
 public class ModelSlot3D
 {
+    [Tooltip("AfterPrevious (default) = starts once the slot above has finished its own time.\nTogetherWithSlot = starts at the same moment another, earlier slot starts.")]
+    public ModelStart3D startMode = ModelStart3D.AfterPrevious;
+
+    [Tooltip("Slot number (1, 2, 3 ...) this one starts together with. Only used if Start Mode is TogetherWithSlot. Must be an earlier slot.")]
+    [Min(1)] public int startSlotNumber = 1;
+
+    [Tooltip("Seconds to wait before this model appears. 0 = no wait.")]
+    [Min(0f)] public float startDelay = 0f;
+
+    [Tooltip("AfterOwnTime (default) = hides when its Show Duration ends.\nWhenSlotHides = stays on until another slot hides.\nStayOn = never hides on its own; stays until the page resets.")]
+    public ModelHide3D hideMode = ModelHide3D.AfterOwnTime;
+
+    [Tooltip("Slot number (1, 2, 3 ...) this one waits for before hiding. Only used if Hide Mode is WhenSlotHides.")]
+    [Min(1)] public int hideSlotNumber = 1;
+
     [Tooltip("The 3D model to show for this slot.")]
     public Transform model;
 
-    [Tooltip("Position to place the model at when this slot starts. Adjust here directly instead of in the Hierarchy.")]
+    [Tooltip("OFF (default) = the model appears exactly where you placed it in the scene. Just move it in the Scene view.\nON = ignore that and use the typed Position below instead.")]
+    public bool overridePosition = false;
+
+    [Tooltip("Only used if 'Use Typed Position' is ON.")]
     public Vector3 position;
+
+    [Tooltip("Tick this if the model walks along a Spline Mover. The walk then starts when THIS model appears, not when the page starts.")]
+    public bool startSplineWithModel = false;
 
     [Tooltip("OFF (default) = use Show Duration below.\nON = automatically use this model's own animation length instead — no need to time it by hand.")]
     public bool matchAnimationLength = false;
@@ -522,9 +560,7 @@ public class ARTrackedPageNode : MonoBehaviour
     private int _currentPartIndex2D = -1;
 
     // 3D Model Slots runtime
-    private Coroutine _modelSlotsRoutine;
     private bool _3dSlotsPaused;
-    private int _currentModelSlotIndex = -1;
 
     // Names kept visible after fade (frame stays, black screen removed separately)
     private static readonly string[] _keepVisible = {
@@ -553,11 +589,9 @@ public class ARTrackedPageNode : MonoBehaviour
     private readonly Dictionary<VideoPlayer, VideoFreezeRuntime> _videoRuntime = new();
 
     // Runs automatically in the Editor whenever a field changes in the Inspector.
-    // Two jobs for Model Slots:
-    //   1. When a NEW model is dragged into a slot, capture its current position
-    //      automatically instead of leaving Position at 0,0,0.
-    //   2. Whenever Position is edited afterward, move the model there immediately
-    //      so you can see exactly where it'll be without pressing Play.
+    // Model Slots: remembers each model's normal size, and -- only if "Use Typed
+    // Position" is ON -- previews the typed position. Otherwise the model is left
+    // exactly where you put it, so moving it by hand always sticks.
     private void OnValidate()
     {
         if (modelSlots == null) return;
@@ -577,13 +611,25 @@ public class ARTrackedPageNode : MonoBehaviour
                 }
             }
 
-            if (slot.model != null)
-                slot.model.localPosition = slot.position;
+            if (slot.model == null || Application.isPlaying) continue;
+
+            if (slot.overridePosition) slot.model.localPosition = slot.position;
+            else slot.position = slot.model.localPosition; // keeps the typed value ready if you switch it on
         }
     }
 
+    // Where each model was placed in the scene, captured before anything moves it.
+    private Vector3[] _slotHomePos;
+
     private void Awake()
     {
+        if (modelSlots != null)
+        {
+            _slotHomePos = new Vector3[modelSlots.Count];
+            for (int i = 0; i < modelSlots.Count; i++)
+                if (modelSlots[i]?.model != null) _slotHomePos[i] = modelSlots[i].model.localPosition;
+        }
+
         if (mediaManager == null)
         {
 #if UNITY_2023_1_OR_NEWER
@@ -1328,6 +1374,10 @@ public class ARTrackedPageNode : MonoBehaviour
             ARTrackableSplineMover m = splineMovers[i];
             if (m == null) continue;
 
+            // This one walks a model that has "Start Spline With Model" ticked --
+            // it starts when that model appears, not now.
+            if (IsSplineHeldForModelSlot(m)) continue;
+
             EnsureSplineMoverCanStart(m);
 
             if (!m.gameObject.activeInHierarchy)
@@ -1386,13 +1436,27 @@ public class ARTrackedPageNode : MonoBehaviour
     // Does nothing if the list is empty, so existing 3D pages that don't use
     // this are unaffected.
 
+    // Each slot runs on its own small timer, so several models can be on screen at
+    // once. Three flags per slot tell the other slots what it is doing:
+    //   started  = the model has appeared
+    //   ownDone  = its own Show Duration (and gap) is over -> "After Previous" slots may go
+    //   hidden   = the model has been switched off
+    private bool[] _slotStarted;
+    private bool[] _slotOwnDone;
+    private bool[] _slotHidden;
+    private readonly List<Coroutine> _modelSlotRoutines = new List<Coroutine>();
+
     private void BeginModelSlots3D()
     {
         if (modelSlots == null || modelSlots.Count == 0) return;
 
-        if (_modelSlotsRoutine != null) { StopCoroutine(_modelSlotsRoutine); _modelSlotsRoutine = null; }
+        StopModelSlots3D();
         _3dSlotsPaused = false;
-        _currentModelSlotIndex = -1;
+
+        int n = modelSlots.Count;
+        _slotStarted = new bool[n];
+        _slotOwnDone = new bool[n];
+        _slotHidden = new bool[n];
 
         foreach (var slot in modelSlots)
         {
@@ -1401,56 +1465,164 @@ public class ARTrackedPageNode : MonoBehaviour
             slot.model.localScale = slot.originalScale; // undo any leftover scale from a previous run
         }
 
-        _modelSlotsRoutine = StartCoroutine(RunModelSlots3D());
+        for (int i = 0; i < n; i++)
+            _modelSlotRoutines.Add(StartCoroutine(RunModelSlot3D(i)));
     }
 
-    private IEnumerator RunModelSlots3D()
+    private bool IsSplineHeldForModelSlot(ARTrackableSplineMover m)
     {
-        for (int i = 0; i < modelSlots.Count; i++)
+        if (modelSlots == null) return false;
+        foreach (var slot in modelSlots)
+            if (slot != null && slot.startSplineWithModel && slot.model != null && m.ObjectToMove == slot.model)
+                return true;
+        return false;
+    }
+
+    private void StartSplinesForModel(Transform model)
+    {
+        RebuildSplineMoverLists();
+        foreach (var m in splineMovers)
         {
-            _currentModelSlotIndex = i;
-            ModelSlot3D slot = modelSlots[i];
-            if (slot?.model == null) continue;
+            if (m == null || m.ObjectToMove != model) continue;
+            EnsureSplineMoverCanStart(m);
+            if (!m.gameObject.activeInHierarchy) continue;
 
-            slot.model.localPosition = slot.position;
-            if (slot.scaleInOut) slot.model.localScale = Vector3.zero;
-            slot.model.gameObject.SetActive(true);
+            string reason;
+            if (!m.ForceRestartFromBeginning(out reason))
+                Debug.LogWarning($"[AR] ARTrackableSplineMover '{m.name}' did not start with its model: {reason}", m);
+        }
+    }
 
-            // Model turns on right here — start its own animation fresh from the
-            // beginning at this exact moment, not whatever state it was left in.
-            Animator modelAnimator = slot.model.GetComponentInChildren<Animator>(true);
-            if (modelAnimator != null)
-            {
-                modelAnimator.Rebind();
-                modelAnimator.Update(0f);
-            }
+    private void StopModelSlots3D()
+    {
+        foreach (var c in _modelSlotRoutines)
+            if (c != null) StopCoroutine(c);
+        _modelSlotRoutines.Clear();
+    }
 
-            if (slot.sfxClip != null)
-                AudioSource.PlayClipAtPoint(slot.sfxClip, slot.model.position, slot.sfxVolume);
+    // Slot number typed in the Inspector (1-based) -> list index, or -1 if it is not usable.
+    private int SlotIndexFromNumber(int number, int self)
+    {
+        int idx = number - 1;
+        if (idx < 0 || idx >= modelSlots.Count || idx == self) return -1;
+        return idx;
+    }
 
-            if (slot.scaleInOut)
-                yield return ScaleModelRoutine(slot.model, Vector3.zero, slot.originalScale, slot.scaleDuration);
-            else
-                slot.model.localScale = slot.originalScale;
+    // True if following "wait for slot X to hide" links from this slot leads back to itself.
+    private bool HideChainLoops(int start)
+    {
+        int cur = start;
+        for (int step = 0; step <= modelSlots.Count; step++)
+        {
+            ModelSlot3D s = modelSlots[cur];
+            if (s == null || s.hideMode != ModelHide3D.WhenSlotHides) return false;
+            cur = SlotIndexFromNumber(s.hideSlotNumber, cur);
+            if (cur < 0) return false;
+            if (cur == start) return true;
+        }
+        return true;
+    }
 
-            float duration = slot.matchAnimationLength && modelAnimator != null && modelAnimator.GetCurrentAnimatorStateInfo(0).length > 0f
-                ? modelAnimator.GetCurrentAnimatorStateInfo(0).length
-                : slot.showDuration;
-
-            yield return WaitPausable3D(duration);
-
-            if (slot.scaleInOut)
-                yield return ScaleModelRoutine(slot.model, slot.originalScale, Vector3.zero, slot.scaleDuration);
-
-            slot.model.gameObject.SetActive(false);
-            slot.model.localScale = slot.originalScale; // reset for next time, in case scaling was used
-
-            if (slot.gapBeforeNext > 0f)
-                yield return WaitPausable3D(slot.gapBeforeNext);
+    private IEnumerator RunModelSlot3D(int i)
+    {
+        ModelSlot3D slot = modelSlots[i];
+        if (slot?.model == null)
+        {
+            // Nothing to show -- never block the slots that wait on this one.
+            _slotStarted[i] = _slotOwnDone[i] = _slotHidden[i] = true;
+            yield break;
         }
 
-        _modelSlotsRoutine = null;
-        _currentModelSlotIndex = -1;
+        // ── WHEN DOES IT APPEAR ──────────────────────────────────────────
+        int startAfter = i - 1;   // default: wait for the slot above
+        bool together = false;
+        if (slot.startMode == ModelStart3D.TogetherWithSlot)
+        {
+            int idx = SlotIndexFromNumber(slot.startSlotNumber, i);
+            if (idx >= 0 && idx < i) { startAfter = idx; together = true; }
+            else Debug.LogWarning($"[AR] Model Slot {i + 1}: 'Together With Slot {slot.startSlotNumber}' must point to an earlier slot -- using 'After Previous' instead.", this);
+        }
+
+        if (startAfter >= 0)
+        {
+            bool[] gate = together ? _slotStarted : _slotOwnDone;
+            while (!gate[startAfter]) yield return null;
+        }
+        if (slot.startDelay > 0f) yield return WaitPausable3D(slot.startDelay);
+
+        // ── SHOW ─────────────────────────────────────────────────────────
+        if (slot.overridePosition) slot.model.localPosition = slot.position;
+        else if (_slotHomePos != null && i < _slotHomePos.Length) slot.model.localPosition = _slotHomePos[i];
+        if (slot.scaleInOut) slot.model.localScale = Vector3.zero;
+        slot.model.gameObject.SetActive(true);
+        _slotStarted[i] = true;
+
+        // Model turns on right here — start its own animation fresh from the
+        // beginning at this exact moment, not whatever state it was left in.
+        Animator modelAnimator = slot.model.GetComponentInChildren<Animator>(true);
+        if (modelAnimator != null)
+        {
+            modelAnimator.Rebind();
+            modelAnimator.Update(0f);
+            modelAnimator.speed = 1f; // an earlier freeze must not carry over into this run
+        }
+
+        if (slot.startSplineWithModel) StartSplinesForModel(slot.model);
+
+        if (slot.sfxClip != null)
+            AudioSource.PlayClipAtPoint(slot.sfxClip, slot.model.position, slot.sfxVolume);
+
+        if (slot.scaleInOut)
+            yield return ScaleModelRoutine(slot.model, Vector3.zero, slot.originalScale, slot.scaleDuration);
+        else
+            slot.model.localScale = slot.originalScale;
+
+        float duration = slot.matchAnimationLength && modelAnimator != null && modelAnimator.GetCurrentAnimatorStateInfo(0).length > 0f
+            ? modelAnimator.GetCurrentAnimatorStateInfo(0).length
+            : slot.showDuration;
+
+        yield return WaitPausable3D(duration);
+
+        // ── WHEN DOES IT DISAPPEAR ───────────────────────────────────────
+        ModelHide3D hide = slot.hideMode;
+        int hideAfter = -1;
+        if (hide == ModelHide3D.WhenSlotHides)
+        {
+            hideAfter = SlotIndexFromNumber(slot.hideSlotNumber, i);
+            if (hideAfter < 0 || HideChainLoops(i))
+            {
+                Debug.LogWarning($"[AR] Model Slot {i + 1}: 'When Slot {slot.hideSlotNumber} Hides' is not usable -- the model will stay on instead.", this);
+                hide = ModelHide3D.StayOn;
+            }
+        }
+
+        if (hide == ModelHide3D.AfterOwnTime)
+        {
+            yield return HideModelSlot3D(i);
+            if (slot.gapBeforeNext > 0f) yield return WaitPausable3D(slot.gapBeforeNext);
+            _slotOwnDone[i] = true;
+            yield break;
+        }
+
+        // Stays on: the slots below carry on as if this one had finished.
+        if (slot.gapBeforeNext > 0f) yield return WaitPausable3D(slot.gapBeforeNext);
+        _slotOwnDone[i] = true;
+
+        if (hide == ModelHide3D.StayOn) yield break; // stays until the page resets
+
+        while (!_slotHidden[hideAfter]) yield return null;
+        yield return HideModelSlot3D(i);
+    }
+
+    private IEnumerator HideModelSlot3D(int i)
+    {
+        ModelSlot3D slot = modelSlots[i];
+        if (slot.scaleInOut)
+            yield return ScaleModelRoutine(slot.model, slot.originalScale, Vector3.zero, slot.scaleDuration);
+
+        slot.model.gameObject.SetActive(false);
+        slot.model.localScale = slot.originalScale; // reset for next time, in case scaling was used
+        _slotHidden[i] = true;
     }
 
     // Universal, safe "reveal" effect: scales the model from one size to another.
@@ -1489,14 +1661,16 @@ public class ARTrackedPageNode : MonoBehaviour
     {
         _3dSlotsPaused = false;
 
-        // Re-assert the currently active slot's model is actually showing —
-        // same safety idea as the 2D Video Slots resume fix: if tracking
-        // flickered off at an awkward moment, this guarantees the right
-        // model is visible again rather than leaving it stuck off.
-        if (_currentModelSlotIndex < 0 || modelSlots == null || _currentModelSlotIndex >= modelSlots.Count) return;
-        ModelSlot3D slot = modelSlots[_currentModelSlotIndex];
-        if (slot?.model == null) return;
-        if (!slot.model.gameObject.activeSelf) slot.model.gameObject.SetActive(true);
+        // Re-assert every model that should be showing right now -- same safety idea
+        // as the 2D Video Slots resume fix: if tracking flickered off at an awkward
+        // moment, this guarantees the models are visible again rather than stuck off.
+        if (modelSlots == null || _slotStarted == null) return;
+        for (int i = 0; i < modelSlots.Count && i < _slotStarted.Length; i++)
+        {
+            ModelSlot3D slot = modelSlots[i];
+            if (slot?.model == null || !_slotStarted[i] || _slotHidden[i]) continue;
+            if (!slot.model.gameObject.activeSelf) slot.model.gameObject.SetActive(true);
+        }
     }
 
     public void PauseStoryForActivity()

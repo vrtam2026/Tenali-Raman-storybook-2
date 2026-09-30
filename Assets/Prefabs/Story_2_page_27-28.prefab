@@ -64,8 +64,15 @@ MonoBehaviour:
   splineMovers: []
   splinePathMovers: []
   modelSlots:
-  - model: {fileID: 0}
+  - startMode: 0
+    startSlotNumber: 1
+    startDelay: 0
+    hideMode: 0
+    hideSlotNumber: 1
+    model: {fileID: 0}
+    overridePosition: 0
     position: {x: 0.15, y: 0, z: -0.738}
+    startSplineWithModel: 0
     matchAnimationLength: 0
     showDuration: 0
     gapBeforeNext: 0

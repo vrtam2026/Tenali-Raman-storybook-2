@@ -647,7 +647,7 @@ public class ARTrackedPageNodeEditor : Editor
     // Unity's default "Element 0" so each slot is easy to tell apart at a glance.
     private void DrawModelSlots()
     {
-        EditorGUILayout.LabelField("Model Slots (optional) — shows one 3D model at a time, in order", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("Model Slots (optional) — one after another by default; each slot can also start together or stay on", EditorStyles.boldLabel);
 
         while (_modelSlotFoldouts.Count < _modelSlots.arraySize) _modelSlotFoldouts.Add(false);
         while (_modelSlotFoldouts.Count > _modelSlots.arraySize) _modelSlotFoldouts.RemoveAt(_modelSlotFoldouts.Count - 1);
@@ -676,7 +676,16 @@ public class ARTrackedPageNodeEditor : Editor
                 if (!_modelSlotFoldouts[i]) continue;
 
                 EditorGUILayout.PropertyField(model, new GUIContent("Model"));
-                EditorGUILayout.PropertyField(slot.FindPropertyRelative("position"), new GUIContent("Position"));
+                SerializedProperty overridePos = slot.FindPropertyRelative("overridePosition");
+                EditorGUILayout.PropertyField(overridePos, new GUIContent("Use Typed Position",
+                    "OFF = the model appears exactly where it sits in the scene (just move it in the Scene view).\nON = use the Position typed below instead."));
+                if (overridePos.boolValue)
+                    EditorGUILayout.PropertyField(slot.FindPropertyRelative("position"), new GUIContent("Position"));
+
+                EditorGUILayout.PropertyField(slot.FindPropertyRelative("startSplineWithModel"), new GUIContent("Start Spline With Model",
+                    "Tick if this model walks along a Spline Mover: the walk starts when THIS model appears, not when the page starts."));
+
+                DrawModelSlotTiming(slot, i);
 
                 SerializedProperty matchAnim = slot.FindPropertyRelative("matchAnimationLength");
                 EditorGUILayout.PropertyField(matchAnim, new GUIContent("Match Animation Length"));
@@ -703,6 +712,78 @@ public class ARTrackedPageNodeEditor : Editor
             _modelSlots.InsertArrayElementAtIndex(_modelSlots.arraySize);
             _modelSlotFoldouts.Add(true); // new slot starts expanded so you can fill it in right away
         }
+    }
+
+    // "When does it appear / disappear" -- two plain dropdowns per slot.
+    // Defaults (After Previous / After Its Own Time) behave exactly like before.
+    private void DrawModelSlotTiming(SerializedProperty slot, int index)
+    {
+        SerializedProperty startMode = slot.FindPropertyRelative("startMode");
+        SerializedProperty startSlot = slot.FindPropertyRelative("startSlotNumber");
+        SerializedProperty hideMode = slot.FindPropertyRelative("hideMode");
+        SerializedProperty hideSlot = slot.FindPropertyRelative("hideSlotNumber");
+
+        EditorGUILayout.Space(2);
+        EditorGUILayout.LabelField("WHEN DOES IT APPEAR?", EditorStyles.miniBoldLabel);
+
+        string[] startLabels = { "After the slot above finishes", "Together with another slot" };
+        startMode.enumValueIndex = EditorGUILayout.Popup("Appears", startMode.enumValueIndex, startLabels);
+
+        if (startMode.enumValueIndex == (int)ModelStart3D.TogetherWithSlot)
+        {
+            if (index == 0)
+            {
+                EditorGUILayout.HelpBox("Slot 1 has no earlier slot, so it starts first.", MessageType.Info);
+            }
+            else
+            {
+                // Only EARLIER slots can be picked -- keeps the timing from ever looping.
+                string[] names = new string[index];
+                for (int k = 0; k < index; k++) names[k] = SlotLabel(k);
+                int current = Mathf.Clamp(startSlot.intValue - 1, 0, index - 1);
+                current = EditorGUILayout.Popup("Starts with", current, names);
+                startSlot.intValue = current + 1;
+            }
+        }
+        EditorGUILayout.PropertyField(slot.FindPropertyRelative("startDelay"), new GUIContent("Wait before showing (sec)"));
+
+        EditorGUILayout.Space(2);
+        EditorGUILayout.LabelField("WHEN DOES IT DISAPPEAR?", EditorStyles.miniBoldLabel);
+
+        string[] hideLabels = { "After its own Show Duration", "When another slot disappears", "Stays on until the page resets" };
+        hideMode.enumValueIndex = EditorGUILayout.Popup("Disappears", hideMode.enumValueIndex, hideLabels);
+
+        if (hideMode.enumValueIndex == (int)ModelHide3D.WhenSlotHides)
+        {
+            if (_modelSlots.arraySize < 2)
+            {
+                EditorGUILayout.HelpBox("Add another slot to pick from.", MessageType.Info);
+            }
+            else
+            {
+                // Every OTHER slot can be picked (e.g. slot 1 can stay until slot 3 hides).
+                var names = new List<string>();
+                var numbers = new List<int>();
+                for (int k = 0; k < _modelSlots.arraySize; k++)
+                {
+                    if (k == index) continue;
+                    names.Add(SlotLabel(k));
+                    numbers.Add(k + 1);
+                }
+                int sel = Mathf.Max(0, numbers.IndexOf(hideSlot.intValue));
+                sel = EditorGUILayout.Popup("Disappears with", sel, names.ToArray());
+                hideSlot.intValue = numbers[sel];
+            }
+        }
+        EditorGUILayout.Space(2);
+        EditorGUILayout.LabelField("HOW LONG / EXTRAS", EditorStyles.miniBoldLabel);
+    }
+
+    private string SlotLabel(int k)
+    {
+        SerializedProperty m = _modelSlots.GetArrayElementAtIndex(k).FindPropertyRelative("model");
+        string n = m.objectReferenceValue != null ? m.objectReferenceValue.name : "no model";
+        return $"Slot {k + 1} — {n}";
     }
 
     private static void DrawBar(string title)

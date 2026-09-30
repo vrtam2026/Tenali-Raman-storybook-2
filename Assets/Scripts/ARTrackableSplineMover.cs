@@ -36,6 +36,9 @@ public class ARTrackableSplineMover : MonoBehaviour
     [SerializeField] private bool playAnimatorWhileMoving = true;
     [SerializeField] private bool freezeAnimatorOnComplete = true;
 
+    // The object this mover walks along the spline (used by Model Slots).
+    public Transform ObjectToMove => objectToMove;
+
     public bool IsPlaying { get; private set; }
     public bool IsFinished { get; private set; }
     public bool IsPaused { get; private set; }
