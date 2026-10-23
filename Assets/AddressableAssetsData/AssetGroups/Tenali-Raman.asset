@@ -138,7 +138,8 @@ MonoBehaviour:
   - m_GUID: ca23badd855b5d243be1d88ecae92d64
     m_Address: Story_2_page_23-Quiz
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ce99e18e26eae644888f66176b3d6f7a
     m_Address: Story_2_page_9-10

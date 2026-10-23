@@ -40,18 +40,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 20c48bfd7d5d2bd48b01fd42ddca7f4d
-    m_Address: audio/English/TR_S2_P29-30
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 250251db4d915d9f52fff834b72985f4
     m_Address: audio/English/TR_S2_P27-28
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4606b23cbb31b4f41b5c3b3df9787206
-    m_Address: audio/English/TR_S3_P53-54
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -70,11 +60,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5ff6a63fe45bfeb4c99cad0c5978f605
-    m_Address: audio/English/TR_S3_P51-52
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e17a475b12d4074890db448f06c5812
     m_Address: audio/English/TR_S2_P43-44
     m_ReadOnly: 0
@@ -82,11 +67,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 96b9b650e8f8b8c4d80eb64f0c205f79
     m_Address: audio/English/TR_S2_P37-38
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9bac4bda02458a04a8746f1d1b12f47c
-    m_Address: audio/English/TR_S2_P35-36
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
