@@ -9552,11 +9552,11 @@ MonoBehaviour:
   pages:
   - addressableKey: Story_2_page_1-2
     pageId: TR_S1_P1-2
-  - addressableKey: Story_2_page_Quiz
+  - addressableKey: Story_2_page_47-Quiz
     pageId: 
-  - addressableKey: Story_2_page_Quiz
+  - addressableKey: Story_2_page_23-Quiz
     pageId: 
-  - addressableKey: Story_2_page_Quiz
+  - addressableKey: Story_2_page_75-Quiz
     pageId: 
   - addressableKey: Story_2_page_Moral
     pageId: 
@@ -13084,7 +13084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
-  addressableKey: Story_2_page_Quiz
+  addressableKey: Story_2_page_47-Quiz
   blockBackgroundTouchesWhileQuizOpen: 1
   replayButton: {fileID: 479568790}
   nextPageImg: {fileID: 1634428168}
@@ -14143,7 +14143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
-  addressableKey: Story_2_page_Quiz
+  addressableKey: Story_2_page_75-Quiz
   blockBackgroundTouchesWhileQuizOpen: 1
   replayButton: {fileID: 479568790}
   nextPageImg: {fileID: 1634428168}
@@ -19171,7 +19171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c704a4a4b89f24ca231b358c15572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomARHandler
-  addressableKey: Story_2_page_Quiz
+  addressableKey: Story_2_page_23-Quiz
   blockBackgroundTouchesWhileQuizOpen: 1
   replayButton: {fileID: 479568790}
   nextPageImg: {fileID: 1634428168}
