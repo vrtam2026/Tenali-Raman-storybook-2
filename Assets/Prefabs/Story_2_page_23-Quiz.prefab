@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Panchatantra (sanskrit) is _________________
+  m_text: 1. Tenali Raman was known for which qualities?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -204,9 +204,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Correct Answers
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -526,9 +525,9 @@ RectTransform:
   - {fileID: 2383694423631631328}
   m_Father: {fileID: 5338441473218069585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -28.125}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &74651036149350922
@@ -864,7 +863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9069938599617500410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1004,9 +1003,9 @@ RectTransform:
   - {fileID: 533457374364657193}
   m_Father: {fileID: 2865872646898378288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1018.2338, y: -686.1754}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7933094362254046008
@@ -1272,9 +1271,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2865872646898378288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1018.2338, y: -307.05847}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 40}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &9159662080069962640
@@ -1398,7 +1397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4971540015302953169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1450,7 +1449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a402d4b1469f0b9469e3e945b3d80317, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fe229ebd239a8f4db1bf313c2686564, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1579,8 +1578,8 @@ MonoBehaviour:
     option2IsCorrect: 0
     option3IsCorrect: 0
     option4IsCorrect: 1
-    questionAudio: {fileID: 8300000, guid: 560098950c48da84688cd710d69ad45a, type: 3}
-    questionVideo: {fileID: 32900000, guid: c8490dbdf72414b48afedde461195505, type: 3}
+    questionAudio: {fileID: 8300000, guid: 9f3a5311410bc2b40bd8772ee857cfc8, type: 3}
+    questionVideo: {fileID: 32900000, guid: 6dca78b13a9a9cf42846b50e30daa4dc, type: 3}
     optionStartTime: 4
   - questionText: 2. Who was King Krishnadevaraya?
     option1: A. The King of Hastinapura.
@@ -1591,8 +1590,8 @@ MonoBehaviour:
     option2IsCorrect: 1
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: f116222baa8ede849862571ed0c1ca32, type: 3}
-    questionVideo: {fileID: 32900000, guid: 1a13feb4d9b25354090b4f54a0b5a5e4, type: 3}
+    questionAudio: {fileID: 8300000, guid: 3ceae791b1ec9184fa72b14af5f6bb2e, type: 3}
+    questionVideo: {fileID: 32900000, guid: cef778b8102adef438ee634f0422f010, type: 3}
     optionStartTime: 3
   - questionText: 3. How did Raman come to be known as Tenali Raman?
     option1: A. After his father's death, his mother took him to a city called Chittoor.
@@ -1603,8 +1602,8 @@ MonoBehaviour:
     option2IsCorrect: 0
     option3IsCorrect: 1
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 4fdd1d07cee458c4f8b5fe0fcd10c587, type: 3}
-    questionVideo: {fileID: 32900000, guid: 2faf6edefe9b80b41a776244487579d7, type: 3}
+    questionAudio: {fileID: 8300000, guid: 96fa759469505c54884f3f205f5d852f, type: 3}
+    questionVideo: {fileID: 32900000, guid: 75b67e93217f26343b944381bad717e3, type: 3}
     optionStartTime: 4
   - questionText: 4. At one time, the village of Tenali suffered from...
     option1: A. ...drought.
@@ -1615,8 +1614,8 @@ MonoBehaviour:
     option2IsCorrect: 0
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 7ef862ae3da14ee44956351cca2967c9, type: 3}
-    questionVideo: {fileID: 32900000, guid: 001bf4b5122dadf47ab63abcb0b8b09e, type: 3}
+    questionAudio: {fileID: 8300000, guid: 40ff07111ea64c048b0d9a5acf6a4175, type: 3}
+    questionVideo: {fileID: 32900000, guid: f36433fe783eae64ea551099c6c4b0f5, type: 3}
     optionStartTime: 4
   - questionText: 5. Why did the villagers trust the visiting Saint like a god?
     option1: A. They believed that the presence of the Saint and repeated chants
@@ -1628,8 +1627,8 @@ MonoBehaviour:
     option2IsCorrect: 1
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 6bcdb10791a9d4c45b1327c8f9a34a5d, type: 3}
-    questionVideo: {fileID: 32900000, guid: f54f265513ced9340ad6fe7966fbbd25, type: 3}
+    questionAudio: {fileID: 8300000, guid: ec487d901e77bc840a11898629379bc8, type: 3}
+    questionVideo: {fileID: 32900000, guid: fdd35b6c2699a134cb28a8aaa7198ed5, type: 3}
     optionStartTime: 4
   - questionText: 6. What did the Saint teach Tenali Raman?
     option1: A. A few mantras to chant to Lakshmi Devi.
@@ -1640,8 +1639,8 @@ MonoBehaviour:
     option2IsCorrect: 0
     option3IsCorrect: 1
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 0e1d0a0f8b87c1f44bab536bdae41d02, type: 3}
-    questionVideo: {fileID: 32900000, guid: 23a6a20fbffc376478897af41dd333ad, type: 3}
+    questionAudio: {fileID: 8300000, guid: 652411d18ff170c4c8b6a5e8ac4ec448, type: 3}
+    questionVideo: {fileID: 32900000, guid: ee6a21fe08c356b44b88837d2da6bcc2, type: 3}
     optionStartTime: 3.5
   - questionText: 7. What did the Saint say would happen?
     option1: A. That Kali Devi would bless Raman and give him the boon to become
@@ -1656,8 +1655,8 @@ MonoBehaviour:
     option2IsCorrect: 1
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 15240aba1260a7745b98098db26996b3, type: 3}
-    questionVideo: {fileID: 32900000, guid: 3f931fcc65938ea4ea89fafb4b416d9c, type: 3}
+    questionAudio: {fileID: 8300000, guid: dfc6299b02004974daca4c4856b86354, type: 3}
+    questionVideo: {fileID: 32900000, guid: 6133512dd1e25fc46bf193fa4c2d4765, type: 3}
     optionStartTime: 4
   - questionText: 8. Tenali Raman displayed an intelligent quality. What was it?
     option1: A. While others prayed to the Saint, Tenali Raman refused to bow.
@@ -1668,8 +1667,8 @@ MonoBehaviour:
     option2IsCorrect: 0
     option3IsCorrect: 0
     option4IsCorrect: 1
-    questionAudio: {fileID: 8300000, guid: b669f1ea231c34b44b0fc91a141302de, type: 3}
-    questionVideo: {fileID: 32900000, guid: 4e3d82574f2deba479f948a44c1244d0, type: 3}
+    questionAudio: {fileID: 8300000, guid: ccd6cecfeb3819c4aba812b409d6fe55, type: 3}
+    questionVideo: {fileID: 32900000, guid: 9e34728561981ab44903a16d90321fd8, type: 3}
     optionStartTime: 4
   startPanel: {fileID: 7828088731746517434}
   options:
@@ -1684,27 +1683,27 @@ MonoBehaviour:
   quizTextReveal: {fileID: 6614438741315361665}
   finishPanel: {fileID: 4652867744104988154}
   correctPairs:
-  - audio: {fileID: 8300000, guid: 866d073e05c576c4eb8bdf1e1d6f1fd4, type: 3}
-    video: {fileID: 32900000, guid: d6b502900f758a843933d07b3210ce8f, type: 3}
-  - audio: {fileID: 8300000, guid: 167023c79a7af074b99a7128f96dd71f, type: 3}
-    video: {fileID: 32900000, guid: f3875a859b674aa40a9c8cea2c295d46, type: 3}
-  - audio: {fileID: 8300000, guid: 4b7888f7a7f16c74c855128847c3496d, type: 3}
-    video: {fileID: 32900000, guid: 4be6a79a15596be45ad7dc52729d2426, type: 3}
-  - audio: {fileID: 8300000, guid: c6edf2e764b4b30429d5acf555bff8e8, type: 3}
-    video: {fileID: 32900000, guid: 0cacd67a61083094c84a4934de68b3ab, type: 3}
-  - audio: {fileID: 8300000, guid: df301e21dad089c41a49b267ce70e914, type: 3}
-    video: {fileID: 32900000, guid: 165e7505971ff4d4d89fa840dca4ba87, type: 3}
+  - audio: {fileID: 8300000, guid: 8dceb07ea3b0fba43aa8987a211ddd84, type: 3}
+    video: {fileID: 32900000, guid: 72120f8a0a902b7429648d2d653baa03, type: 3}
+  - audio: {fileID: 8300000, guid: 1c4024e28ab3b3e479b8530e3a95dbd2, type: 3}
+    video: {fileID: 32900000, guid: 96c064764b2c27d4e84fbead722d9c99, type: 3}
+  - audio: {fileID: 8300000, guid: 4b51c5aa3cd38da48839022146a78961, type: 3}
+    video: {fileID: 32900000, guid: 88013252773e7a54c82477b7099a9d52, type: 3}
+  - audio: {fileID: 8300000, guid: 7e1118832ee5bcc42ad868fd4d8715cd, type: 3}
+    video: {fileID: 32900000, guid: d68b6198545f4cc42bb16a9cc09e19c4, type: 3}
+  - audio: {fileID: 8300000, guid: 0cbe8aa3c5cca15418b0ce02f488e54a, type: 3}
+    video: {fileID: 32900000, guid: fcedff7e367e3264faaec7f017fdceed, type: 3}
   wrongPairs:
-  - audio: {fileID: 8300000, guid: 5cd7c0f9f4cf27a4bb4e1f008c489437, type: 3}
-    video: {fileID: 32900000, guid: 6cc195687ad0fae429cdbd616725e4ee, type: 3}
-  - audio: {fileID: 8300000, guid: a445fadb01559f04ead775bae0da1f31, type: 3}
-    video: {fileID: 32900000, guid: ff4d2f6dd74d9ac4eac962f3f3d998e3, type: 3}
-  - audio: {fileID: 8300000, guid: 2ab7e59eceec0c54e9e7be0a0828c1d8, type: 3}
-    video: {fileID: 32900000, guid: ffb1fc5a5bd5d7146994e629ccb4905b, type: 3}
-  - audio: {fileID: 8300000, guid: 93b6fc5fbbf2c70439165e85fea9009e, type: 3}
-    video: {fileID: 32900000, guid: 7088bec0aced53f4bbcaf4b393c60baa, type: 3}
-  - audio: {fileID: 8300000, guid: ffead6edf064ad4489eff89b686a5999, type: 3}
-    video: {fileID: 32900000, guid: 6086e64db1d298a4a889756a800bed28, type: 3}
+  - audio: {fileID: 8300000, guid: fce4ff0b621af7b4898504c4871db33a, type: 3}
+    video: {fileID: 32900000, guid: b0ffc76f95a5b9f48a24601cb9e3df8c, type: 3}
+  - audio: {fileID: 8300000, guid: 9638c42ea44623f4885082f604cc6b98, type: 3}
+    video: {fileID: 32900000, guid: 350a86068f26ef5419c6548e949ccbab, type: 3}
+  - audio: {fileID: 8300000, guid: 3bd6c60ccd61d36439d6eb00379713a0, type: 3}
+    video: {fileID: 32900000, guid: 33d7c3017a6a8714b944c3b9d5a65a25, type: 3}
+  - audio: {fileID: 8300000, guid: 18ed24ec0897c96478f57ab0a794a95f, type: 3}
+    video: {fileID: 32900000, guid: 8e92665030d866d429120f881159e453, type: 3}
+  - audio: {fileID: 8300000, guid: c4548f0baf68756428976a96f55311a2, type: 3}
+    video: {fileID: 32900000, guid: 011e53c7f208ecd4aac7c746dc6e9da2, type: 3}
   questionAudioSource: {fileID: 7062516088208557990}
   reactionAudioSource: {fileID: 2184622172307290129}
   sageVideoPlayer: {fileID: 2003959141924737704}
@@ -2325,9 +2324,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NEXT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2540,9 +2538,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 13/15
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2976,9 +2973,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Completed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3709,9 +3705,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PASSED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3815,9 +3810,9 @@ RectTransform:
   - {fileID: 1515255675068481298}
   m_Father: {fileID: 5338441473218069585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -140.625}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6873251824632212470
@@ -3962,7 +3957,7 @@ RectTransform:
   - {fileID: 2865872646898378288}
   - {fileID: 4971540015302953169}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 85.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4490,7 +4485,7 @@ GameObject:
   - component: {fileID: 8797522974031978680}
   - component: {fileID: 2003959141924737704}
   m_Layer: 5
-  m_Name: RawImage_sage_video
+  m_Name: Quiz-1 Video
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4504,7 +4499,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5725029712529309640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 16.051792, y: 8.683216, z: 8.683216}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4512,7 +4507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -506, y: -68}
+  m_AnchoredPosition: {x: 60, y: -68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6758637300263044958
@@ -4535,7 +4530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
-  m_Material: {fileID: 2100000, guid: 89eb634fe6eec1e4fb3f412871144483, type: 2}
+  m_Material: {fileID: 2100000, guid: d5f4dab4763217342bc81c085be467b2, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -4543,7 +4538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 75342458c7312f14c91cabd102ea2b54, type: 2}
+  m_Texture: {fileID: 8400000, guid: 309888974333d6640bab16bfd1100b7c, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4558,11 +4553,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5725029712529309640}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6a9a33f664e2e4f4cb4d518e1b34fceb, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 459fcdaeb0399944db4a2ac544288b70, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 75342458c7312f14c91cabd102ea2b54, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 309888974333d6640bab16bfd1100b7c, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -4580,10 +4575,10 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &5751682433540284896
@@ -4653,9 +4648,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Question 1/20
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4789,7 +4783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...an ancient collection of animal fables.
+  m_text: D. He was witty, intelligent and scholarly.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4816,7 +4810,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.7
+  m_fontSize: 13.4
   m_fontSizeBase: 11.7
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4926,7 +4920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...the story of Rama.
+  m_text: B. He was skilled in all forms of archery.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4953,7 +4947,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 13.6
   m_fontSizeBase: 11.7
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5415,9 +5409,9 @@ RectTransform:
   - {fileID: 8716777477174677806}
   m_Father: {fileID: 5338441473218069585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -196.875}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4674313485506216781
@@ -5731,7 +5725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...the story of the Pandavas and the Khauravas
+  m_text: C. He was angry and arrogant.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5758,7 +5752,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.2
+  m_fontSize: 15
   m_fontSizeBase: 11.7
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6254,7 +6248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2865872646898378288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6531,9 +6525,9 @@ RectTransform:
   - {fileID: 4930449781802560568}
   m_Father: {fileID: 5338441473218069585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -84.375}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5853584001228511527
@@ -6709,7 +6703,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...one of two great ithihasas from India.
+  m_text: A. He was the master of the magic arts.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6736,7 +6730,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.9
+  m_fontSize: 13.8
   m_fontSizeBase: 11.7
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7380,9 +7374,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0 %
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 891d808f71592f64cb148a7c10356671, type: 2}
-  m_sharedMaterial: {fileID: -90742384672196422, guid: 891d808f71592f64cb148a7c10356671,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

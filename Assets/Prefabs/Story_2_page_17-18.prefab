@@ -347,11 +347,11 @@ MonoBehaviour:
   - partName: 
     timing: 0
     manualDuration: 0
-    backgroundImage: {fileID: 0}
+    backgroundImage: {fileID: 5245317515210820373}
     restartBackgroundOnSlotStart: 0
     mainVideos:
-    - video: {fileID: 592975995157126336}
-      playbackSpeed: 1
+    - video: {fileID: 6807130833833547542}
+      playbackSpeed: 0
       startDelay: 0
       freezeMode: 0
       freezeFirstSeconds: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
     mainPlayOrder: 0
     visualLayers: []
     backgroundVideos:
-    - video: {fileID: 6807130833833547542}
+    - video: {fileID: 0}
       playbackSpeed: 1
       startDelay: 0
       loop: 1
@@ -935,9 +935,8 @@ GameObject:
   - component: {fileID: 5245317515210820373}
   - component: {fileID: 3954318811679074529}
   - component: {fileID: 3674497698429946713}
-  - component: {fileID: 592975995157126336}
   m_Layer: 0
-  m_Name: 17-18 (V1)02 Ground
+  m_Name: '17-18 (I2)02 BG '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -991,7 +990,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fcb6f603e3613f64ea7c0b1df5086fdb, type: 2}
+  - {fileID: 2100000, guid: f718b70f49c92a94b92c61ed229b4673, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1015,40 +1014,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!328 &592975995157126336
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4641320808119501987}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6e526c555ff97c14d959bcf3dae59a8c, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: c76fe397e183c484ebcd6e21aa2065e9, type: 2}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 3674497698429946713}
-  m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 2
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
-  m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &5707904528105812741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,7 +1523,7 @@ GameObject:
   - component: {fileID: 1604859214700796611}
   - component: {fileID: 6807130833833547542}
   m_Layer: 0
-  m_Name: 17-18 (V2)02 Cloud
+  m_Name: 17-18 (V1)02 Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1644,7 +1609,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9181013019988832364}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 60e99609b391a9945943e4ad0abe29bc, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: f068bbb115c9cbf43a7e557484d832a6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
