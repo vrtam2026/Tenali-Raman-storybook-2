@@ -55,12 +55,22 @@ public class QuizManager : MonoBehaviour
     [Header("Timing")]
     [SerializeField] private float cooldownDuration = 2f;
 
+    [Header("Skip Intro (triple tap)")]
+    [Tooltip("While the question is being read out, tapping the screen 3 times quickly skips to the options and starts the timer.")]
+    [SerializeField] private bool allowTripleTapSkip = true;
+
+    [Tooltip("Max seconds between two taps for them to count as one triple tap.")]
+    [SerializeField] private float tripleTapGap = 0.45f;
+
     [Header("State — Read Only")]
     [SerializeField] private int currentQuestionIndex = 0;
     [SerializeField] private int currentAttempt = 0;
 
     private QuizQuestion currentQuestion;
     private bool isPaused = false;
+    private int tapCount = 0;
+    private float lastTapTime = -10f;
+    private int ignoreTapFrame = -1;
     private CustomARHandler ownerARHandler;
 
     // ── Lifecycle ─────────────────────────────────────────────────────────────
@@ -89,6 +99,77 @@ public class QuizManager : MonoBehaviour
         StopAllAudio();
         StopVideo();
         if (quizTimer != null) quizTimer.StopTimer();
+    }
+
+    // ── Triple-tap skip ───────────────────────────────────────────────────────
+
+    private void Update()
+    {
+        if (!allowTripleTapSkip || isPaused || quizTextReveal == null || !quizTextReveal.IsRevealing)
+        {
+            tapCount = 0;
+            return;
+        }
+
+        // The tap that pressed "Start Quiz" must not count as the first of three.
+        if (Time.frameCount == ignoreTapFrame) return;
+        if (!TappedThisFrame()) return;
+
+        if (Time.unscaledTime - lastTapTime > tripleTapGap) tapCount = 0;
+        lastTapTime = Time.unscaledTime;
+        tapCount++;
+
+        if (tapCount >= 3)
+        {
+            tapCount = 0;
+            SkipIntro();
+        }
+    }
+
+    private static bool TappedThisFrame()
+    {
+#if ENABLE_INPUT_SYSTEM
+        return (UnityEngine.InputSystem.Touchscreen.current != null && UnityEngine.InputSystem.Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+            || (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame);
+#else
+        return Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began);
+#endif
+    }
+
+    // Skips the spoken intro: stops the question voice, shows the question + all options at once,
+    // starts the timer (via the normal "reveal finished" path) and parks the sage video on its last frame.
+    private void SkipIntro()
+    {
+        Debug.Log("[QuizManager] Triple tap -- skipping the question intro.");
+
+        if (questionAudioSource != null) questionAudioSource.Stop();
+        quizTextReveal.SkipToEnd(currentQuestion);   // ends with OnRevealComplete -> buttons on, timer starts
+
+        if (sageVideoPlayer != null && sageVideoPlayer.clip != null)
+            StartCoroutine(JumpVideoToLastFrame());
+    }
+
+    private IEnumerator JumpVideoToLastFrame()
+    {
+        VideoPlayer vp = sageVideoPlayer;
+
+        float t0 = Time.unscaledTime;
+        while (!vp.isPrepared && Time.unscaledTime - t0 < 3f) yield return null;
+        if (!vp.isPrepared) yield break;               // never got ready: leave it as it is
+
+        long last = (long)vp.frameCount - 1;
+        if (last < 1) yield break;
+
+        bool seeked = false;
+        VideoPlayer.EventHandler onSeek = _ => seeked = true;
+        vp.seekCompleted += onSeek;
+        vp.frame = last;
+
+        t0 = Time.unscaledTime;
+        while (!seeked && Time.unscaledTime - t0 < 1.5f) yield return null;
+        vp.seekCompleted -= onSeek;
+
+        vp.Pause();                                    // freeze on the last frame (Stop() would clear it)
     }
 
     // ── StartButton ───────────────────────────────────────────────────────────
@@ -199,6 +280,10 @@ public class QuizManager : MonoBehaviour
         currentAttempt = 0;
         currentQuestion = questions[currentQuestionIndex];
         if (currentQuestion == null) return;
+
+        tapCount = 0;
+        lastTapTime = -10f;
+        ignoreTapFrame = Time.frameCount;
 
         string[] opts = {
             currentQuestion.option1, currentQuestion.option2,

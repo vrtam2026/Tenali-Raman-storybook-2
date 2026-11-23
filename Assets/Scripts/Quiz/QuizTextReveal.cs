@@ -94,6 +94,16 @@ public class QuizTextReveal : MonoBehaviour
 
     private Coroutine revealCoroutine;
 
+    // True while the question is being read out (from StartReveal until the timer is about to start).
+    public bool IsRevealing => revealCoroutine != null;
+
+    // Remembered so a triple-tap skip can finish the sequence exactly like the normal ending.
+    private Action pendingOnComplete;
+    private Vector3 activeOriginalScale;
+    private bool homeCaptured;
+    private Vector2 textHomePos;
+    private Vector2[] optionHomePos;
+
     // ── Public API ────────────────────────────────────────────────────────────
 
     // coroutineHost: runs on QuizManager (stable inside Canvas)
@@ -113,9 +123,84 @@ public class QuizTextReveal : MonoBehaviour
 
         // Read scale NOW before coroutine starts
         Vector3 originalScale = GetOriginalScale();
+        activeOriginalScale = originalScale;
+        pendingOnComplete = onComplete;
+        CaptureHomePositions();
 
         revealCoroutine = coroutineHost.StartCoroutine(RevealSequence(question, audio, originalScale, onComplete));
         Debug.Log($"[QuizReveal] StartReveal on host={coroutineHost.name}");
+    }
+
+    // Triple-tap skip: jump straight to the end of the reveal -- full question, all options
+    // visible, timer shown -- then run the same "reveal finished" callback (buttons on, timer starts).
+    public void SkipToEnd(QuizQuestion question)
+    {
+        if (revealCoroutine == null) return;
+
+        if (coroutineHost != null) coroutineHost.StopCoroutine(revealCoroutine);
+        else StopCoroutine(revealCoroutine);
+        revealCoroutine = null;
+
+        // Panel fully open
+        if (questionContainer != null)
+            questionContainer.localScale = activeOriginalScale;
+
+        // Full question text, back at its resting position
+        if (questionText != null)
+        {
+            if (question != null && !string.IsNullOrEmpty(question.questionText))
+            {
+                string[] words = question.questionText.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                questionText.text = string.Join(" ", words);
+            }
+            RectTransform trt = questionText.GetComponent<RectTransform>();
+            if (trt != null && homeCaptured) trt.anchoredPosition = textHomePos;
+        }
+        ShowText(true);
+
+        // All options fully visible, at their resting positions
+        SetAllOptionsAlpha(1f);
+        if (optionButtons != null && homeCaptured)
+        {
+            for (int i = 0; i < optionButtons.Length && i < optionHomePos.Length; i++)
+            {
+                if (optionButtons[i] == null) continue;
+                RectTransform rt = optionButtons[i].GetComponent<RectTransform>();
+                if (rt != null) rt.anchoredPosition = optionHomePos[i];
+            }
+        }
+
+        // Same as step 8 of the normal sequence
+        Show(skipButton, true);
+        if (question != null && question.IsMultiAnswer)
+            Show(submitButton, true);
+        Show(timerObject, true);
+
+        Action done = pendingOnComplete;
+        pendingOnComplete = null;
+        done?.Invoke();
+    }
+
+    // Resting positions, taken once before any reveal has moved anything.
+    private void CaptureHomePositions()
+    {
+        if (homeCaptured) return;
+
+        if (questionText != null)
+        {
+            RectTransform trt = questionText.GetComponent<RectTransform>();
+            if (trt != null) textHomePos = trt.anchoredPosition;
+        }
+
+        int n = optionButtons != null ? optionButtons.Length : 0;
+        optionHomePos = new Vector2[n];
+        for (int i = 0; i < n; i++)
+        {
+            if (optionButtons[i] == null) continue;
+            RectTransform rt = optionButtons[i].GetComponent<RectTransform>();
+            if (rt != null) optionHomePos[i] = rt.anchoredPosition;
+        }
+        homeCaptured = true;
     }
 
     public void CancelReveal()
@@ -254,6 +339,7 @@ public class QuizTextReveal : MonoBehaviour
             yield return new WaitForSeconds(delayBeforeTimerStarts);
 
         revealCoroutine = null;
+        pendingOnComplete = null;
         onComplete?.Invoke();
     }
 
