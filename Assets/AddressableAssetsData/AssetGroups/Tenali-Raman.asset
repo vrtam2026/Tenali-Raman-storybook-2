@@ -186,11 +186,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f2305e6c06d3fce4081798fea68ccb7a
-    m_Address: Story_2_page_75-Quiz
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc490726bf873e8448ef7c8d09ac568e
     m_Address: Story_2_page_53-54
     m_ReadOnly: 0

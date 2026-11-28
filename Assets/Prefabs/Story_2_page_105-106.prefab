@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ARTrackedPageNode
   pageId: TR_S5_P105-106
   mediaManager: {fileID: 0}
-  pageType: 1
+  pageType: 0
   layerRoot2D: {fileID: 0}
   commonBackgroundImage: {fileID: 0}
   persistentLayers2D: []

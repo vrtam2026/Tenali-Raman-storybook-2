@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audio_
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Audio_
+  m_GUID: 59591869e4a1cdb44ab6312926bc2b3a
+  m_SerializeEntries:
+  - m_GUID: 44067ce76e56d364d85dce22ca94183a
+    m_Address: audio/English/TR_S5_P97-98
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6a6db65fcdb4a56488f87c5578e88d89, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b0204e03bd74e6f42a0228aa4dafdcae, type: 2}
+    - {fileID: 11400000, guid: bda9a7be3cf330242baa623c2f6ffc3b, type: 2}

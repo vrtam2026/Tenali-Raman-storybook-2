@@ -2929,9 +2929,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3650538798332496227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 995.19965, y: -312.9503}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1122.4822, y: -283.4168}
   m_SizeDelta: {x: 600, y: 40}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7671542747116392142
@@ -4284,9 +4284,9 @@ RectTransform:
   - {fileID: 4420662771410137095}
   m_Father: {fileID: 3650538798332496227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 995.19965, y: -703.8508}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1122.4822, y: -615.2504}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8853009179044799342
@@ -5053,7 +5053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2697029721675247449
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5061,7 +5061,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6458223209559283985}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -5069,7 +5069,7 @@ RectTransform:
   - {fileID: 3650538798332496227}
   - {fileID: 3335638009263828652}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 85.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -5206,8 +5206,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 619fee19ff865b9469bab934362a76cd, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6985,106 +6985,132 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuizManagerArun
   questions:
-  - questionText: '1. Tenali Raman was known for which qualities? '
-    option1: He was the master of the magic arts.
-    option2: B. He was skilled in all forms of archery.
-    option3: C. He was angry and arrogant.
-    option4: D. He was witty, intelligent and scholarly.
-    option1IsCorrect: 0
-    option2IsCorrect: 0
-    option3IsCorrect: 0
-    option4IsCorrect: 1
-    questionAudio: {fileID: 8300000, guid: 9f3a5311410bc2b40bd8772ee857cfc8, type: 3}
-    questionVideo: {fileID: 32900000, guid: 6dca78b13a9a9cf42846b50e30daa4dc, type: 3}
-    optionStartTime: 4
-  - questionText: 2. Who was King Krishnadevaraya?
-    option1: A. The King of Hastinapura.
-    option2: B. The King of Vijayanagara.
-    option3: C. The King of Ayodhya.
-    option4: D. The King of Mithila.
-    option1IsCorrect: 0
-    option2IsCorrect: 1
-    option3IsCorrect: 0
-    option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 3ceae791b1ec9184fa72b14af5f6bb2e, type: 3}
-    questionVideo: {fileID: 32900000, guid: cef778b8102adef438ee634f0422f010, type: 3}
-    optionStartTime: 3
-  - questionText: 3. How did Raman come to be known as Tenali Raman?
-    option1: A. After his father's death, his mother took him to a city called Chittoor.
-    option2: B. After his mother's death, his father took him to a city called Tenali.
-    option3: C. After his father's death, his mother took him to a city called Tenali.
-    option4: D. Tenali was a family name.
-    option1IsCorrect: 0
-    option2IsCorrect: 0
-    option3IsCorrect: 1
-    option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 96fa759469505c54884f3f205f5d852f, type: 3}
-    questionVideo: {fileID: 32900000, guid: 75b67e93217f26343b944381bad717e3, type: 3}
-    optionStartTime: 4
-  - questionText: 4. At one time, the village of Tenali suffered from...
-    option1: A. ...drought.
-    option2: B. ...disease.
-    option3: C. ...hurricane.
-    option4: 'D. ...snow storms. '
+  - questionText: 1,Where did Tenali Raman chant the Mantra?
+    option1: In the Kali Temple.
+    option2: Underwater
+    option3: In his house.
+    option4: In front of the T.V.
     option1IsCorrect: 1
     option2IsCorrect: 0
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 40ff07111ea64c048b0d9a5acf6a4175, type: 3}
-    questionVideo: {fileID: 32900000, guid: f36433fe783eae64ea551099c6c4b0f5, type: 3}
+    questionAudio: {fileID: 8300000, guid: 6ef41fd9b3c04e442bf0732a7e7821fe, type: 3}
+    questionVideo: {fileID: 32900000, guid: 038fc7603ffb92148afc10d03962b637, type: 3}
     optionStartTime: 4
-  - questionText: 5. Why did the villagers trust the visiting Saint like a god?
-    option1: A. They believed that the presence of the Saint and repeated chants
-      will eliminate the misfortune.
-    option2: B. They believed that the presence of the Saint will control rains.
-    option3: C. The Saint was Thor in disguise.
-    option4: D. The Saint taught them divine Mantras.
+  - questionText: "2,Raman\u2019s desire was to.."
+    option1: Compose more puranas.
+    option2: "Impress King Krishnadevraya and become part of the King\u2019s durbar."
+    option3: Defeat King Krishnadevaraya and become the king himself.
+    option4: Earn money and invest in the stock market
     option1IsCorrect: 0
     option2IsCorrect: 1
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: ec487d901e77bc840a11898629379bc8, type: 3}
-    questionVideo: {fileID: 32900000, guid: fdd35b6c2699a134cb28a8aaa7198ed5, type: 3}
-    optionStartTime: 4
-  - questionText: 6. What did the Saint teach Tenali Raman?
-    option1: A. A few mantras to chant to Lakshmi Devi.
-    option2: B. A few mantras to chant to Durga Devi.
-    option3: C. A few mantras to chant to Kali Devi.
-    option4: D. A few mantras to chant to Surya Devi.
+    questionAudio: {fileID: 8300000, guid: d16581ade0842344db9132ce403611be, type: 3}
+    questionVideo: {fileID: 32900000, guid: 9cef9a4a561ac8f42b3f08a80e3cda9a, type: 3}
+    optionStartTime: 8
+  - questionText: 3,Who was Tathacharya?
+    option1: Son of King Krishnadevaraya
+    option2: Durbar priest of the Vijayanagra empire
+    option3: Father of King Krishnadevaraya.
+    option4: "Kali Devi\u2019s temple priest."
     option1IsCorrect: 0
+    option2IsCorrect: 1
+    option3IsCorrect: 0
+    option4IsCorrect: 0
+    questionAudio: {fileID: 8300000, guid: c09526a6b06cae34b9212a0540678c92, type: 3}
+    questionVideo: {fileID: 32900000, guid: 2039fa9de2ade6642becf9a78fb06d6f, type: 3}
+    optionStartTime: 5
+  - questionText: 4,When Tenali Raman saw Tathacharya in the Kali Temple he wanted
+      to...
+    option1: Impress Thathachary.
+    option2: Beat Thathachary.
+    option3: Celebrate Krishna Jayanti with Thathachary.
+    option4: Debate Thathachary.
+    option1IsCorrect: 1
     option2IsCorrect: 0
-    option3IsCorrect: 1
-    option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: 652411d18ff170c4c8b6a5e8ac4ec448, type: 3}
-    questionVideo: {fileID: 32900000, guid: ee6a21fe08c356b44b88837d2da6bcc2, type: 3}
-    optionStartTime: 3.5
-  - questionText: 7. What did the Saint say would happen?
-    option1: A. That Kali Devi would bless Raman and give him the boon to become
-      strong.
-    option2: B. That Kali Devi would bless Raman and give him the boon to become
-      famous.
-    option3: C. That Saraswati Devi would bless Raman and give him the boon to become
-      famous.
-    option4: D. That Lakshmi Devi would bless Raman and give him the boon to become
-      rich.
-    option1IsCorrect: 0
-    option2IsCorrect: 1
     option3IsCorrect: 0
     option4IsCorrect: 0
-    questionAudio: {fileID: 8300000, guid: dfc6299b02004974daca4c4856b86354, type: 3}
-    questionVideo: {fileID: 32900000, guid: 6133512dd1e25fc46bf193fa4c2d4765, type: 3}
-    optionStartTime: 4
-  - questionText: 8. Tenali Raman displayed an intelligent quality. What was it?
-    option1: A. While others prayed to the Saint, Tenali Raman refused to bow.
-    option2: B. Tenali Raman made fun of the Saint and insulted him.
-    option3: C. While others questioned the logic, Tenali Raman believed.
-    option4: D. While others blindly believed, Tenali Raman questioned the logic.
+    questionAudio: {fileID: 8300000, guid: 73e83f4d9c2821a4888d70dc5670d33c, type: 3}
+    questionVideo: {fileID: 32900000, guid: 728d8a3c87a381d4c8a16db51ed787ad, type: 3}
+    optionStartTime: 3
+  - questionText: "5,What did Tathacharya think after seeing Raman\u2019s Lingapurana?"
+    option1: He must have copied it from somewhwere
+    option2: "If Tenai Raman became part of King\u2019s durbar, I can listen to the
+      Lingaprana everyday."
+    option3: The Lingapurana is so boring.
+    option4: "If Tenali Raman became part of King\u2019s durbar, my fame and reputation
+      will be at risk."
     option1IsCorrect: 0
     option2IsCorrect: 0
     option3IsCorrect: 0
     option4IsCorrect: 1
-    questionAudio: {fileID: 8300000, guid: ccd6cecfeb3819c4aba812b409d6fe55, type: 3}
-    questionVideo: {fileID: 32900000, guid: 9e34728561981ab44903a16d90321fd8, type: 3}
+    questionAudio: {fileID: 8300000, guid: 8987babc212932b4989bc30833516d7c, type: 3}
+    questionVideo: {fileID: 32900000, guid: 11847a93d7425c04fad682bb14f9c932, type: 3}
+    optionStartTime: 3
+  - questionText: 6,Why did Tathachary hire Raman?
+    option1: To make him do all his household chores.
+    option2: "To keep Raman close to him, so that he won\u2019t go to durbar."
+    option3: "To curtian Raman\u2019s ability to prosper."
+    option4: To learn magic tricks from Tenali Raman.
+    option1IsCorrect: 0
+    option2IsCorrect: 1
+    option3IsCorrect: 0
+    option4IsCorrect: 0
+    questionAudio: {fileID: 8300000, guid: a815a959e36b1cb4d83e284b903ddd0a, type: 3}
+    questionVideo: {fileID: 32900000, guid: da303c7ddc627fd44b9fc35d08ff80ee, type: 3}
+    optionStartTime: 5
+  - questionText: 7,What did Tathacharya promise Raman before leaving  for Vijayanagara?
+    option1: He will send money every month in a royal bag.
+    option2: He would send sweets and snacks signed by the king himself.
+    option3: He would come back the following week and bring the king with him.
+    option4: Once he settled down, he would invite Tenali Raman and have him meet
+      the King.
+    option1IsCorrect: 0
+    option2IsCorrect: 0
+    option3IsCorrect: 0
+    option4IsCorrect: 1
+    questionAudio: {fileID: 8300000, guid: 06ce5d23850d6bd4f83a0a91d8f6f370, type: 3}
+    questionVideo: {fileID: 32900000, guid: ed2ebc8889acb2641b3091ca9d243b46, type: 3}
+    optionStartTime: 3
+  - questionText: 8,After waiting a long time for an invite from Tathacharya, what
+      did Raman do ?
+    option1: He went back to his hometown and became a farmer.
+    option2: He started a business in Managalagrir.
+    option3: He left fror Vijayanagaram with his family.
+    option4: He thought that he could wait a little while longer.
+    option1IsCorrect: 0
+    option2IsCorrect: 0
+    option3IsCorrect: 1
+    option4IsCorrect: 0
+    questionAudio: {fileID: 8300000, guid: 065959aeea33c1c4d8e5dd478a0b1186, type: 3}
+    questionVideo: {fileID: 32900000, guid: 9081b293a2d2e9d40ac444fd789c11a5, type: 3}
+    optionStartTime: 5
+  - questionText: 9,When Raman went to Thatacharya house, what did Tahathacarya do
+      ?
+    option1: He tool Tenali to see a movie.
+    option2: He cooked Rasam for Tenali Raman.
+    option3: He welcomed Tenali Raman and gave him sweets.
+    option4: He pretended to not know Tenali Raman.
+    option1IsCorrect: 0
+    option2IsCorrect: 0
+    option3IsCorrect: 0
+    option4IsCorrect: 1
+    questionAudio: {fileID: 8300000, guid: e5c37b08683e5e340aa6461e1e0299a6, type: 3}
+    questionVideo: {fileID: 32900000, guid: 40a99460cba97d44b9562934e3ab9af7, type: 3}
+    optionStartTime: 5
+  - questionText: 10,What happened when Tenali Raman realized that he was cheated
+      ?
+    option1: Tenali Raman felt miserable.
+    option2: Tenali Raman vowed to teach Tathachary a lesson.
+    option3: Tenali Raman went on a long drive.
+    option4: Tenali Raman started crying.
+    option1IsCorrect: 0
+    option2IsCorrect: 1
+    option3IsCorrect: 0
+    option4IsCorrect: 0
+    questionAudio: {fileID: 8300000, guid: 4f538a75036968d42817b6f418eeb778, type: 3}
+    questionVideo: {fileID: 32900000, guid: c4a41d1017676c74f931d5b6a3210f41, type: 3}
     optionStartTime: 4
   startPanel: {fileID: 6644770882590547251}
   options:
@@ -7099,32 +7125,34 @@ MonoBehaviour:
   quizTextReveal: {fileID: 1955152511294148801}
   finishPanel: {fileID: 4240432754432107591}
   correctPairs:
-  - audio: {fileID: 8300000, guid: 8dceb07ea3b0fba43aa8987a211ddd84, type: 3}
-    video: {fileID: 32900000, guid: 72120f8a0a902b7429648d2d653baa03, type: 3}
-  - audio: {fileID: 8300000, guid: 1c4024e28ab3b3e479b8530e3a95dbd2, type: 3}
-    video: {fileID: 32900000, guid: 96c064764b2c27d4e84fbead722d9c99, type: 3}
-  - audio: {fileID: 8300000, guid: 4b51c5aa3cd38da48839022146a78961, type: 3}
-    video: {fileID: 32900000, guid: 88013252773e7a54c82477b7099a9d52, type: 3}
-  - audio: {fileID: 8300000, guid: 7e1118832ee5bcc42ad868fd4d8715cd, type: 3}
-    video: {fileID: 32900000, guid: d68b6198545f4cc42bb16a9cc09e19c4, type: 3}
-  - audio: {fileID: 8300000, guid: 0cbe8aa3c5cca15418b0ce02f488e54a, type: 3}
-    video: {fileID: 32900000, guid: fcedff7e367e3264faaec7f017fdceed, type: 3}
+  - audio: {fileID: 8300000, guid: f29bdab0ae30aa74d8c3fc27b90824ae, type: 3}
+    video: {fileID: 32900000, guid: 9049e8b2357fb3641b083c8592134c71, type: 3}
+  - audio: {fileID: 8300000, guid: 8fd61465f7a6b8e4487ab787ccec8e52, type: 3}
+    video: {fileID: 32900000, guid: 2870dca37a73ef14cab58190b1f6cbbc, type: 3}
+  - audio: {fileID: 8300000, guid: 69d76d6ddcab8614096f86dba05af4a1, type: 3}
+    video: {fileID: 32900000, guid: f0acd50e5e8b21a408c60d505a89aaa5, type: 3}
+  - audio: {fileID: 8300000, guid: e7d900c3346d5494d83e1551a5bf8554, type: 3}
+    video: {fileID: 32900000, guid: c6e6839d83eb9ea489304edd70f03c58, type: 3}
+  - audio: {fileID: 8300000, guid: c70bf60a5ee660a4e822c6bbab046f1f, type: 3}
+    video: {fileID: 32900000, guid: 332c7b9ef9e2545499723041b6613174, type: 3}
   wrongPairs:
-  - audio: {fileID: 8300000, guid: fce4ff0b621af7b4898504c4871db33a, type: 3}
-    video: {fileID: 32900000, guid: b0ffc76f95a5b9f48a24601cb9e3df8c, type: 3}
-  - audio: {fileID: 8300000, guid: 9638c42ea44623f4885082f604cc6b98, type: 3}
-    video: {fileID: 32900000, guid: 350a86068f26ef5419c6548e949ccbab, type: 3}
-  - audio: {fileID: 8300000, guid: 3bd6c60ccd61d36439d6eb00379713a0, type: 3}
-    video: {fileID: 32900000, guid: 33d7c3017a6a8714b944c3b9d5a65a25, type: 3}
-  - audio: {fileID: 8300000, guid: 18ed24ec0897c96478f57ab0a794a95f, type: 3}
-    video: {fileID: 32900000, guid: 8e92665030d866d429120f881159e453, type: 3}
-  - audio: {fileID: 8300000, guid: c4548f0baf68756428976a96f55311a2, type: 3}
-    video: {fileID: 32900000, guid: 011e53c7f208ecd4aac7c746dc6e9da2, type: 3}
+  - audio: {fileID: 8300000, guid: 796893d340288c242bd7e1ae3577429f, type: 3}
+    video: {fileID: 32900000, guid: b36db48ddc07aeb4f958685481a68961, type: 3}
+  - audio: {fileID: 8300000, guid: d0cb2d86ee87612419d7a1d8ca2e739d, type: 3}
+    video: {fileID: 32900000, guid: a65365de44c00924db2c288d1434cec0, type: 3}
+  - audio: {fileID: 8300000, guid: cf1f473367503664ca1f53aef26661ab, type: 3}
+    video: {fileID: 32900000, guid: d6c483c55927d3b43aa3e94f55ab5368, type: 3}
+  - audio: {fileID: 8300000, guid: 3cad024dcb9016146bfb6fa7d3bb95eb, type: 3}
+    video: {fileID: 32900000, guid: d9d4005a0b1456d4baa41e04d9eaa0d4, type: 3}
+  - audio: {fileID: 8300000, guid: 99f9b92f013c5aa4299880a5cfcc643f, type: 3}
+    video: {fileID: 32900000, guid: f74b0c924b25eec4b80d484ce46e6f44, type: 3}
   questionAudioSource: {fileID: 8615726721748372846}
   reactionAudioSource: {fileID: 5721706172159376781}
   sageVideoPlayer: {fileID: 7660459379377826935}
   quizTimer: {fileID: 8597071512166561551}
   cooldownDuration: 3
+  allowTripleTapSkip: 1
+  tripleTapGap: 0.45
   currentQuestionIndex: 0
   currentAttempt: 0
 --- !u!82 &5721706172159376781
